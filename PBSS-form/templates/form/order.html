@@ -1,0 +1,7 @@
+<h1>Generate a daily implimentation plan</h1>
+<h2>{{ note }}</h2>
+    <form action="{% url 'order' %}" method="post">
+      {% csrf_token %}
+        {{ FbaForm }}
+        <input id="behaviour3" type="submit" value="submit" >
+    </form>
