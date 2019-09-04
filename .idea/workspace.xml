@@ -3,25 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ef0aea1b-fb8a-40a9-8eed-4e9874903096" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/1048294929022719476149212321115618112107912.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/PBSS/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/PBS/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/PBSS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/PBS/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/PBSS/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/PBS/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/PBSS/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/PBS/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/postivebehaviour/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/postivebehaviour/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/postivebehaviour/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/postivebehaviour/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/postivebehaviour/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/postivebehaviour/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/postivebehaviour/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/postivebehaviour/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/venv/Scripts/easy_install-3.7-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/venv/Scripts/easy_install-3.7-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/venv/Scripts/easy_install-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/venv/Scripts/easy_install-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/venv/Scripts/pip-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/venv/Scripts/pip-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/venv/Scripts/pip3-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/venv/Scripts/pip3-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBSS/venv/Scripts/pip3.7-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/venv/Scripts/pip3.7-script.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,21 +10,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PBSS/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="875" />
-    <option name="y" value="17" />
+    <option name="y" value="16" />
     <option name="width" value="1020" />
-    <option name="height" value="1049" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -72,6 +61,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -106,16 +96,17 @@
       <workItem from="1566954855759" duration="166000" />
       <workItem from="1567167975451" duration="45000" />
       <workItem from="1567214118130" duration="844000" />
+      <workItem from="1567561232585" duration="1439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1055000" />
+    <option name="totallyTimeSpent" value="2494000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1300268" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1313673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -129,7 +120,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281471" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3281471" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -140,5 +131,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PBSS/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
   </component>
 </project>
