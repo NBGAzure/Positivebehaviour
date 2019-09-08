@@ -27,11 +27,16 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
 h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    padding-bottom: 4%;
 }
 
 p{letter-spacing:1px;font-size: 16px;}
@@ -289,10 +294,38 @@ footer a{color: #6ECADC;}
 footer a:hover{color: #333; text-decoration: underline;}
 footer .wrap-footer {padding-top: 50px;background-color: #222;}
 
+footer-links
+{
+    padding-left:0;
+    list-style:none;
+    line-height: 1.5em;
+}
+.footer-links li
+{
+    display:block;
+    line-height: 1.5em;
+}
+.footer-links a
+{
+    color:white;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#6ECADC;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+
+
 footer .col-footer{margin-bottom: 50px;}
 footer .col-footer .heading{text-align: center;}
 footer .col-footer .heading h4{color:#fff;font-size: 24px;margin-bottom: 25px;}
-footer .col-footer .content{}
+footer .col-footer .content{
+    line-height: 1.5em;
+}
 
 footer .col-footer.footer-1{}
 footer .col-footer.footer-1 img{width:40%;}
