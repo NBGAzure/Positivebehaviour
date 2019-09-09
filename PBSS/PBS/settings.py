@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    "E:/github/Positivebehaviour/PBSS/positivebehaviour/static"
+]
 
 # Application definition
 
@@ -55,7 +60,7 @@ ROOT_URLCONF = 'PBS.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
