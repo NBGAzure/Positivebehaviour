@@ -203,7 +203,22 @@
 		</section>
 
 	<!-- /////////////////////////////////////////Content -->
-	<div id="page-content" class="index-page">
+
+
+    <div>
+        {%  if messages %}
+            {% for message in messages %}
+               <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+               </div>
+            {% endfor %}
+        {%  endif %}
+
+    </div>
+
+
+
+    <div id="page-content" class="index-page">
 
 		<!-- ////////////Content Box 01 -->
 		<section id="services" class="box-content box-1">
