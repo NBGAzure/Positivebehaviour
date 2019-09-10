@@ -61,15 +61,28 @@
                         <a class="page-scroll" href="#about">About us</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#new">Signin/Signup</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
 					<li>
                         <a class="page-scroll" href="#fbaform">FBA Form</a>
                     </li>
                     <li>
+                         {% if user.is_authenticated %}
+                             <a class="page-scroll" href="{% url 'profile' %}">Profile</a>
+                             <a class="page-scroll" href="{% url 'logout' %}">Logout</a>
+                     </li>
+                             <li>
+
+                         {% else %}
+                            <a class="page-scroll" href="{% url 'register' %}">Signup</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="{% url 'login' %}">Signin</a>
+                        </li>
+                         {% endif %}
+
+                        <li>
+
                         <a class="page-scroll" href="#contact">Contact us</a>
                     </li>
                 </ul>
