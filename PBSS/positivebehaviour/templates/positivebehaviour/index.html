@@ -33,6 +33,7 @@
         <script src= "{% static 'js/respond.min.js' %}"></script>
     <![endif]-->
 </head>
+
 <body>
 	<!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -80,10 +81,7 @@
                              <li>
 
                          {% else %}
-                            <a class="page-scroll" href="{% url 'register' %}">Signup</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="{% url 'login' %}">Signin</a>
+                            <a class="page-scroll" href="#portal">Signup</a>
                         </li>
                          {% endif %}
 
@@ -206,20 +204,7 @@
 		</section>
 
 
-    <section id="new" class="box-content box-2 box-style">
-			<div class="container">
-				<div class="row">
-					<blockquote>Block Qoute for information and Sign Up login Button.</blockquote>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                <div class="col text-center">
-                    <a class="btn btn-1 btn-sm" href=" {% url 'register' %}">Signup</a>
-                    <a class="btn btn-1 btn-sm" href=" {% url 'login' %}">Signin</a>
-                </div></div>
-                </div>
-			</div>
-		</section>
+
 
 	<!-- /////////////////////////////////////////Content -->
 
@@ -290,9 +275,6 @@
 			</div>
 		</section>
 
-		<!-- ////////////Content Box 02 -->
-
-		<!-- ////////////Content Box 03 -->
         <section id="fbaform" class="box-content box-1" style="background: white;>
 			<div class="container">
 				<div class="row heading">
@@ -307,8 +289,91 @@
 			</div>
 		</section>
 
+
+		<!-- ////////////Content Box 02 -->
+<section id="portal" class="box-content box-2 box-style">
+			<div class="container">
+				<div class="row">
+					<blockquote>Block Qoute for information and Sign Up login Button.</blockquote>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                <div class="col text-center">
+                    <a class="btn btn-1 btn-sm" href="{% url 'register' %}">Signup</a>
+                    <a class="btn btn-1 btn-sm" href="{% url 'login' %}">Signin</a>
+                </div></div>
+                </div>
+			</div>
+		</section>
+		<!-- ////////////Content Box 03 -->
+
 		<!-- ////////////Content Box 04 -->
-		<section class="box-content box-4 box-style">
+
+
+		<!-- ////////////Content Box 05 -->
+		<section class="box-content box-5" id="contact" style="background:white;" >
+			<div class="container">
+				<div class="row heading">
+					<div class="col-lg-12">
+	                    <h2>Contact us</h2>
+						<hr>
+	                    <div class="intro">Lorem ipsum dolor sit amet</div>
+	                </div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 ">
+						<div class="row box-item">
+							<h3>Complete the Submission Form</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+							<h3>Or Just Make a Call</h3>
+							<p>+6221 888 888 90 <br>
+								+6221 888 88891</p>
+							<p>info@yourdomain.com</p>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div id="contact-form">
+							<form name="form1" method="post" action="contact.php">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+										<input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="email" class="form-control input-lg" name="email" id="email" placeholder="Enter email" required="required" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="text" class="form-control input-lg" name="subject" id="subject" placeholder="Subject" required="required" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
+											placeholder="Message"></textarea>
+										</div>
+										<button type="submit" class="btn btn-3 btn-block" name="btnContactUs" id="btnContactUs">
+									Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+
+    <section class="box-content box-4 box-style">
 			<div class="clearfix">
 				<div class="cd-testimonials-wrapper cd-container">
 					<ul class="cd-testimonials">
@@ -488,68 +553,6 @@
 				</div> <!-- cd-testimonials-all -->
 			</div>
 		</section>
-
-		<!-- ////////////Content Box 05 -->
-		<section class="box-content box-5" id="contact" style="background:white;" >
-			<div class="container">
-				<div class="row heading">
-					<div class="col-lg-12">
-	                    <h2>Contact us</h2>
-						<hr>
-	                    <div class="intro">Lorem ipsum dolor sit amet</div>
-	                </div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 ">
-						<div class="row box-item">
-							<h3>Complete the Submission Form</h3>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-							<h3>Or Just Make a Call</h3>
-							<p>+6221 888 888 90 <br>
-								+6221 888 88891</p>
-							<p>info@yourdomain.com</p>
-						</div>
-					</div>
-					<div class="col-md-8">
-						<div id="contact-form">
-							<form name="form1" method="post" action="contact.php">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-										<input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<input type="email" class="form-control input-lg" name="email" id="email" placeholder="Enter email" required="required" />
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="text" class="form-control input-lg" name="subject" id="subject" placeholder="Subject" required="required" />
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
-											placeholder="Message"></textarea>
-										</div>
-										<button type="submit" class="btn btn-3 btn-block" name="btnContactUs" id="btnContactUs">
-									Submit</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-	</div>
 
 	<!-- /////////////////////////////////////////Footer -->
 	<footer>

@@ -1,6 +1,4 @@
-/*!
- izBootstrap
- */
+
  
  /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Html-Body------------------------------- */
@@ -65,11 +63,11 @@ hr:after {content: url(../static/images/dots.png);display: inline-block;position
 /* ---------------------------------Header+Nav--------------------------------- */
 /* ---------------------------------------------------------------------------- */
 .navbar-default {border-color: transparent;background-color: #222;}
-.navbar-default .navbar-brand {font-family: Helvetica,Arial,cursive;color: #6ECADC;}
+.navbar-default .navbar-brand {font-family: Helvetica,Arial,cursive; color: #6ECADC;}
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {color: #6ECADC;}
+.navbar-default .navbar-brand.active {color: #6ECADC !important;}
 
 .navbar-default .navbar-collapse {border-color: rgba(255,255,255,.02);}
 
@@ -383,3 +381,23 @@ a.btn:focus{outline: 0;}
 
 .btn-4 {background: #6ECADC;border: 2px solid transparent;font-size:18px;}
 .btn-4:hover {color:#333;border:2px solid #555;background:transparent;text-shadow: none;}
+
+.login-form {
+		width: 500px;
+    	margin: 50px auto;
+	}
+    .login-form form {
+        margin-top: 15%;
+    	margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+
