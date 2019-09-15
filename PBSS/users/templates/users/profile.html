@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load static %}
-{% load crispy_forms_tags %}
+{%  extends "users/userbase.html" %}
+{% block content %}
+    {% load static %}
+    {% load crispy_forms_tags %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/our-team.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animated-logo.min.css' %}">
-</head>
+ <!-- i have to add nav bar which will be redirected to this page.-->
+    <div class="profile-form">
+            <div class="row">
+                <div class="col-mt-3">
+                <div class="content-section">
+                    <form method="POST">
+                        <p>hi, {{ user.username }}</p>
+                     </form>
 
-<body>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
 
-<h1> {{ user.username }}</h1>
 
 
-</body>
-</html>
+{% endblock content %}

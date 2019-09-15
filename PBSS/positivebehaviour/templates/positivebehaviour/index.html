@@ -1,653 +1,460 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Positive Behaviour</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'css/bootstrap.min.css' %}">
-
-    <!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css"
-          href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'css/style.css' %}">
-	<link rel="stylesheet" type="text/css"
-          href="{% static 'css/animated-logo.min.css' %}">
-	<link rel="stylesheet" type="text/css"
-          href="{% static 'css/our-team.css' %}">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-	<!-- Js -->
-	<script src= "{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
-
-        <script src= "{% static 'js/html5shiv.js' %}"></script>
-        <script src= "{% static 'js/respond.min.js' %}"></script>
-    <![endif]-->
-</head>
-
-<body>
-	<!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">PBSS</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#page-top">Home</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About us</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#fbaform">FBA Form</a>
-                    </li>
-                    <li>
-                         {% if user.is_authenticated %}
-                             <li>
-                                 <a class="page-scroll" href="{% url 'profile' %}">Profile</a>
-                             </li>
-                             <li>
-                                 <a class="page-scroll" href="{% url 'logout' %}">Logout</a>
-                             </li>
-
-
-                     </li>
-                             <li>
-
-                         {% else %}
-                            <a class="page-scroll" href="#portal">Signup</a>
-                        </li>
-                         {% endif %}
-
-                        <li>
-
-                        <a class="page-scroll" href="#contact">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-	<!-- Navigation -->
-
-	<!-- /////////////////////////////////////////Header -->
-	<header id="page-top">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="o-container">
-						<div class="c-slack">
-						  <span class="c-slack__dot c-slack__dot--a"></span>
-						  <span class="c-slack__dot c-slack__dot--b"></span>
-						  <span class="c-slack__dot c-slack__dot--c"></span>
-						  <span class="c-slack__dot c-slack__dot--d"></span>
-						</div>
-					</div>
-					<div class="intro-text">
-						<div class="intro-lead-in">Hero Image</div>
-						<div class="intro-heading">Description</div>
-					</div>
-					<a class="btn btn-1 btn-sm" href="#about">About Us</a>
-					<a class="btn btn-1 btn-sm" href="#team">Our Team</a>
-				</div>
-			</div>
-		</div>
-    </header>
-	<!-- Header -->
-
-    <section id="about" class="box-content box-3">
-			<div class="container">
-				<div class="row heading">
-					<div class="col-lg-12">
-						<h2>About us</h2>
-						<hr>
-						<div class="intro">Lorem ipsum dolor sit amet</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12">
-						<ul class="timeline">
-							<li class="blue">
-								<div class="timeline-image">
-									<img class="img-circle img-responsive" src="{% static 'images/4.jpg' %}" alt="">
-								</div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4>2009-2011</h4>
-										<h4 class="subheading">Our Humble Beginnings</h4>
-									</div>
-									<div class="timeline-body">
-										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted red">
-								<div class="timeline-image">
-									<img class="img-circle img-responsive" src="{% static 'images/5.jpg' %}" alt="">
-								</div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4>March 2011</h4>
-										<h4 class="subheading">An Agency is Born</h4>
-									</div>
-									<div class="timeline-body">
-										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-									</div>
-								</div>
-							</li>
-							<li class="green">
-								<div class="timeline-image">
-									<img class="img-circle img-responsive" src="{% static 'images/6.jpg' %}" alt="">
-								</div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4>December 2012</h4>
-										<h4 class="subheading">Transition to Full Service</h4>
-									</div>
-									<div class="timeline-body">
-										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted yellow">
-								<div class="timeline-image">
-									<img class="img-circle img-responsive" src="{% static 'images/7.jpg' %}" alt="">
-								</div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4>July 2014</h4>
-										<h4 class="subheading">Phase Two Expansion</h4>
-									</div>
-									<div class="timeline-body">
-										<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted ">
-								<div class="timeline-image">
-									<h4>Be Part
-									<br>Of Our
-									<br>Story!</h4>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-
-
-	<!-- /////////////////////////////////////////Content -->
-
-
-    <div>
-        {%  if messages %}
-            {% for message in messages %}
-               <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-               </div>
-            {% endfor %}
-        {%  endif %}
-
-    </div>
-
-
-
-    <div id="page-content" class="index-page">
-
-		<!-- ////////////Content Box 01 -->
-		<section id="services" class="box-content box-1">
-			<div class="container">
-				<div class="row heading">
-					<div class="col-lg-12">
-						<h2>Services</h2>
-						<hr>
-						<div class="intro">Lorem ipsum dolor sit amet</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3 box-item">
-						<div class="wrap-img">
-							<img src="{% static 'images/Html.png' %}" alt="">
-						</div>
-						<h3 class="blue">Text Heading 3</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-						<button type="submit" class="btn btn-2 ">More</button>
-					</div>
-					<div class="col-sm-3 box-item">
-						<div class="wrap-img">
-							<img src="{% static 'images/CSS.png' %}" alt="">
-						</div>
-						<h3 class="yellow">Text Heading 3</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-						<button type="submit" class="btn btn-2 ">More</button>
-					</div>
-					<div class="col-sm-3 box-item">
-						<div class="wrap-img">
-							<img src="{% static 'images/screen.png' %}" alt="">
-						</div>
-						<h3 class="red">Text Heading 3</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-						<button type="submit" class="btn btn-2 ">More</button>
-					</div>
-					<div class="col-sm-3 box-item">
-						<div class="wrap-img">
-							<img src="{% static 'images/Setting.png' %}" alt="">
-						</div>
-						<h3 class="green">Text Heading 3</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-						<button type="submit" class="btn btn-2 ">More</button>
-					</div>
-				</div>
-			</div>
-		</section>
-
-        <section id="fbaform" class="box-content box-1" style="background: white;>
-			<div class="container">
-				<div class="row heading">
-					<div class="col-lg-12">
-						<h2>FBA Form</h2>
-						<hr>
-						<div class="intro">Lorem ipsum dolor sit amet</div>
-					</div>
-                    <button type="submit" class="btn btn-2 ">Access Form</button>
-				</div>
-
-			</div>
-		</section>
-
-
-		<!-- ////////////Content Box 02 -->
-<section id="portal" class="box-content box-2 box-style">
-			<div class="container">
-				<div class="row">
-					<blockquote>Block Qoute for information and Sign Up login Button.</blockquote>
+{%  extends "positivebehaviour/base.html" %}
+{% block content %}
+        {% load static %}
+        <header id="page-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="o-container">
+                            <div class="c-slack">
+                              <span class="c-slack__dot c-slack__dot--a"></span>
+                              <span class="c-slack__dot c-slack__dot--b"></span>
+                              <span class="c-slack__dot c-slack__dot--c"></span>
+                              <span class="c-slack__dot c-slack__dot--d"></span>
+                            </div>
+                        </div>
+                        <div class="intro-text">
+                            <div class="intro-lead-in">Hero Image</div>
+                            <div class="intro-heading">Description</div>
+                        </div>
+                        <a class="btn btn-1 btn-sm" href="#about">About Us</a>
+                        <a class="btn btn-1 btn-sm" href="#team">Our Team</a>
+                    </div>
                 </div>
-                <div class="container-fluid">
+            </div>
+        </header>
+        <!-- Header -->
+
+        <section id="about" class="box-content box-3">
+                <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12">
+                            <h2>About us</h2>
+                            <hr>
+                            <div class="intro">Lorem ipsum dolor sit amet</div>
+                        </div>
+                    </div>
                     <div class="row">
-                <div class="col text-center">
-                    <a class="btn btn-1 btn-sm" href="{% url 'register' %}">Signup</a>
-                    <a class="btn btn-1 btn-sm" href="{% url 'login' %}">Signin</a>
-                </div></div>
+                        <div class="col-lg-12">
+                            <ul class="timeline">
+                                <li class="blue">
+                                    <div class="timeline-image">
+                                        <img class="img-circle img-responsive" src="{% static 'images/4.jpg' %}" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4>2009-2011</h4>
+                                            <h4 class="subheading">Our Humble Beginnings</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted red">
+                                    <div class="timeline-image">
+                                        <img class="img-circle img-responsive" src="{% static 'images/5.jpg' %}" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4>March 2011</h4>
+                                            <h4 class="subheading">An Agency is Born</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="green">
+                                    <div class="timeline-image">
+                                        <img class="img-circle img-responsive" src="{% static 'images/6.jpg' %}" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4>December 2012</h4>
+                                            <h4 class="subheading">Transition to Full Service</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted yellow">
+                                    <div class="timeline-image">
+                                        <img class="img-circle img-responsive" src="{% static 'images/7.jpg' %}" alt="">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4>July 2014</h4>
+                                            <h4 class="subheading">Phase Two Expansion</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted ">
+                                    <div class="timeline-image">
+                                        <h4>Be Part
+                                        <br>Of Our
+                                        <br>Story!</h4>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-			</div>
-		</section>
-		<!-- ////////////Content Box 03 -->
-
-		<!-- ////////////Content Box 04 -->
+            </section>
 
 
-		<!-- ////////////Content Box 05 -->
-		<section class="box-content box-5" id="contact" style="background:white;" >
-			<div class="container">
-				<div class="row heading">
-					<div class="col-lg-12">
-	                    <h2>Contact us</h2>
-						<hr>
-	                    <div class="intro">Lorem ipsum dolor sit amet</div>
-	                </div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 ">
-						<div class="row box-item">
-							<h3>Complete the Submission Form</h3>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-							<h3>Or Just Make a Call</h3>
-							<p>+6221 888 888 90 <br>
-								+6221 888 88891</p>
-							<p>info@yourdomain.com</p>
-						</div>
-					</div>
-					<div class="col-md-8">
-						<div id="contact-form">
-							<form name="form1" method="post" action="contact.php">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-										<input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<input type="email" class="form-control input-lg" name="email" id="email" placeholder="Enter email" required="required" />
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="text" class="form-control input-lg" name="subject" id="subject" placeholder="Subject" required="required" />
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
-											placeholder="Message"></textarea>
-										</div>
-										<button type="submit" class="btn btn-3 btn-block" name="btnContactUs" id="btnContactUs">
-									Submit</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-	</div>
 
 
-    <section class="box-content box-4 box-style">
-			<div class="clearfix">
-				<div class="cd-testimonials-wrapper cd-container">
-					<ul class="cd-testimonials">
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<div class="cd-author">
-								<img src="{% static 'images/avatar-1.jpg' %}" alt="">
-								<ul class="cd-author-info">
-									<li>MyName</li>
-									<li>CEO, AmberCreative</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ea, perferendis error repudiandae numquam dolor fuga temporibus. Unde omnis, consequuntur.</p>
-							<div class="cd-author">
-								<img src="{% static 'images/avatar-2.jpg' %}" alt="">
-								<ul class="cd-author-info">
-									<li>MyName</li>
-									<li>Designer, CodyHouse</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam nulla est, illo molestiae maxime officiis, quae ad, ipsum vitae deserunt molestias eius alias.</p>
-							<div class="cd-author">
-								<img src="{% static 'images/avatar-3.jpg' %}" alt="">
-								<ul class="cd-author-info">
-									<li>MyName</li>
-									<li>CEO, CompanyName</li>
-								</ul>
-							</div>
-						</li>
-					</ul> <!-- cd-testimonials -->
-				</div> <!-- cd-testimonials-wrapper -->
+        <!-- /////////////////////////////////////////Content -->
 
-				<div class="cd-see-all"><a href="#0" class="btn btn-1">See all</a></div>
 
-				<div class="cd-testimonials-all">
-					<div class="cd-testimonials-all-wrapper">
-						<ul>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
+        <div>
+            {%  if messages %}
+                {% for message in messages %}
+                   <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                   </div>
+                {% endfor %}
+            {%  endif %}
 
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-1.jpg.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nostrum nisi, doloremque error hic nam nemo doloribus porro impedit perferendis. Tempora, distinctio hic suscipit. At ullam eaque atque recusandae modi fugiat voluptatem laborum laboriosam rerum, consequatur reprehenderit omnis, enim pariatur nam, quidem, quas vel reiciendis aspernatur consequuntur. Commodi quasi enim, nisi alias fugit architecto, doloremque, eligendi quam autem exercitationem consectetur.</p>
+        </div>
 
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-2.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quibusdam eveniet, molestiae laborum voluptatibus minima hic quasi accusamus ut facere, eius expedita, voluptatem? Repellat incidunt veniam quaerat, qui laboriosam dicta. Quidem ducimus laudantium dolorum enim qui at ipsum, a error.</p>
 
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-3.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptates officiis tempore quae officia! Beatae quia deleniti cum corporis eos perferendis libero reiciendis nemo iusto accusamus, debitis tempora voluptas praesentium repudiandae laboriosam excepturi laborum, nisi optio repellat explicabo, incidunt ex numquam. Ullam perferendis officiis harum doloribus quae corrupti minima quia, aliquam nostrum expedita pariatur maxime repellat, voluptas sunt unde, inventore.</p>
 
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-4.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
+        <div id="page-content" class="index-page">
 
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-5.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quia quas, quis illo adipisci voluptate ex harum iste commodi nulla dolor. Eius ratione quod ab!</p>
-
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-6.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, dignissimos iure rem fugiat consequuntur officiis.</p>
-
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-6.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus tempora necessitatibus reiciendis provident deserunt maxime sit id. Dicta aut voluptatibus placeat quibusdam vel, dolore.</p>
-
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-2.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis iusto sapiente, excepturi velit, beatae possimus est tenetur cumque fugit tempore dolore fugiat! Recusandae, vel suscipit? Perspiciatis non similique sint suscipit officia illo, accusamus dolorum, voluptate vitae quia ea amet optio magni voluptatem nemo, natus nihil.</p>
-
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-3.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quasi officiis pariatur, fugit minus omnis animi ut assumenda quod commodi, ad a alias maxime unde suscipit magnam, voluptas laboriosam ipsam quibusdam quidem, dolorem deleniti id.</p>
-
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-4.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus tempora necessitatibus reiciendis provident deserunt maxime sit id. Dicta aut voluptatibus placeat quibusdam vel, dolore.</p>
-
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-5.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-							<li class="cd-testimonials-item">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore ipsam, eos suscipit nostrum molestias reprehenderit, rerum amet cum similique a, ipsum soluta delectus explicabo nihil repellat incidunt! Minima magni possimus mollitia deserunt facere, tempore earum modi, ea ipsa dicta temporibus suscipit quidem ut quibusdam vero voluptatibus nostrum excepturi explicabo nulla harum, molestiae alias. Ab, quidem rem fugit delectus quod.</p>
-
-								<div class="cd-author">
-									<img src="{% static 'images/avatar-6.jpg' %}" alt="">
-									<ul class="cd-author-info">
-										<li>MyName</li>
-										<li>CEO, CompanyName</li>
-									</ul>
-								</div> <!-- cd-author -->
-							</li>
-						</ul>
-					</div>	<!-- cd-testimonials-all-wrapper -->
-					<a href="#0" class="close-btn">Close</a>
-				</div> <!-- cd-testimonials-all -->
-			</div>
-		</section>
-
-	<!-- /////////////////////////////////////////Footer -->
-	<footer>
-		<div class="wrap-footer">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4 col-footer footer-1">
-						<div class=""><h6>PBSS</h6></div>
-						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, dolore magna aliquam erat volutpat. </p>
+            <!-- ////////////Content Box 01 -->
+            <section id="services" class="box-content box-1">
+                <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12">
+                            <h2>Services</h2>
+                            <hr>
+                            <div class="intro">Lorem ipsum dolor sit amet</div>
                         </div>
-					</div>
-
-
-						<div class="col-xs-6 col-md-4 col-footer footer-3">
-                            <h6>Quick Links</h6>
-                                <ul class="footer-links">
-                                      <li><a href="#">Home</a></li>
-                                      <li><a href="#">About us</a></li>
-                                      <li><a href="#">Signin/Signup</a></li>
-                                      <li><a href="#">Services</a></li>
-                                      <li><a href="#">FBA Form</a></li>
-                                      <li><a href="#">Contact us</a></li>
-                                </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 box-item">
+                            <div class="wrap-img">
+                                <img src="{% static 'images/Html.png' %}" alt="">
+                            </div>
+                            <h3 class="blue">Text Heading 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <button type="submit" class="btn btn-2 ">More</button>
                         </div>
+                        <div class="col-sm-3 box-item">
+                            <div class="wrap-img">
+                                <img src="{% static 'images/CSS.png' %}" alt="">
+                            </div>
+                            <h3 class="yellow">Text Heading 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <button type="submit" class="btn btn-2 ">More</button>
+                        </div>
+                        <div class="col-sm-3 box-item">
+                            <div class="wrap-img">
+                                <img src="{% static 'images/screen.png' %}" alt="">
+                            </div>
+                            <h3 class="red">Text Heading 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <button type="submit" class="btn btn-2 ">More</button>
+                        </div>
+                        <div class="col-sm-3 box-item">
+                            <div class="wrap-img">
+                                <img src="{% static 'images/Setting.png' %}" alt="">
+                            </div>
+                            <h3 class="green">Text Heading 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <button type="submit" class="btn btn-2 ">More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fbaform" class="box-content box-1" style="background: white;>
+                <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12">
+                            <h2>FBA Form</h2>
+                            <hr>
+                            <div class="intro">Lorem ipsum dolor sit amet</div>
+                        </div>
+                        <button type="submit" class="btn btn-2 ">Access Form</button>
+                    </div>
+
+                </div>
+            </section>
 
 
-                    <div class="col-md-4 col-footer footer-2">
-						<div class=""><h6>Your Email</h6></div>
-						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Consectetuer adipiscing elit, dolore magna aliquam erat volutpat. </p>
-							<div class="subscribe-form" >
-								<form method="get" action="/search" id="subscribe">
-									<div class="form-group">
-										<input type="text" class="form-control input-lg" name="subscribe" placeholder="Enter your email address...  " required="required" />
-									</div>
-									<button type="submit" name="Submit" class="btn btn-4 btn-block">Subscribe</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="copyright">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4">
-						<p>Copyright &copy; PBSS - Designed by <a href="#"></a></p>
-					</div>
-					<div class="col-md-4">
-						<ul class="list-inline">
-							<li><a href="#"><i class="fa fa-twitter"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-facebook"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-google"></i></a>
+            <!-- ////////////Content Box 02 -->
+    <section id="portal" class="box-content box-2 box-style">
+                <div class="container">
+                    <div class="row">
+                        <blockquote>Block Qoute for information and Sign Up login Button.</blockquote>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                    <div class="col text-center">
+                        <a class="btn btn-1 btn-sm" href="{% url 'register' %}">Signup</a>
+                        <a class="btn btn-1 btn-sm" href="{% url 'login' %}">Signin</a>
+                    </div></div>
+                    </div>
+                </div>
+            </section>
+            <!-- ////////////Content Box 03 -->
+
+            <!-- ////////////Content Box 04 -->
+
+
+            <!-- ////////////Content Box 05 -->
+            <section class="box-content box-5" id="contact" style="background:white;" >
+                <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12">
+                            <h2>Contact us</h2>
+                            <hr>
+                            <div class="intro">Lorem ipsum dolor sit amet</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="row box-item">
+                                <h3>Complete the Submission Form</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                                <h3>Or Just Make a Call</h3>
+                                <p>+6221 888 888 90 <br>
+                                    +6221 888 88891</p>
+                                <p>info@yourdomain.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="contact-form">
+                                <form name="form1" method="post" action="contact.php">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                            <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control input-lg" name="email" id="email" placeholder="Enter email" required="required" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control input-lg" name="subject" id="subject" placeholder="Subject" required="required" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
+                                                placeholder="Message"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-3 btn-block" name="btnContactUs" id="btnContactUs">
+                                        Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <section class="box-content box-4 box-style">
+                <div class="clearfix">
+                    <div class="cd-testimonials-wrapper cd-container">
+                        <ul class="cd-testimonials">
+                            <li>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="cd-author">
+                                    <img src="{% static 'images/avatar-1.jpg' %}" alt="">
+                                    <ul class="cd-author-info">
+                                        <li>MyName</li>
+                                        <li>CEO, AmberCreative</li>
+                                    </ul>
+                                </div>
                             </li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul class="list-inline">
-							•<li><a href="#">Privacy Policy</a>
-							</li>
-							•<li><a href="#">Terms of Use</a>
-							</li>
-                            •<li><a href="#">Sitemap</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer -->
+                            <li>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ea, perferendis error repudiandae numquam dolor fuga temporibus. Unde omnis, consequuntur.</p>
+                                <div class="cd-author">
+                                    <img src="{% static 'images/avatar-2.jpg' %}" alt="">
+                                    <ul class="cd-author-info">
+                                        <li>MyName</li>
+                                        <li>Designer, CodyHouse</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam nulla est, illo molestiae maxime officiis, quae ad, ipsum vitae deserunt molestias eius alias.</p>
+                                <div class="cd-author">
+                                    <img src="{% static 'images/avatar-3.jpg' %}" alt="">
+                                    <ul class="cd-author-info">
+                                        <li>MyName</li>
+                                        <li>CEO, CompanyName</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul> <!-- cd-testimonials -->
+                    </div> <!-- cd-testimonials-wrapper -->
 
+                    <div class="cd-see-all"><a href="#0" class="btn btn-1">See all</a></div>
 
-	<!-- jQuery -->
-	<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
-	<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
-	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-	<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
+                    <div class="cd-testimonials-all">
+                        <div class="cd-testimonials-all-wrapper">
+                            <ul>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
 
-	<!-- Bootstrap Core JavaScript -->
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-1.jpg.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nostrum nisi, doloremque error hic nam nemo doloribus porro impedit perferendis. Tempora, distinctio hic suscipit. At ullam eaque atque recusandae modi fugiat voluptatem laborum laboriosam rerum, consequatur reprehenderit omnis, enim pariatur nam, quidem, quas vel reiciendis aspernatur consequuntur. Commodi quasi enim, nisi alias fugit architecto, doloremque, eligendi quam autem exercitationem consectetur.</p>
 
-	<!-- Custom Theme JavaScript -->
-	<script src="{% static 'js/agency.js'%}"></script>
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-2.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quibusdam eveniet, molestiae laborum voluptatibus minima hic quasi accusamus ut facere, eius expedita, voluptatem? Repellat incidunt veniam quaerat, qui laboriosam dicta. Quidem ducimus laudantium dolorum enim qui at ipsum, a error.</p>
 
-	<!-- Animated Top -->
-	<script src="{% static 'js/jquery.easing.min.js'%}"></script>
-	<script src="{% static 'js/classie.js'%}"></script>
-	<script src="{% static 'js/cbpAnimatedHeader.js'%}"></script>
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-3.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptates officiis tempore quae officia! Beatae quia deleniti cum corporis eos perferendis libero reiciendis nemo iusto accusamus, debitis tempora voluptas praesentium repudiandae laboriosam excepturi laborum, nisi optio repellat explicabo, incidunt ex numquam. Ullam perferendis officiis harum doloribus quae corrupti minima quia, aliquam nostrum expedita pariatur maxime repellat, voluptas sunt unde, inventore.</p>
 
-</body>
-</html>
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-4.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
+
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-5.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quia quas, quis illo adipisci voluptate ex harum iste commodi nulla dolor. Eius ratione quod ab!</p>
+
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-6.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, dignissimos iure rem fugiat consequuntur officiis.</p>
+
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-6.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus tempora necessitatibus reiciendis provident deserunt maxime sit id. Dicta aut voluptatibus placeat quibusdam vel, dolore.</p>
+
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-2.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis iusto sapiente, excepturi velit, beatae possimus est tenetur cumque fugit tempore dolore fugiat! Recusandae, vel suscipit? Perspiciatis non similique sint suscipit officia illo, accusamus dolorum, voluptate vitae quia ea amet optio magni voluptatem nemo, natus nihil.</p>
+
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-3.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quasi officiis pariatur, fugit minus omnis animi ut assumenda quod commodi, ad a alias maxime unde suscipit magnam, voluptas laboriosam ipsam quibusdam quidem, dolorem deleniti id.</p>
+
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-4.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus tempora necessitatibus reiciendis provident deserunt maxime sit id. Dicta aut voluptatibus placeat quibusdam vel, dolore.</p>
+
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-5.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                                <li class="cd-testimonials-item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore ipsam, eos suscipit nostrum molestias reprehenderit, rerum amet cum similique a, ipsum soluta delectus explicabo nihil repellat incidunt! Minima magni possimus mollitia deserunt facere, tempore earum modi, ea ipsa dicta temporibus suscipit quidem ut quibusdam vero voluptatibus nostrum excepturi explicabo nulla harum, molestiae alias. Ab, quidem rem fugit delectus quod.</p>
+                                    <div class="cd-author">
+                                        <img src="{% static 'images/avatar-6.jpg' %}" alt="">
+                                        <ul class="cd-author-info">
+                                            <li>MyName</li>
+                                            <li>CEO, CompanyName</li>
+                                        </ul>
+                                    </div> <!-- cd-author -->
+                                </li>
+                            </ul>
+                        </div>	<!-- cd-testimonials-all-wrapper -->
+                        <a href="#0" class="close-btn">Close</a>
+                    </div> <!-- cd-testimonials-all -->
+                </div>
+            </section>
+
+{% endblock content %}

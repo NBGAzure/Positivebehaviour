@@ -12,12 +12,15 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}!')
-            return redirect('index')
+
+            '''if crashed change userbase to index. I have to ask shankar for redirecting after login.'''
+
+            return redirect('userbase')
     else:
         form = UserRegisterForm()
-    return render(request,'users/register.html', {'form': form})
+    return render(request, 'users/register.html', {'form': form})
 
 
 @login_required
 def profile(request):
-    return render(request,'users/profile.html' )
+    return render(request, 'users/profile.html', {'title': 'Profile'})

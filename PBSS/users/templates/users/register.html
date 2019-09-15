@@ -1,181 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load static %}
-{% load crispy_forms_tags %}
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css"
-          href="{% static 'css/reset.css' %}">
-     <link rel="stylesheet" type="text/css"
-          href="{% static 'css/animated-logo.min.css' %}">
-	<link rel="stylesheet" type="text/css"
-          href="{% static 'css/our-team.css' %}">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Js -->
-	<script src= "{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
+{%  extends "users/userbase.html" %}
+{% block content %}
+        {% load static %}
+        {% load crispy_forms_tags %}
 
-        <script src= "{% static 'js/html5shiv.js' %}"></script>
-        <script src= "{% static 'js/respond.min.js' %}"></script>
-    <![endif]-->
-</head>
+            <div class="login-form">
+            <div class="row">
+                <div class="col-mt-3">
+                <div class="content-section">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <h3 class="text-center">Sign up</h3><br>
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4 "></legend>
+                            {{ form| crispy }}
+                        </fieldset>
 
-<body>
-<!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <a class="navbar-brand page-scroll" href="#page-top">PBSS</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-	<!-- Navigation -->
-
-<div class="login-form">
-<div class="row">
-    <div class="col-mt-3">
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <h2 class="text-center">Sign up</h2>
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4 "></legend>
-                {{ form| crispy }}
-            </fieldset>
-
-            <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit" > Sign Up </button>
-            </div>
-         </form>
-        <div class="border-top pr-3">
-            <small class="text-muted">
-                Already have an account? <a class="ml-2" href="{% url 'login' %}"> Sign In</a>
-            </small>
-        </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- jQuery -->
-	<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
-	<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
-	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-	<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
-
-	<!-- Bootstrap Core JavaScript -->
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-	<!-- Custom Theme JavaScript -->
-	<script src="{% static 'js/agency.js'%}"></script>
-
-	<!-- Animated Top -->
-	<script src="{% static 'js/jquery.easing.min.js'%}"></script>
-	<script src="{% static 'js/classie.js'%}"></script>
-	<script src="{% static 'js/cbpAnimatedHeader.js'%}"></script>
-<footer>
-		<div class="wrap-footer">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4 col-footer footer-1">
-						<div class=""><h6>PBSS</h6></div>
-						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, dolore magna aliquam erat volutpat. </p>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" type="submit" > Sign Up </button>
                         </div>
-					</div>
+                     </form>
+                    <div class="border-top pr-3">
+                        <small class="text-muted">
+                            Already have an account? <a class="ml-2" href="{% url 'login' %}"> Sign In</a>
+                        </small>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-
-						<div class="col-xs-6 col-md-4 col-footer footer-3">
-                            <h6>Quick Links</h6>
-                                <ul class="footer-links">
-                                      <li><a href="#">Home</a></li>
-                                      <li><a href="#">About us</a></li>
-                                      <li><a href="#">Signin/Signup</a></li>
-                                      <li><a href="#">Services</a></li>
-                                      <li><a href="#">FBA Form</a></li>
-                                      <li><a href="#">Contact us</a></li>
-                                </ul>
-                        </div>
-
-
-                    <div class="col-md-4 col-footer footer-2">
-						<div class=""><h6>Your Email</h6></div>
-						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Consectetuer adipiscing elit, dolore magna aliquam erat volutpat. </p>
-							<div class="subscribe-form" >
-								<form method="get" action="/search" id="subscribe">
-									<div class="form-group">
-										<input type="text" class="form-control input-lg" name="subscribe" placeholder="Enter your email address...  " required="required" />
-									</div>
-									<button type="submit" name="Submit" class="btn btn-4 btn-block">Subscribe</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="copyright">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4">
-						<p>Copyright &copy; PBSS - Designed by <a href="#"></a></p>
-					</div>
-					<div class="col-md-4">
-						<ul class="list-inline">
-							<li><a href="#"><i class="fa fa-twitter"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-facebook"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-google"></i></a>
-                            </li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul class="list-inline">
-							•<li><a href="#">Privacy Policy</a>
-							</li>
-							•<li><a href="#">Terms of Use</a>
-							</li>
-                            •<li><a href="#">Sitemap</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer -->
-
-
-	<!-- jQuery -->
-	<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
-	<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
-	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-	<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
-
-	<!-- Bootstrap Core JavaScript -->
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-	<!-- Custom Theme JavaScript -->
-	<script src="{% static 'js/agency.js'%}"></script>
-
-	<!-- Animated Top -->
-	<script src="{% static 'js/jquery.easing.min.js'%}"></script>
-	<script src="{% static 'js/classie.js'%}"></script>
-	<script src="{% static 'js/cbpAnimatedHeader.js'%}"></script>
-	<!-- Footer -->
-</body>
-</html>
+{% endblock content %}
