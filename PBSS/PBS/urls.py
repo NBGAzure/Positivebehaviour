@@ -21,6 +21,9 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as user_views
 
+from django.conf.urls import include, url
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('positivebehaviour/', include('positivebehaviour.urls')),
@@ -41,5 +44,7 @@ urlpatterns = [
 
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
+
+
 
 ]
