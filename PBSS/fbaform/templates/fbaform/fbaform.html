@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>posetive behaviour </title>
+    <h1>Behaviour recording form </h1>
+
+{#    <ul>#}
+{#        {% for all_Datetime in all_time%}#}
+{#        <li>{{ all_Datetime.PersonCompleting }}</li>#}
+{#            <li>{{ all_Datetime.Date }}</li>#}
+{#            <li>{{ all_Datetime.TimeIncidentStarted }}</li>#}
+{#            <li>{{ all_Datetime.TimeIncedentEnded }}</li>#}
+{#            <form action="/deletePbss/{{ all_Datetime.id }}/" method="post">{%  csrf_token %}#}
+{#                <input type="submit" value="Delete">#}
+{#    </form>#}
+{##}
+{#        {% endfor %}#}
+{##}
+{#    </ul>#}
+<ul>
+    {% for location_all in all_items %}
+
+                <li>{{ location_all.wakingup }}</li>
+
+{#                <li>{{ location_all.pain }}</li>#}
+{##}
+{#                <li>{{ location_all.staff }}</li>#}
+{##}
+{#                <li>{{ location_all.solution }}</li>#}
+
+    {% endfor %}
+</ul>
+    <form action="/addBehaviour/" method="post">{%  csrf_token %}
+    <input type="text" name="wakingup"/>
+    <input type="submit" value="Add">
+    </form>
+</head>
+<body>
+
+</body>
+</html>

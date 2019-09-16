@@ -36,6 +36,7 @@ STATICFILES_DIRS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'fbaform.apps.FbaformConfig',
     'positivebehaviour',
     'users.apps.UsersConfig',
     'crispy_forms',
