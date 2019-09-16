@@ -1,6 +1,54 @@
-{%  extends "positivebehaviour/base.html" %}
+{%  extends "users/userbase.html" %}
 {% block content %}
-        {% load static %}
+    {% load static %}
+    {% load crispy_forms_tags %}
+
+ <!-- i have to add nav bar which will be redirected to this page.-->
+    <div class="sitemap">
+            <div class="row">
+                <div class="col-mt-3">
+                <div class="content-section">
+                    <form method="POST">
+                        <h4>Sitemap</h4>
+            <div class="menu">
+                <ul>
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">COMPANY</a></li>
+                  <li><a href="#">SOLUTIONS</a></li>
+                  <li><a href="#">SERVICES</a></li>
+                  <li><a href="#">NEWS & EVENTS</a></li>
+                  <li><a href="#">BLOGS</a></li>
+                  <li><a href="#">CONTACTS</a>
+                    <div class = "submenu">
+                      <ul>
+                            <li><a href="#">subitem</a></li>
+                            <li><a href="#">subitem</a></li>
+                      </ul></div>
+                  </li>
+                    <li><a href="#">HOME</a></li>
+                  <li><a href="#">COMPANY</a></li>
+                  <li><a href="#">SOLUTIONS</a></li>
+                  <li><a href="#">SERVICES</a></li>
+                  <li><a href="#">NEWS & EVENTS</a></li>
+                  <li><a href="#">BLOGS</a></li>
+                  <li><a href="#">CONTACTS</a></li>
+                    <li><a href="#">HOME</a></li>
+                  <li><a href="#">COMPANY</a></li>
+                  <li><a href="#">SOLUTIONS</a></li>
+                  <li><a href="#">SERVICES</a></li>
+                  <li><a href="#">NEWS & EVENTS</a></li>
+                  <li><a href="#">BLOGS</a></li>
+                  <li><a href="#">CONTACTS</a></li>
+                </ul>
+              </div>
+                     </form>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+
 
 
 {% endblock content %}
