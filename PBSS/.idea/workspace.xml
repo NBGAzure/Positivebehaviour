@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="629a3155-c05d-4b9a-88cb-87e8ce3fa629" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/PBSS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PBSS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBS/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="937">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="339">
+              <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -68,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PBS/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="132" column="19" lean-forward="true" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+            <state relative-caret-position="290">
+              <caret line="139" column="52" lean-forward="true" selection-start-line="139" selection-start-column="52" selection-end-line="139" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -158,7 +157,6 @@
         <option value="$PROJECT_DIR$/users/apps.py" />
         <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
-        <option value="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html" />
         <option value="$PROJECT_DIR$/users/templates/users/profile.html" />
         <option value="$PROJECT_DIR$/users/templates/users/logout.html" />
         <option value="$PROJECT_DIR$/users/templates/users/register.html" />
@@ -169,10 +167,11 @@
         <option value="$PROJECT_DIR$/users/templates/users/password_reset_complete.html" />
         <option value="$PROJECT_DIR$/users/templates/users/login.html" />
         <option value="$PROJECT_DIR$/PBS/settings.py" />
+        <option value="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="276" />
     <option name="y" value="126" />
     <option name="width" value="1940" />
@@ -197,6 +196,30 @@
               <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
               <item name="PBSS" type="462c0819:PsiDirectoryNode" />
               <item name="PBS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
@@ -287,18 +310,17 @@
       <workItem from="1568095979021" duration="26675000" />
       <workItem from="1568349131937" duration="139000" />
       <workItem from="1568349291349" duration="1711000" />
-      <workItem from="1568796346079" duration="4695000" />
+      <workItem from="1568796346079" duration="5653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65634000" />
+    <option name="totallyTimeSpent" value="66592000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.2191689" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.2191689" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.502008" side_tool="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49932975" weight="0.32956153" />
@@ -313,7 +335,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.23190348" side_tool="true" weight="0.2956153" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.7680965" visible="true" weight="0.3437058" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.7680965" visible="true" weight="0.3437058" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32924962" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -525,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="937">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/templates/users/userbase.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -593,8 +608,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PBS/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="132" column="19" lean-forward="true" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+        <state relative-caret-position="290">
+          <caret line="139" column="52" lean-forward="true" selection-start-line="139" selection-start-column="52" selection-end-line="139" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
         </state>
       </provider>
     </entry>
