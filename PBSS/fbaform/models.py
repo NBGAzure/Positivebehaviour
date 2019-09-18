@@ -5,20 +5,15 @@ class Location(models.Model):
     # pain = models.CharField(max_length=255)
     # staff = models.CharField(max_length=255)
     # solution = models.CharField(max_length=255)
-
-    def __str__(self):
-        return self.wakingup
-    
-class Triggers(models.Model):
-    Location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    reason1 = models.CharField(max_length=255)
+# class Triggers(models.Model):
+#     reason1 = models.CharField(max_length=255)
 #     reason2 = models.CharField(max_length=255)
 #     reason3 = models.CharField(max_length=255)
 #     reason4 = models.CharField(max_length=255)
 #     reason5 = models.CharField(max_length=255)
 # class CuesOfDistress(models.Model):
 #     cues1 = models.CharField(max_length=255)
-    # cues2 = models.CharField(max_length=255)
+#     cues2 = models.CharField(max_length=255)
 #     cues3 = models.CharField(max_length=255)
 #     cues4 = models.CharField(max_length=255)
 #     cues5 = models.CharField(max_length=255)
