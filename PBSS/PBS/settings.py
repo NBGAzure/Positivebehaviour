@@ -62,7 +62,7 @@ ROOT_URLCONF = 'PBS.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, '')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,12 +125,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'index'
-LOGIN_URL = 'LOGIN'
+LOGIN_URL = 'login'
 
 "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'"
 "EMAIL_HOST = 'smtp.gmail.com'"
