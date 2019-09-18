@@ -15,7 +15,7 @@ def register(request):
 
             '''if crashed change userbase to index. I have to ask shankar for redirecting after login.'''
 
-            return redirect('index')
+            return redirect('userbase')
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
