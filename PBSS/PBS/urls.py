@@ -20,14 +20,13 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as user_views
-from fbaform.views import fbaformfunc,addBehaviour
+
 from django.conf.urls import include, url
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('positivebehaviour/', include('positivebehaviour.urls')),
-    path('fbaform/', fbaformfunc),
-    path('addBehaviour/', addBehaviour),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('password-reset/',
