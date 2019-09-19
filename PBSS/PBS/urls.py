@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as user_views
+from fbaform.views import fbaformfunc,addBehaviour, addTrigger
 
 from django.conf.urls import include, url
 
@@ -45,6 +46,9 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
 
+# fbaform url
 
-
+    path('fbaform/', fbaformfunc),
+    path('addBehaviour/', addBehaviour),
+    path('addTrigger/', addTrigger),
 ]

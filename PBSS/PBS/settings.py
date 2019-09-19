@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'positivebehaviour',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'fbaform',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

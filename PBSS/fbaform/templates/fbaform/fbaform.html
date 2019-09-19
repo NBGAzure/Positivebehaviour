@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>positive behaviour </title>
+    <h1>Behaviour recording form </h1>
+    <h2>Location</h2>
+
+<ul>
+    {% for location_all in all_items %}
+
+                <li>{{ location_all.wakingup }}</li>
+
+
+    {% endfor %}
+</ul>
+    <form action="/addBehaviour/" method="post">{%  csrf_token %}
+    <input type="text" name="wakingup"/>
+    <input type="submit" value="Add">
+    </form>
+
+    <h2>Triggers</h2>
+
+<ul>
+    {% for triggers_all in all_trigger %}
+
+                <li>{{ triggers_all.reason1 }}</li>
+
+    {% endfor %}
+</ul>
+    <form action="/addTrigger/" method="post">{%  csrf_token %}
+    <input type="text" name="reason1"/>
+    <input type="submit" value="Add">
+    </form>
+<h2>Cue</h2>
+
+</head>
+<body>
+<ul>
+    {% for location_all in all_items %}
+
+{#                <li>{{ location_all.wakingup }}</li>#}
+
+
+
+    {% endfor %}
+</ul>
+    <form action="/addBehaviour/" method="post">{%  csrf_token %}
+    <input type="text" name="wakingup"/>
+    <input type="submit" value="Add">
+    </form>
+<h2>Cues for Distress</h2>
+<ul>
+    {% for location_all in all_items %}
+
+{#                <li>{{ location_all.wakingup }}</li>#}
+
+
+
+    {% endfor %}
+</ul>
+    <form action="/addBehaviour/" method="post">{%  csrf_token %}
+    <input type="text" name="wakingup"/>
+    <input type="submit" value="Add">
+    </form>
+<h2>Physical Aggression</h2>
+
+<ul>
+    {% for location_all in all_items %}
+
+{#                <li>{{ location_all.wakingup }}</li>#}
+
+
+
+    {% endfor %}
+</ul>
+    <form action="/addBehaviour/" method="post">{%  csrf_token %}
+    <input type="text" name="wakingup"/>
+    <input type="submit" value="Add">
+    </form>
+<h2>Property Damage</h2>
+
+<ul>
+    {% for location_all in all_items %}
+
+{#                <li>{{ location_all.wakingup }}</li>#}
+
+
+
+    {% endfor %}
+</ul>
+    <form action="/addBehaviour/" method="post">{%  csrf_token %}
+    <input type="text" name="wakingup"/>
+    <input type="submit" value="Add">
+    </form>
+<h2>Verbal Aggression</h2>
+
+<ul>
+    {% for location_all in all_items %}
+
+{#                <li>{{ location_all.wakingup }}</li>#}
+
+
+
+    {% endfor %}
+</ul>
+    <form action="/addBehaviour/" method="post">{%  csrf_token %}
+    <input type="text" name="wakingup"/>
+    <input type="submit" value="Add">
+    </form>
+<h2>Sexulised Behaviour</h2>
+
+<ul>
+    {% for location_all in all_items %}
+
+{#                <li>{{ location_all.wakingup }}</li>#}
+
+
+
+    {% endfor %}
+</ul>
+    <form action="/addBehaviour/" method="post">{%  csrf_token %}
+    <input type="text" name="wakingup"/>
+    <input type="submit" value="Add">
+    </form>
+
+</body>
+</html>
