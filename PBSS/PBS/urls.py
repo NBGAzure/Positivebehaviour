@@ -23,7 +23,8 @@ from users import views as user_views
 from fbaform.views import fbaformfunc,addBehaviour, addTrigger
 
 from django.conf.urls import include, url
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -52,3 +53,6 @@ urlpatterns = [
     path('addBehaviour/', addBehaviour),
     path('addTrigger/', addTrigger),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
