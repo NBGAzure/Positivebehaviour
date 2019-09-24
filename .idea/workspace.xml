@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef0aea1b-fb8a-40a9-8eed-4e9874903096" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbaform.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Positivebehaviour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Positivebehaviour.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -9,10 +10,12 @@
       <change beforePath="$PROJECT_DIR$/PBSS/PBS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/PBS/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PBSS/PBS/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/PBS/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PBSS/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/db.sqlite3" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/Positivebehaviour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Positivebehaviour.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PBSS/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/users/views.py" afterDir="false" />
+>>>>>>> b4bd94aa7e7707f87e8b49d0b5b49537d7a2dbe6
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
