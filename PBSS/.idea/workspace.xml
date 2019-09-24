@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="629a3155-c05d-4b9a-88cb-87e8ce3fa629" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,16 +124,6 @@
               <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
               <item name="PBSS" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
-              <item name="profile_pics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -212,7 +201,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73994000" />
+    <option name="totallyTimeSpent" value="75544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
