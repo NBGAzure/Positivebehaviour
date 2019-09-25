@@ -38,7 +38,7 @@ STATICFILES_DIRS = [
 INSTALLED_APPS = [
     'positivebehaviour',
     'users.apps.UsersConfig',
-    'crispy_forms',
+    # 'crispy_forms',
     'fbaform.apps.FbaformConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -128,6 +128,9 @@ USE_TZ = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
