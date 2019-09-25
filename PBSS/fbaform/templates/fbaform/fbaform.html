@@ -4,15 +4,12 @@
 
 
     <div class="profile-form">
-            <form class="form-inline my-2 my-lg-0" method="POST">
+            <form class="my-2 my-lg-0" method="POST">
                 {% csrf_token %}
                 <h3 class="text-center">FBA Form</h3><br>
                 <fieldset class="form-group">
                 <div class="row">
-                    <div class="col-sm-4">
-                    <legend class="border-bottom mb-4 "></legend>
                     <input type="text" class="form-control input-lg" name="item" id="name" placeholder="Enter Behaviour" required="required" />
-                    </div>
                     <button type="submit" class="btn btn-3 btn-block" name="btnadd" id="btnadd">Add</button>
         <br>
                 {%  if messages %}
@@ -43,8 +40,95 @@
             {% endif %}
                 </div>
                 </fieldset></form>
-                </div>
+    </div>
 
+    <div class="profile-form">
+				<div class="row">
+					<div class="col-md-4 col-footer footer-1">
+						<div class="content">
+                            <div class="profile-form">
+            <form class="my-2 my-lg-0" method="POST">
+                {% csrf_token %}
+                <h3 class="text-center">Behaviour</h3><br>
+                <fieldset class="form-group">
+                <div class="row">
+                    <input type="text" class="form-control input-lg" name="item" id="b1" placeholder="Enter Behaviour" required="required" />
+                    <button type="submit" class="btn btn-3 btn-block" name="btnadd" id="btnadd">Add</button>        <br>
+                {%  if messages %}
+                {%  for message in messages %}
+                    <div class = "alert alert-warning alert-dismissable" role="alert">
+                        <button class="close" data-dismiss="alert">
+                            <small><sup>x</sup></small>
+                        </button>
+                    </div>
+                {% endfor %}
+                {% endif %}
+            {% if all_items %}
+                 <table class="table table-bothered">
+                {% for things in all_items %}
+                    {% if things.completed %}
+                        <tr class="table-secondary">
+                            <td><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td>
+                          <td><a href="{% url 'delete' things.id %}">Delete</a></td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td>
+                        <td><a href="{% url 'delete' things.id %}">Delete</a></td>
+                        </tr>
+                    {% endif %}
+            {% endfor %}
+                </table>
+            {% endif %}
+                </div>
+                </fieldset></form>
+                </div>
+                        </div>
+					</div>
+
+<!-- ============================================================================================================== -->
+
+                    <div class="col-md-4 col-footer footer-2">
+						<div class="content">
+                            <div class="profile-form">
+                    <form class="my-2 my-lg-0" method="POST">
+                    {% csrf_token %}
+                        <h3 class="text-center">Anticidents</h3><br>
+                    <fieldset class="form-group">
+                    <div class="row">
+                        <input type="text" class="form-control input-lg" name="anticident" id="name" placeholder="Enter Anticident" required="required" />
+                        <button type="submit" class="btn btn-3 btn-block" name="btnadd" id="btnadd">Add</button> <br>
+                    </div>
+                        {%  if messages %}
+                {%  for message in messages %}
+                    <div class = "alert alert-warning alert-dismissable" role="alert">
+                        <button class="close" data-dismiss="alert">
+                            <small><sup>x</sup></small>
+                        </button>
+                    </div>
+                {% endfor %}
+                {% endif %}
+                     </fieldset></form>
+                            </div>
+						</div>
+					</div>
+
+<!-- ============================================================================================ -->
+
+                    <div class="col-md-4 col-footer footer-3">
+                        <div class="profile-form">
+            <form class="my-2 my-lg-0" method="POST">
+
+                <h3 class="text-center">Consequences</h3><br>
+                <fieldset class="form-group">
+
+                </fieldset></form>
+                </div>
+                        </div>
+				</div>
+			</div>
+
+    </div>
 
 
 {% endblock content %}
