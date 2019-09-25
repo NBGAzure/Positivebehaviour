@@ -4,9 +4,7 @@ from django.http import HttpResponse
 
 from django.shortcuts import render, redirect
 from .models import List
-from .models import Anticident
 from .forms import ListForm
-from .forms import AnticidentForm
 from django.contrib import messages
 from django.http import HttpResponse
 from django.template import loader
@@ -17,27 +15,16 @@ from django.template import loader
 def fbaform(request):
     if request.method == 'POST':
         form = ListForm(request.POST or None)
+
         if form.is_valid():
             form.save()
             all_items = List.objects.all
             messages.success(request, ('Behaviour has been added to the list'))
             return render(request, 'fbaform/fbaform.html', {'all_items': all_items})
+
     else:
         all_items = List.objects.all
         return render(request, 'fbaform/fbaform.html', {'all_items': all_items})
-
-
-def anticident(request):
-    if request.method == 'POST':
-        form = AnticidentForm(request.POST or None)
-        if form.is_valid():
-            form.save()
-            all_anticident = Anticident.objects.all
-            messages.success(request, ('Anticident has been added to the list'))
-            return render(request, 'fbaform/fbaform.html', {'all_anticident': all_anticident})
-    else:
-        all_anticident = Anticident.objects.all
-        return render(request, 'fbaform/fbaform.html', {'all_anticident': all_anticident})
 
 def delete(request, list_id):
     item = List.objects.get(pk=list_id)

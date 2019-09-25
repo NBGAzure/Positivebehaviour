@@ -11,10 +11,4 @@ def sitemap(request):
 
     return render(request, 'positivebehaviour/sitemap.html', {'title': 'sitemap'})
 
-def fbaForm(request):
-
-    return render(request, 'fbaform/fbaform.html', {'title': 'fbaform'})
-
-
-
 

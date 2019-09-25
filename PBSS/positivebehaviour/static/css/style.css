@@ -109,7 +109,7 @@ hr:after {content: url(../static/images/dots.png);display: inline-block;position
         font-size: 1.5em;
     }
 }
-header{text-align: center;color: #fff;background: url(/static/images/heroimage.jpg) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 650px;}
+header{text-align: center;color: #fff;background: url(/static/images/bg.jpg) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 650px;}
 header img{display: block; margin: 200px auto  50px auto;}
 header .intro-text .intro-heading {text-transform: uppercase;font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight: 700;font-size: 50px;}
 header .intro-text .intro-lead-in {margin-bottom: 30px;font-family: 'Helvetica,Arial';font-size: 42px;}
