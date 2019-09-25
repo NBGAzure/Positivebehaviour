@@ -1,6 +1,4 @@
-/*!
- izBootstrap
- */
+
  
  /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Html-Body------------------------------- */
@@ -65,11 +63,11 @@ hr:after {content: url(../static/images/dots.png);display: inline-block;position
 /* ---------------------------------Header+Nav--------------------------------- */
 /* ---------------------------------------------------------------------------- */
 .navbar-default {border-color: transparent;background-color: #222;}
-.navbar-default .navbar-brand {font-family: Helvetica,Arial,cursive;color: #6ECADC;}
+.navbar-default .navbar-brand {font-family: Helvetica,Arial,cursive; color: #6ECADC;}
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {color: #6ECADC;}
+.navbar-default .navbar-brand.active {color: #6ECADC !important;}
 
 .navbar-default .navbar-collapse {border-color: rgba(255,255,255,.02);}
 
@@ -111,7 +109,7 @@ hr:after {content: url(../static/images/dots.png);display: inline-block;position
         font-size: 1.5em;
     }
 }
-header{text-align: center;color: #fff;background: url(/static/images/bg.jpg) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 650px;}
+header{text-align: center;color: #fff;background: url(/static/images/heroimage.jpg) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 650px;}
 header img{display: block; margin: 200px auto  50px auto;}
 header .intro-text .intro-heading {text-transform: uppercase;font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight: 700;font-size: 50px;}
 header .intro-text .intro-lead-in {margin-bottom: 30px;font-family: 'Helvetica,Arial';font-size: 42px;}
@@ -383,3 +381,40 @@ a.btn:focus{outline: 0;}
 
 .btn-4 {background: #6ECADC;border: 2px solid transparent;font-size:18px;}
 .btn-4:hover {color:#333;border:2px solid #555;background:transparent;text-shadow: none;}
+
+.login-form {
+		width: 500px;
+    	margin: 50px auto;
+	}
+    .login-form form {
+        margin-top: 15%;
+    	margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+.profile-form {
+        padding-top: 5%;
+		width: 95%;
+    	margin: 50px auto;
+	}
+.profile-form form {
+        margin-top: 0%;
+    	margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+ .profile-form h2 {
+        margin: 0 0 15px;
+    }
+
+
+
