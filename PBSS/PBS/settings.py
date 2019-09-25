@@ -38,8 +38,8 @@ STATICFILES_DIRS = [
 INSTALLED_APPS = [
     'positivebehaviour',
     'users.apps.UsersConfig',
-    # 'crispy_forms',
-    'fbaform.apps.FbaformConfig',
+    'crispy_forms',
+    'fbaform',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -88,6 +88,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
