@@ -274,7 +274,7 @@ header .intro-text .intro-lead-in {margin-bottom: 30px; font-family:"Montserrat"
 
 .message{text-align: center;margin: 100px 0;}
 .message .wrap{	padding: 50px; background: #ffffff; border: 1px solid #333333;display: inline-block;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-khtml-border-radius: 5px;}
-.checklist, .login{
+.checklist, .login, .logout{
     height: auto;
     width: 40%;
 }

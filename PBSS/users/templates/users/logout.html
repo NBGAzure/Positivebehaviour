@@ -4,25 +4,29 @@
     {% load crispy_forms_tags %}
 
     {% load static %}
-        <header id="page-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="o-container">
-                        </div>
 
-                                 <div class="container-fluid">
-                                         <h2>You have been logged out</h2>
-                                     <div class="border-top pr-3"><br>
-                                          <small class="text-muted">
-                                <a href="{% url 'login' %}"> Log In Again</a>
-                </small>
-                         </div>
-    </div>
-    </div>
-                    </div><br><br><br>
-                <a class="btn btn-1 btn-sm" href="#about">About Us</a>
-                        <a class="btn btn-1 btn-sm" href="#team">Our Team</a>
+    <div id="page-content" class="index-page">
+            <section id="" class="box-content box-1" style="background: white;">
+                <div class="container">
+                     <div class="row heading">
+                        <div class="col-lg-12">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 box-item">
+                            <div class="col-lg-12"><br><br>
+                            <h2>You have been logged out</h2>
+                            <hr>
+                            <div class="intro"><a href="{% url 'login' %}"> Log In Again</a></div>
+
+                        </div>
+                        </div>
+                        <div class="col-sm-6 box-item">
+                           <img src="{% static 'images/logout.png' %}" alt="logout" class="logout">
+        </div></div>
                 </div>
-        </header>
+            </section>
+     </div>
+
 {% endblock content %}

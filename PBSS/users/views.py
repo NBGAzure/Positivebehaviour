@@ -13,7 +13,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}!')
 
-            '''if crashed change userbase to index. I have to ask shankar for redirecting after login.'''
+            '''if crashed change userbase to index.  for redirecting after login.'''
 
             return redirect('index')
     else:
