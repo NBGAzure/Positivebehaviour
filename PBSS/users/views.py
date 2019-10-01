@@ -40,3 +40,6 @@ def profile(request):
 
     return render(request, 'users/profile.html', context, {'title': 'Profile'})
 
+
+def edit_profile(request):
+    return render(request, "users/edit_profile.html")

@@ -47,8 +47,14 @@ urlpatterns = [
 
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
+    path('edit_profile/', user_views.edit_profile, name='edit_profile'),
+    #path('edit_profile/', include('edit_profile.urls')),
 
     path('fbaform/', include('fbaform.urls')),
+
+
+
+
 # fbaform url
 
     #path('fbaform/', fbaformfunc),
