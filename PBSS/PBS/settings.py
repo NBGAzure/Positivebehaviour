@@ -27,11 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    "E:/github/Positivebehaviour/PBSS/positivebehaviour/static"
-]
+STATICFILES_DIRS = []
 
 # Application definition
 
@@ -130,7 +127,8 @@ USE_TZ = True
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
