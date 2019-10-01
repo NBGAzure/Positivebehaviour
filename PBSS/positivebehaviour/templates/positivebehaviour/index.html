@@ -173,7 +173,23 @@
 
             <!-- ////////////Content Box 02 -->
     <section id="portal" class="box-content box-2 box-style">
-                <div class="container">
+
+        {% if user.is_authenticated %}
+        <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12">
+                            <h2>View Profile</h2>
+                            <hr>
+
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <a class="btn btn-1 btn-sm" href="{% url 'profile' %}" style="margin-right: 5%;">Profile</a>
+                </div>
+
+
+        {% else %}
+        <div class="container">
                     <div class="row heading">
                         <div class="col-lg-12">
                             <h2>Create account</h2>
@@ -185,7 +201,9 @@
                         <a class="btn btn-1 btn-sm" href="{% url 'register' %}" style="margin-right: 5%;">Signup</a>
                         <a class="btn btn-1 btn-sm" href="{% url 'login' %}">Signin</a>
                 </div>
-            </section>
+            {% endif %}
+
+        </section>
 
             <section class="box-content box-5" id="contact" style="background:white;" >
                 <div class="container">
