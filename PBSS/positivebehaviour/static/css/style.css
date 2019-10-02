@@ -487,3 +487,8 @@ a.btn:focus{outline: 0;}
      color: #666;
      cursor: pointer;
 }
+
+.rounded-circle{
+    border-radius: 50%;
+    width: 200%;
+}
