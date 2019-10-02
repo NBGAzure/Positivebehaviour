@@ -58,9 +58,9 @@
                         </div>
                             <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
                             <div  class="media-body">
-                              <br>  <p class="text-secondary">{{ user.email }}</p>
+
                                  <a class="btn btn-2 btn-sm" href="{% url 'edit_profile' %}" >Edit Profile</a>
-                                <a class="btn btn-2 btn-sm" href="#" >BR Report</a>
+                                <a class="btn btn-2 btn-sm" href="{% url 'fbaform' %}" >BR Report</a>
                             </div>
                         </div>
                         </div>
