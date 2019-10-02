@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def freeform(request):
+def freefbaform(request):
     return render(request, "freefbaform/freefbaform.html")
