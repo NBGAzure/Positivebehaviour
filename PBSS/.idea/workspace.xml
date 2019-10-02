@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="629a3155-c05d-4b9a-88cb-87e8ce3fa629" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PBS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBS/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PBS/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBS/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fbaform/templates/fbaform/fbabase.html" beforeDir="false" afterPath="$PROJECT_DIR$/fbaform/templates/fbaform/fbabase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fbaform/templates/fbaform/fbaform.html" beforeDir="false" afterPath="$PROJECT_DIR$/fbaform/templates/fbaform/fbaform.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/freefbaform/templates/freefbaform/fbabase.html" beforeDir="false" afterPath="$PROJECT_DIR$/freefbaform/templates/freefbaform/fbabase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/freefbaform/templates/freefbaform/freefbaform.html" beforeDir="false" afterPath="$PROJECT_DIR$/freefbaform/templates/freefbaform/freefbaform.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/positivebehaviour/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/positivebehaviour/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/userbase.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/userbase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,11 +62,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/users/templates/users/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="159">
+              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
               <folding>
                 <element signature="e#611#637#0#HTML" expanded="true" />
               </folding>
@@ -90,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
@@ -429,13 +434,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114196000" />
+    <option name="totallyTimeSpent" value="114204000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.26545843" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.33378017" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.502008" side_tool="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49932975" weight="0.32956153" />
@@ -450,7 +454,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.2524377" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.42627347" side_tool="true" weight="0.3493635" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.57372653" visible="true" weight="0.2751896" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.57372653" visible="true" weight="0.3592645" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -848,8 +852,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users/templates/users/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="159">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
           <folding>
             <element signature="e#611#637#0#HTML" expanded="true" />
           </folding>

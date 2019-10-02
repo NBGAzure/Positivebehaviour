@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b9154906-b685-4f29-aa46-b0275cf135ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/PBSS/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbabase.html" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbabase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbaform.html" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbaform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/fbabase.html" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/fbabase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/freefbaform.html" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/freefbaform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PBSS/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PBSS/users/templates/users/userbase.html" beforeDir="false" afterPath="$PROJECT_DIR$/PBSS/users/templates/users/userbase.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,16 +20,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PBSS/PBS/settings.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/freefbaform.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="259">
+              <caret line="144" column="50" selection-start-line="144" selection-start-column="50" selection-end-line="144" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbaform.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="169" column="22" lean-forward="true" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PBSS/users/templates/users/edit_profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="29" column="102" selection-start-line="29" selection-start-column="102" selection-end-line="29" selection-end-column="102" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>access</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +70,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/PBSS/PBS/settings.py" />
+        <option value="$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/base.html" />
+        <option value="$PROJECT_DIR$/PBSS/users/templates/users/profile.html" />
+        <option value="$PROJECT_DIR$/PBSS/users/templates/users/userbase.html" />
+        <option value="$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/fbabase.html" />
+        <option value="$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbabase.html" />
+        <option value="$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/freefbaform.html" />
+        <option value="$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbaform.html" />
+        <option value="$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/index.html" />
+        <option value="$PROJECT_DIR$/PBSS/users/templates/users/edit_profile.html" />
       </list>
     </option>
   </component>
@@ -45,7 +94,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="width" value="979" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
@@ -53,6 +102,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -60,11 +110,36 @@
               <item name="Positivebehaviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="Positivebehaviour" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Positivebehaviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Positivebehaviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Positivebehaviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Positivebehaviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -100,17 +175,18 @@
       <workItem from="1569930651213" duration="1130000" />
       <workItem from="1569931952523" duration="551000" />
       <workItem from="1569932554533" duration="428000" />
+      <workItem from="1569976533576" duration="2363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2109000" />
+    <option name="totallyTimeSpent" value="4472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -139,8 +215,99 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PBSS/PBS/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="255">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/editfbaform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/users/templates/users/logout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/users/templates/users/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/users/templates/users/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/users/templates/users/userbase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="97" column="33" lean-forward="true" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/fbabase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="99" column="70" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="136" column="69" selection-start-line="136" selection-start-column="69" selection-end-line="136" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/users/templates/users/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbabase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="94" column="18" lean-forward="true" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/freefbaform/templates/freefbaform/freefbaform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="144" column="50" selection-start-line="144" selection-start-column="50" selection-end-line="144" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/fbaform/templates/fbaform/fbaform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/positivebehaviour/templates/positivebehaviour/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="169" column="22" lean-forward="true" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PBSS/users/templates/users/edit_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" column="102" selection-start-line="29" selection-start-column="102" selection-end-line="29" selection-end-column="102" />
         </state>
       </provider>
     </entry>
