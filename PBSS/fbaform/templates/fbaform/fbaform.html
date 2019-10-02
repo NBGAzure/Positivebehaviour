@@ -6,10 +6,11 @@
     <div class="profile-form">
             <form class="my-2 my-lg-0" method="POST">
                 {% csrf_token %}
-                <h3 class="text-center">FBA Form</h3><br>
+                <h3 class="text-center">BR Report</h3><br>
+
                 <fieldset class="form-group">
                 <div class="row">
-                    <input type="text" class="form-control input-lg" name="item" id="name" placeholder="Enter Behaviour" required="required" />
+                    <input type="text" class="form-control input-lg" name="item" id="name" placeholder="Enter BR Report" required="required" />
                     <button type="submit" class="btn btn-3 btn-block" name="btnadd" id="btnadd">Add</button>
         <br>
                 {%  if messages %}
@@ -39,20 +40,32 @@
                 </table>
             {% endif %}
                 </div>
+                    <script>
+                                function myFunction() {
+                                window.print();
+                                }
+                        </script>
+
+                        <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right;">Print</button>
+
                 </fieldset></form>
     </div>
+
+
+
 
     <div class="profile-form">
 				<div class="row">
 					<div class="col-md-4 col-footer footer-1">
 						<div class="content">
                             <div class="profile-form">
+
             <form class="my-2 my-lg-0" method="POST">
                 {% csrf_token %}
-                <h3 class="text-center">Behaviour</h3><br>
+                <h3 class="text-center">Test 1</h3><br>
                 <fieldset class="form-group">
                 <div class="row">
-                    <input type="text" class="form-control input-lg" name="item" id="b1" placeholder="Enter Behaviour" required="required" />
+                    <input type="text" class="form-control input-lg" name="item" id="b1" placeholder="Enter test" required="required" />
                     <button type="submit" class="btn btn-3 btn-block" name="btnadd" id="btnadd">Add</button>        <br>
                 {%  if messages %}
                 {%  for message in messages %}
@@ -93,10 +106,10 @@
                             <div class="profile-form">
                     <form class="my-2 my-lg-0" method="POST">
                     {% csrf_token %}
-                        <h3 class="text-center">Anticidents</h3><br>
+                        <h3 class="text-center">Test 2</h3><br>
                     <fieldset class="form-group">
                     <div class="row">
-                        <input type="text" class="form-control input-lg" name="anticident" id="name" placeholder="Enter Anticident" required="required" />
+                        <input type="text" class="form-control input-lg" name="anticident" id="name" placeholder="Enter Test 2" required="required" />
                         <button type="submit" class="btn btn-3 btn-block" name="btnadd" id="btnadd">Add</button> <br>
                     </div>
                         {%  if messages %}
@@ -119,7 +132,7 @@
                         <div class="profile-form">
             <form class="my-2 my-lg-0" method="POST">
 
-                <h3 class="text-center">Consequences</h3><br>
+                <h3 class="text-center">Test 3</h3><br>
                 <fieldset class="form-group">
 
                 </fieldset></form>
