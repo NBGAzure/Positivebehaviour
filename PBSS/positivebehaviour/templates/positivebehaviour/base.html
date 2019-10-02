@@ -53,7 +53,7 @@
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="#fbaform">FBA Form</a>
+                        <a class="page-scroll" href="#{% url 'freefbaform' %}">FBA Form</a>
                     </li>
                     <li>
                          {% if user.is_authenticated %}
@@ -67,7 +67,7 @@
                              <li>
 
                          {% else %}
-                            <a class="page-scroll" href="#portal">Signup</a>
+                            <a class="page-scroll" href="{% url 'register' %}">Signup</a>
                         </li>
                          {% endif %}
 
@@ -105,9 +105,9 @@
                                 <ul class="footer-links">
                                       <li><a href="{% url 'index' %}">Home</a></li>
                                       <li><a href="#">About us</a></li>
-                                      <li><a href="#">Signin/Signup</a></li>
+                                      <li><a href="{% url 'register' %}">Signin/Signup</a></li>
                                       <li><a href="#">Services</a></li>
-                                      <li><a href="#">FBA Form</a></li>
+                                      <li><a href="{% url 'freefbaform' %}">FBA Form</a></li>
                                       <li><a href="#">Contact us</a></li>
                                 </ul>
                         </div>

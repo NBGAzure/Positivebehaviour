@@ -50,6 +50,7 @@ urlpatterns = [
     path('edit_profile/', user_views.edit_profile, name='edit_profile'),
 
     path('fbaform/', include('fbaform.urls')),
+    path('freefbaform/', include('freefbaform.urls')),
 
 
 

@@ -5,6 +5,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.freeform, name='freeform'),
+    path('', views.freefbaform, name='freefbaform'),
 
 ]
