@@ -10,11 +10,21 @@
                 <div class="content-section">
                     <div class="content-section">
                         <div class="media">
+                        <div >
+                        {%  if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" style="text-align: center">
+                        {{ message }}
+                        </div>
+                        {% endfor %}
+                        {%  endif %}
+                        </div>
                             <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
                             <div  class="media-body">
                                 <h2 class="account-heading">{{ user.username }}</h2>
                                 <p class="text-secondary">{{ user.email }}</p>
                                  <a class="btn btn-1 btn-sm" href="{% url 'edit_profile' %}" >Edit Profile</a>
+
                             </div>
                         </div>
                     </div>

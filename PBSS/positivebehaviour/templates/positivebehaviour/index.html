@@ -175,17 +175,20 @@
     <section id="portal" class="box-content box-2 box-style">
 
         {% if user.is_authenticated %}
-        <div class="container">
+        <div class="container" >
                     <div class="row heading">
                         <div class="col-lg-12">
                             <h2>View Profile</h2>
-                            <hr>
+                            <hr align="center">
 
                         </div>
                     </div>
-                    <div class="col text-center">
-                        <a class="btn btn-1 btn-sm" href="{% url 'profile' %}" style="margin-right: 5%;">Profile</a>
-                </div>
+        </div>
+
+            <div class="col text-center" >
+
+                        <a class="btn btn-1 btn-sm" href="{% url 'profile' %}" style="margin-left: 1%;" >Profile</a>
+            </div>
 
 
         {% else %}
@@ -197,11 +200,12 @@
                             <div class="intro">Be a part of positive behaviour support</div>
                         </div>
                     </div>
+        </div>
                     <div class="col text-center">
                         <a class="btn btn-1 btn-sm" href="{% url 'register' %}" style="margin-right: 5%;">Signup</a>
                         <a class="btn btn-1 btn-sm" href="{% url 'login' %}">Signin</a>
                 </div>
-            {% endif %}
+        {% endif %}
 
         </section>
 
