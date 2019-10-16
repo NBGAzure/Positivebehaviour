@@ -3,19 +3,24 @@
         {% load static %}
 
     <div id="page-content" class="index-page container-fluid">
-                <section id="" class="box-content box-1" style="background: white;">
+                <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
                     <div class="container">
                         <div class="row heading">
                         <div class="col-lg-12">
                             <h2>FBA form</h2>
                             <hr>
                         </div>
-                    </div><button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right;">Print</button>
+                    </div>
+                        <div id="Button1">
+                        <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right;">Print</button>
                         <a button class="btn btn-3 btn-sm"  style="float: right; margin-right: 2%;" href="{% url 'profile' %}">Next</a> </button>
+                        </div>
                             <div class="row">
                         <div class="col-md-4">
+                            <div id="Noprint">
                             <div class="row box-item"><br><br>
                                 <p style="text-align: left; line-height: 2; padding-top: 8%; margin: 4%;">Functional behaviour assessment tool analyse the behaviour of an individual by there actions, we are providing a tool for everyone who wants to know more about the behaviour of an individual.</p>
+                            </div>
                             </div>
                         </div>
                         <div class="col-md-8">
@@ -143,8 +148,10 @@
                                 }
                         </script>
                         </div>
+                        <div id="Button2">
                         <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right; ">Print</button>
                         <a button class="btn btn-3 btn-sm"  style="float: right; margin-right: 2%;" href="{% url 'profile' %}"> Next </a> </button>
+                        </div>
                     </div>
                 </section>
      </div>

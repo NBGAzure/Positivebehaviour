@@ -3,16 +3,18 @@
 {% block content %}
         {% load static %}
         <header id="page-top">
-            <div class="container">
-
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="o-container">
-
+                        <div class="space">
                         </div>
                         <div class="intro-text"><br><br>
-                            <div class="intro-heading">POSITIVE BEHAVIOUR SUPPORT</div>
-                            <div class="intro-lead-in">Better understanding on data</div>
+                            <strong><div class="hero-heading">Helping <span style="color: #2c51d8">People</span>,<br> One step at <span style="color: #2c51d8">a time</span>.</div></strong>
+                            <div class="hero-lead-in">Join us today!</div>
+                             <div class="col text-left">
+                        <a class="btn btn-3 btn-sm" href="{% url 'register' %}" style="margin-right: 2%; margin-left: 10%;">Signup</a>
+                        <a class="btn btn-3 btn-sm" href="{% url 'login' %}" style="margin-left: 10%;">Signin</a>
+                         </div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +113,7 @@
             </section>
 
         <div id="page-content" class="index-page">
-            <section id="services" class="box-content box-1">
+            <section id="services" class="box-content box-1" style="background: white;">
                 <div class="container">
                     <div class="row heading">
                         <div class="col-lg-12">
@@ -123,27 +125,24 @@
                     <div class="row">
                         <div class="col-sm-3 box-item">
                             <h3 class="blue">Business Leader</h3>
-                            <p>Based on the input on the accounts a business report along with the strategy will be created and the business leader can analyse it.</p>
+                            <p style="line-height: 2;">Based on the input on the accounts a business report along with the strategy will be created and analysed.</p>
                             <button type="submit" class="btn btn-2 ">More</button>
                         </div>
                         <div class="col-sm-3 box-item">
                             <h3 class="blue">Team leader</h3>
-                            <p>A structured action plan for the team leaders wo will be supported by a support worker to carry out the plan. </p>
+                            <p style="line-height: 2;">A structured action plan for the team leaders wo will be supported by a support worker to carry out the plan. </p>
                             <button type="submit" class="btn btn-2 ">More</button>
                         </div>
                         <div class="col-sm-3 box-item">
                             <h3 class="blue">Support worker</h3>
-                            <p>Support workers can register there clients behaviour under there profile and can be used for references.</p>
+                            <p style="line-height: 2;">Support workers can register there clients behaviour under there profile and can be used for references.</p>
                             <button type="submit" class="btn btn-2 ">More</button>
                         </div>
                         <div class="col-sm-3 box-item">
                             <h3 class="blue">Personal use</h3>
-                            <p>A free user can use the tool to someones behaviour and print the behaviour strategy for free from the app.</p>
+                            <p style="line-height: 2;">A free user can use the tool to someones behaviour and print the behaviour strategy for free from the app.</p>
                             <button type="submit" class="btn btn-2 ">More</button>
                         </div>
-
-
-
                     </div>
                 </div>
             </section>
@@ -163,7 +162,7 @@
                             <img src="{% static 'images/checklist.png' %}" alt="checklist" class="checklist">
                         </div>
                         <div class="col-sm-6 box-item">
-                            <p>Functional behaviour assessment tool analyse the behaviour of an individual by there actions, we are providing a tool for everyone who wants to know more about the behaviour of an individual </p>
+                            <p style="line-height: 2;">Functional behaviour assessment tool analyse the behaviour of an individual by there actions, we are providing a tool for everyone who wants to know more about the behaviour of an individual </p>
                             <br><br><a class="btn btn-3 btn-sm" href="{% url 'freefbaform' %}">Access FBA Form</a>
                         </div>
                     </div>
@@ -222,10 +221,8 @@
                         <div class="col-md-4 ">
                             <div class="row box-item">
                                 <h3>How can we help?</h3>
-                                <p>Please select a topic that you are not able to find according to your need. click the contact form and complete the required information we will get back to you as soon as possible.</p>
-                                <h3>Or Just Make a Call</h3>
-                                <p>+61 430 299 865 <br>
-                                    +61 411 420 495</p>
+                                <p style="line-height: 2;">Please select a topic that you are not able to find according to your need. click the contact form and complete the required information we will get back to you as soon as possible.</p>
+                                <h3>Drop us a message at:</h3>
                                 <p>info@positivebehaviourPBS.com</p>
                             </div>
                         </div>

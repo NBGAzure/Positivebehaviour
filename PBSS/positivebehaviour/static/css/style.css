@@ -77,9 +77,9 @@ hr { margin: 15px auto; padding: 0; max-width: 130px;border: 0; border-top: soli
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
+        padding: 12px 0;
         border: 0;
-        background-color: transparent;
+        /* background-color: transparent; */
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -101,10 +101,13 @@ hr { margin: 15px auto; padding: 0; max-width: 130px;border: 0; border-top: soli
         font-size: 1.5em;
     }
 }
-header{text-align: center;color: #fff;background: url(/static/images/heroimage.jpg) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 650px; }
-header img{display: block; margin: 200px auto  50px auto;}
+header{color: #fff;background: url(/static/images/newhero.png) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 650px; }
+header img{display: block; margin: 200px auto 50px auto;}
 header .intro-text .intro-heading {text-transform: uppercase;font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight: 700;font-size: 50px; margin-top: 5%;}
 header .intro-text .intro-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,Arial;font-size: 42px; margin-top: 1%;}
+header .hero-heading {margin-bottom: 30px; font-family:"Montserrat", Helvetica,Arial;font-size: 45px; margin-top: 1%; color: black; margin-left: 10%; line-height: 1.7; font-weight: bold;}
+header .hero-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,Arial;font-size: 32px; margin-top: 1%; color: black; margin-left: 10%; margin-right: 55%; line-height: 1;}
+
 @media(min-width:635px) {
     header .intro-text {
         padding-bottom: 80px;
@@ -127,10 +130,13 @@ header .intro-text .intro-lead-in {margin-bottom: 30px; font-family:"Montserrat"
 .box-content {padding: 100px 0;}
 .box-content .heading{margin-bottom: 30px; text-align: center;}
 .box-content .heading h2{font-size: 45px;letter-spacing:2px;}
-.box-content .heading .intro{margin-bottom: 75px; font-family: "Montserrat", Helvetica,Arial,cursive; font-size:22px;}
+.box-content .heading .intro{margin-bottom: 75px; font-family: "Montserrat", Helvetica,Arial; font-size:22px;}
 
 .box-content.box-style {background-attachment:fixed; background-image: url(/static/images/scroll.jpg); background-size: 100% auto; background-color: #222; color: white;}
 
+.space{
+    margin-top: 6%;
+}
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------Services(box-1)------------------------------- */
 /* ---------------------------------------------------------------------------- */
@@ -491,4 +497,8 @@ a.btn:focus{outline: 0;}
 .rounded-circle{
     border-radius: 50%;
     width: 200%;
+}
+
+@media print {
+    #Header, #Footer, #Noprint, #Button1, #Button2 { display: none !important; }
 }
