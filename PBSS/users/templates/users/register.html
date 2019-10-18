@@ -19,15 +19,14 @@
                             <img src="{% static 'images/password.png' %}" alt="checklist" class="password">
                         </div>
                         <div class="col-sm-6 box-item" style="text-align: left;">
-                            <form method="POST">
+                            <form method="POST" style="">
                                  {% csrf_token %}
                                  <fieldset class="form-group">
                                      <legend class="border-bottom mb-4 "></legend>
                                     {{ form| crispy }}
                                  </fieldset>
-
                                 <div class="form-group">
-                                 <button class="btn btn-primary btn-block" type="submit" > Sign Up </button>
+                                 <button class="btn btn-3 btn-sm btn-block" type="submit" > Sign Up </button>
                                 </div>
                             </form>
                              <div class="border-top pr-3">

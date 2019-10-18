@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 STATICFILES_DIRS = []
 
+CRISPY_TEMPLATE_PACK = 'bootstap3'
 # Application definition
 
 INSTALLED_APPS = [

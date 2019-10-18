@@ -105,18 +105,31 @@ header{color: #fff;background: url(/static/images/newhero.png) no-repeat scroll 
 header img{display: block; margin: 200px auto 50px auto;}
 header .intro-text .intro-heading {text-transform: uppercase;font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight: 700;font-size: 50px; margin-top: 5%;}
 header .intro-text .intro-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,Arial;font-size: 42px; margin-top: 1%;}
-header .hero-heading {margin-bottom: 30px; font-family:"Montserrat", Helvetica,Arial;font-size: 45px; margin-top: 1%; color: black; margin-left: 10%; line-height: 1.7; font-weight: bold;}
-header .hero-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,Arial;font-size: 32px; margin-top: 1%; color: black; margin-left: 10%; margin-right: 55%; line-height: 1;}
+header .hero-heading {margin-bottom: 30px; font-family:"Montserrat", Helvetica,Arial;font-size: 45px; margin-top: 10%; color: black; margin-left: 14%; line-height: 1.7; font-weight: bold;}
+header .hero-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,Arial;font-size: 32px; margin-top: 1%; color: black; margin-left: 14%; margin-right: 55%; line-height: 1;}
 
 @media(min-width:635px) {
     header .intro-text {
         padding-bottom: 80px;
     }
+     header .intro-text .hero-heading {font-size: 45px; margin-top: 15%}
+	 header .intro-text .hero-lead-in {font-size: 22px;}
 }
 @media(max-width:420px) {
 	header .intro-text .intro-heading {font-size: 33px;}
-	header .intro-text .intro-lead-in {font-size: 22px;}
+    header .intro-text .hero-heading {font-size: 33px; margin-top: 15%}
+	header .intro-text .hero-lead-in {font-size: 22px;}
 	header .intro-text {padding-bottom: 40px;}
+}
+
+.border-white{
+  /*border white with light shadow*/
+  text-shadow:
+     1px  1px     #fff,
+    -1px  1px     #fff,
+     1px -1px     #fff,
+    -1px -1px     #fff,
+     1px  1px 5px #555;
 }
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Content-------------------------------- */
@@ -137,6 +150,7 @@ header .hero-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,A
 .space{
     margin-top: 6%;
 }
+
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------Services(box-1)------------------------------- */
 /* ---------------------------------------------------------------------------- */
@@ -218,6 +232,7 @@ header .hero-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,A
         padding: 0 30px 20px 20px;
         text-align: left;
     }
+
 }
 @media(min-width:992px) {
     .timeline>li {
@@ -282,12 +297,12 @@ header .hero-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,A
 .message .wrap{	padding: 50px; background: #ffffff; border: 1px solid #333333;display: inline-block;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-khtml-border-radius: 5px;}
 .checklist, .login, .logout{
     height: auto;
-    width: 40%;
+    width: 30%;
 }
 .password{
     float: left;
     height: auto;
-    width: 60%;
+    width: 50%;
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -406,6 +421,9 @@ a.btn:focus{outline: 0;}
     .form-control, .btn {
         min-height: 38px;
         border-radius: 2px;
+    }
+    .form-text{
+        display: none;
     }
 .profile-form {
         padding-top: 5%;
