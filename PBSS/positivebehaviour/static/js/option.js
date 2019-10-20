@@ -13,10 +13,11 @@ $(document).ready(function() {
             $("#alternativeoptions").html("<option value='alternativeoptions1'>Select one</option>");
             $("#functionoptions").html("<option value='functionoptions1'>Select one</option>");
 
+
         } else if (val == "behaviour2") {
 
 
-            $("#boptions").html("<option value='behaviouroptions1'>Select one</option><option value='behaviouroptions2'>familiar</option><option value='behaviouroptions3'>unfamiliar</option>");
+            $("#boptions").html("<option value='behaviouroptions1'>Select one</option><option value='behaviouroptions2' id='behaviouroptions2'>familiar</option><option value='behaviouroptions3'>unfamiliar</option>");
             $("#ageoptions").html("<option value='ageoptions1'>Select one</option><option value='ageoptions2'>Adult</option><option value='ageoptions3'>Child</option><option value='ageoptions4'>Student</option>");
             $("#interactionoptions").html("<option value='interactionoptions1'>Select one</option><option value='interactionoptions2'>directs them to start or continue with a disliked task</option><option value='interactionoptions3'>directs them to stop a liked task</option><option value='interactionoptions4'>does not respond to their approach</option>");
             $("#observationoptions").html("<option value='observationoptions1'>Select one</option><option value='observationoptions2'>is off task but remains seated or in appropriate area</option><option value='observationoptions3'>is off task and distracting other students</option>");
@@ -37,3 +38,77 @@ $(document).ready(function() {
 $(document).ready(function() {
 $('.mdb-select').materialSelect();
 });
+
+    //Retrieval
+
+
+     $("#behaviour").on("change",function(){
+        //Getting Value
+        var selValue = $("#behaviour :selected").text();
+        //Setting Value
+        $("#textFieldTextBehaviour").val(selValue);
+    });
+
+      $("#boptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#boptions :selected").text();
+        //Setting Value
+        $("#textFieldTextboptions").val(selValue);
+    });
+
+      $("#ageoptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#ageoptions :selected").text();
+        //Setting Value
+        $("#textFieldTextageoptions").val(selValue);
+    });
+
+      $("#interactionoptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#interactionoptions :selected").text();
+        //Setting Value
+        $("#textFieldTextinteractionoptions").val(selValue);
+    });
+
+      $("#observationoptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#observationoptions :selected").text();
+        //Setting Value
+        $("#textFieldTextobservationoptions").val(selValue);
+    });
+
+      $("#enganingoptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#enganingoptions :selected").text();
+        //Setting Value
+        $("#textFieldTextenganingoptions").val(selValue);
+    });
+
+      $("#responseoptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#responseoptions :selected").text();
+        //Setting Value
+        $("#textFieldTextresponseoptions").val(selValue);
+    });
+
+      $("#consequensesoptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#consequensesoptions :selected").text();
+        //Setting Value
+        $("#textFieldTextconsequensesoptions").val(selValue);
+    });
+
+      $("#alternativeoptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#alternativeoptions :selected").text();
+        //Setting Value
+        $("#textFieldTextalternativeoptions").val(selValue);
+    });
+
+      $("#functionoptions").on("change",function(){
+        //Getting Value
+        var selValue = $("#functionoptions :selected").text();
+        //Setting Value
+        $("#textFieldTextfunctionoptions").val(selValue);
+    });
+
