@@ -34,22 +34,6 @@
 <!--            </div>-->
 <!--    </div>-->
 
-<<<<<<< Updated upstream
-         <div id="page-content" class="index-page">
-            <section id="" class="box-content box-1" style="background: white;">
-                <div class="container">
-                    <div class="row heading">
-                        <div class="col-lg-12">
-                            <h2>Dashboard</h2>
-                            <hr>
-                            <div class="intro">Manage work on daily basis.</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-3 box-item">
-                             <div class="media">
-                        <div >
-=======
         <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
     <i class="fas fa-bars"></i>
@@ -60,7 +44,6 @@
           <a class="navbar-brand page-scroll" style="font-size: 26px;" href="{% url 'index' %}">PBSS</a>
       </div>
         <div>
->>>>>>> Stashed changes
                         {%  if messages %}
                         {% for message in messages %}
                         <div class="alert alert-{{ message.tags }}" style="text-align: center">
@@ -69,27 +52,6 @@
                         {% endfor %}
                         {%  endif %}
                         </div>
-<<<<<<< Updated upstream
-                            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-                            <div  class="media-body">
-
-                                 <a class="btn btn-2 btn-sm" href="{% url 'edit_profile' %}" >Edit Profile</a>
-                                <a class="btn btn-2 btn-sm" href="{% url 'fbaform' %}" >BR Report</a>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-sm-9 box-item" style="text-align: left;">
-                            <div  class="media-body">
-                                <h4 class="account-heading">Hello, {{ user.username }}</h4><br>
-                                <p class="text-secondary">{{ user.email }}</p><br>
-                            </div>
-        <div class="border-top pr-3">
-
-            </div></div></div>
-                </div>
-            </section>
-     </div>
-=======
       <div class="sidebar-header">
         <div class="user-pic">
           <img class="img-responsive img-rounded" src="{{ user.profile.image.url }}"
@@ -168,7 +130,6 @@
         </div>
       </div>
     </div>
->>>>>>> Stashed changes
 
   </main>
   <!-- page-content" -->
