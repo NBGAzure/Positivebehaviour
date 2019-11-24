@@ -354,7 +354,7 @@ footer .col-footer.footer-2{}
 
 footer .col-footer.footer-3{}
 footer .col-footer.footer-3 img{margin: 10px 0;}
-
+  
 footer .copyright {background-color: white; color: black; text-align:center;}
 footer .copyright p, footer .copyright ul{margin: 20px 0;}
 
@@ -371,7 +371,7 @@ footer .copyright p, footer .copyright ul{margin: 20px 0;}
 	border-radius: 0px;
     padding: 10px;
     border: 1px solid #aaa;
-
+  
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -386,7 +386,7 @@ footer .copyright p, footer .copyright ul{margin: 20px 0;}
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 400;
+	font-weight: 400;	
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 	font-size: 14px;
 }
