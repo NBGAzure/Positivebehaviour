@@ -36,7 +36,6 @@ CRISPY_TEMPLATE_PACK = 'bootstap3'
 # Application definition
 
 INSTALLED_APPS = [
-    'contact',
     'positivebehaviour',
     'users.apps.UsersConfig',
     'crispy_forms',
