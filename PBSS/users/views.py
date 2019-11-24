@@ -60,4 +60,10 @@ def edit_profile(request):
         'p_form': p_form
     }
 
+<<<<<<< Updated upstream
     return render(request, "users/edit_profile.html", context, {'title': 'Profile'})
+=======
+    return render(request, "users/edit_profile.html", context, {'title': 'Profile'})
+
+
+>>>>>>> Stashed changes

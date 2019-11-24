@@ -1,4 +1,4 @@
-{%  extends "users/userbase.html" %}
+{%  extends "users/dashboardbase.html" %}
 {% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -34,6 +34,7 @@
 <!--            </div>-->
 <!--    </div>-->
 
+<<<<<<< Updated upstream
          <div id="page-content" class="index-page">
             <section id="" class="box-content box-1" style="background: white;">
                 <div class="container">
@@ -48,6 +49,18 @@
                         <div class="col-sm-3 box-item">
                              <div class="media">
                         <div >
+=======
+        <div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+          <a class="navbar-brand page-scroll" style="font-size: 26px;" href="{% url 'index' %}">PBSS</a>
+      </div>
+        <div>
+>>>>>>> Stashed changes
                         {%  if messages %}
                         {% for message in messages %}
                         <div class="alert alert-{{ message.tags }}" style="text-align: center">
@@ -56,6 +69,7 @@
                         {% endfor %}
                         {%  endif %}
                         </div>
+<<<<<<< Updated upstream
                             <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
                             <div  class="media-body">
 
@@ -75,6 +89,89 @@
                 </div>
             </section>
      </div>
+=======
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="{{ user.profile.image.url }}"
+            alt="User picture">
+        </div>
 
+
+
+        <div class="user-info">
+          <span class="user-name" style="margin-top: 6%; margin-bottom: 6%;">Hello, {{ user.username }}</span>
+            <span class="user-name" style="margin-top: 6%;">Mail ID:</span>  <span class="user-name" style="margin-top: 6%;">{{ user.email }}</span>
+        </div>
+      </div>
+
+
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span style="font-size: 24px; margin-top: 4%; margin-bottom: 4%;">General</span>
+          </li>
+             <li class="sidebar-dropdown">
+           <a href="{% url 'profile' %}">
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+           <a href="{% url 'edit_profile' %}">
+              <span>Edit Profile</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="{% url 'fbaform' %}" >
+              <span>BR Report</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="{% url 'fbaform' %}" >
+              <span>FBA form</span>
+            </a>
+          </li>
+            <li class="sidebar-dropdown">
+            <a href="{% url 'logout' %}" >
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <div class="container-fluid">
+       <h2 style="text-align: center;">Dashboard</h2>
+        <hr>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <p style="text-align: center;">Manage work on daily basis.</p>
+        </div>
+      </div>
+        <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        </div>
+        </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                </div>
+        </div>
+            <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+
+          </div>
+        </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        </div>
+      </div>
+    </div>
+>>>>>>> Stashed changes
+
+  </main>
+  <!-- page-content" -->
+</div>
 
 {% endblock content %}
