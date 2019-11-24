@@ -222,7 +222,9 @@
                         </div>
                         <div class="col-md-8">
                             <div id="contact-form">
-                                <form name="form1" method="post" action="contact.php">
+                                <form name="form1" method="post">
+                                            {% csrf_token %}
+                                            {{form.as_p}}
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -258,8 +260,7 @@
                     </div>
                 </div>
             </section>
-
-        </div>
+    </div>
 
 
         <section class="box-content box-4 box-style">
@@ -429,6 +430,7 @@
                         <a href="#0" class="close-btn">Close</a>
                     </div> <!-- cd-testimonials-all -->
                 </div>
+
             </section>
 
 {% endblock content %}
