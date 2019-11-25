@@ -25,22 +25,20 @@
                             <div class="contact-form">
                                 <form name="form1" method="post">
                                     <div class="row">
-                                        <div class="form-control">
+
                                         <div class="col-md-6">
 
                                             <div class="form-group">
                                                 <fieldset class="form-group">
-
-                                                 {% csrf_token %}
+                                                {% csrf_token %}
                                                 {{form.as_p}}
-
-                                                     </fieldset>
+                                                </fieldset>
                                             </div>
                                         </div>
                                             <button type="submit" class="btn btn-3 btn-block" name="btnContactUs" id="btnContactUs">
                                         Submit</button>
                                         </div>
-                                    </div>
+
                                 </form>
                             </div>
                         </div>

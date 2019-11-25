@@ -1009,3 +1009,38 @@ body {
     margin-bottom: 0%;
 }
 
+.box-content.box-5 input {
+    width: 205%;
+    padding: 3%;
+}
+
+.box-content.box-5 textarea {
+    height: 40%;
+    padding: 4%;
+    width: 205%;
+}
+
+@media only screen and (max-width: 480px) {
+   .box-content.box-5 textarea {
+    height: 40%;
+    padding: 4%;
+    width: 100%;
+}
+    .box-content.box-5 input {
+    width: 100%;
+    padding: 3%;
+}
+}
+
+
+@media only screen and (max-width: 600px) {
+   .box-content.box-5 textarea {
+    height: 40%;
+    padding: 4%;
+    width: 100%;
+}
+    .box-content.box-5 input {
+    width: 100%;
+    padding: 3%;
+}
+}
