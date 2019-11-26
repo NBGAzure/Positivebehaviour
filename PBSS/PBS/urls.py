@@ -21,7 +21,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as user_views
 from contact.views import contact
-from client.views import client
+
 #from fbaform.views import fbaformfunc, addBehaviour, addTrigger Updated upstream
 from django.conf.urls import include, url
 from django.conf import settings
@@ -53,7 +53,9 @@ urlpatterns = [
     path('fbaform/', include('fbaform.urls')),
     path('freefbaform/', include('freefbaform.urls')),
     path('contact/', contact, name="contact"),
-    path('client/', client),
+  #  path('newsletter/', include('newsletter.urls')),
+
+
 
 # fbaform url
 
