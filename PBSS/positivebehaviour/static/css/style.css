@@ -1044,3 +1044,13 @@ body {
     padding: 3%;
 }
 }
+
+
+input{
+    width: 100%;
+    line-height: 2.5;
+}
+
+#id_email{
+    color: black;
+}
