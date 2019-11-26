@@ -1,0 +1,20 @@
+{%  extends "fbaform/fbabase.html" %}
+{% block content %}
+        {% load static %}
+
+
+    <div class="profile-form">
+
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+    </form>
+
+    If you already have an account <a href="/login" target="blank"><strong>login</strong></a> instead.
+
+
+    </div>
+
+
+{% endblock content %}
