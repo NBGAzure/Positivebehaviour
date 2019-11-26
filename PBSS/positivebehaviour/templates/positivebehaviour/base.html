@@ -50,12 +50,6 @@
                         <a class="page-scroll" href="#about">About us</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#fbaform">FBA Form</a>
-                    </li>
-                    <li>
                          {% if user.is_authenticated %}
                              <li>
                                  <a class="page-scroll" href="{% url 'profile' %}">Profile</a>
@@ -70,6 +64,13 @@
                             <a class="page-scroll" href="#portal">Signup</a>
                         </li>
                          {% endif %}
+
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="#fbaform">FBA Form</a>
+                    </li>
 
                         <li>
                             <a class="page-scroll" href="{% url 'contact' %}">Contact us</a>
@@ -117,16 +118,15 @@
 						<div class="content">
 							<p></p>
 							<div class="subscribe-form">
-								 <form method="post">{% csrf_token %}
+								 <form method="post">
                 <div class = "form-group" style="display: block;">
+                    {% csrf_token %}
                     {{ form }}<br>
                     <span class="input-group-btn">
                        <button type="submit" name="Submit" class="btn btn-4 btn-block" style="width: 100%; margin-top: 4%;">Subscribe</button>
                     </span>
                 </div>
             </form>
-							<!--
-							-->
 							</div>
 						</div>
 					</div>
