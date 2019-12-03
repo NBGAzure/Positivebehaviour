@@ -43,7 +43,7 @@
                             <ul class="timeline">
                                 <li class="blue">
                                     <div class="timeline-image">
-                                        <img class="img-circle img-responsive" src="{% static 'images/4.jpg' %}" alt="">
+                                        <img class="img-circle img-responsive" style="width: 200%;" src="{% static 'images/tools.png' %}" alt="">
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
@@ -56,7 +56,7 @@
                                 </li>
                                 <li class="timeline-inverted blue">
                                     <div class="timeline-image">
-                                        <img class="img-circle img-responsive" src="{% static 'images/5.jpg' %}" alt="">
+                                        <img class="img-circle img-responsive" src="{% static 'images/report.png' %}" alt="">
                                     </div>
                                     <div class="timeline-panel">
                                        <div class="timeline-heading">
@@ -69,7 +69,7 @@
                                 </li>
                                 <li class="blue">
                                     <div class="timeline-image">
-                                        <img class="img-circle img-responsive" src="{% static 'images/6.jpg' %}" alt="">
+                                        <img class="img-circle img-responsive" src="{% static 'images/understanding.png' %}" alt="">
                                     </div>
                                     <div class="timeline-panel">
                                       <div class="timeline-heading">
@@ -82,7 +82,7 @@
                                 </li>
                                 <li class="timeline-inverted blue">
                                     <div class="timeline-image">
-                                        <img class="img-circle img-responsive" src="{% static 'images/7.jpg' %}" alt="">
+                                        <img class="img-circle img-responsive" src="{% static 'images/summary.png' %}" alt="">
                                     </div>
                                     <div class="timeline-panel">
                                       <div class="timeline-heading">
@@ -130,15 +130,15 @@
         <div class="container">
                     <div class="row heading">
                         <div class="col-lg-12">
-                            <h2>Create account</h2>
+                            <h2 style="color: black;">Create account</h2>
                             <hr>
-                            <div class="intro">Be a part of positive behaviour support</div>
+                            <div class="intro" style="color: black;">Be a part of positive behaviour support</div>
                         </div>
                     </div>
         </div>
                     <div class="col text-center">
-                        <a class="btn btn-1 btn-sm" href="{% url 'register' %}" style="margin-right: 5%;">Signup</a>
-                        <a class="btn btn-1 btn-sm" href="{% url 'login' %}">Signin</a>
+                        <a class="btn btn-3 btn-sm" href="{% url 'register' %}" style="margin-right: 5%;">Signup</a>
+                        <a class="btn btn-3 btn-sm" href="{% url 'login' %}">Signin</a>
                 </div>
         {% endif %}
 
@@ -208,14 +208,22 @@
 
 
 
-        <section class="box-content box-4 box-style">
+        <section class="box-content box-1" style="background-size: 100% auto; padding: 0px 0; background-color: white;">
                 <div class="clearfix">
+                     <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12">
+                            <h2>Testimonials</h2>
+                            <hr>
+                            <div class="intro" style="margin-bottom: 0%;">  </div>
+                        </div>
+                    </div>
                     <div class="cd-testimonials-wrapper cd-container">
                         <ul class="cd-testimonials">
                             <li>
                                 <p>FBA tool has been implemented successfully on our firm the understanding of the support workers on client has been improved </p>
-                                <div class="cd-author">
-                                    <img src="{% static 'images/avatar.png' %}" alt="">
+                             <br/>   <div class="cd-author">
+
                                     <ul class="cd-author-info">
                                         <li>MyName</li>
                                         <li>CEO, AmberCreative</li>
@@ -224,8 +232,8 @@
                             </li>
                             <li>
                                 <p>FBA tool has been implemented successfully on our firm the understanding of the support workers on client has been improved </p>
-                                <div class="cd-author">
-                                    <img src="{% static 'images/avatar.png' %}" alt="">
+                               <br/> <div class="cd-author">
+
                                     <ul class="cd-author-info">
                                         <li>MyName</li>
                                         <li>Designer, CodyHouse</li>
@@ -234,8 +242,8 @@
                             </li>
                             <li>
                                 <p>FBA tool has been implemented successfully on our firm the understanding of the support workers on client has been improved </p>
-                                <div class="cd-author">
-                                    <img src="{% static 'images/avatar.png' %}" alt="">
+                              <br/>  <div class="cd-author">
+
                                     <ul class="cd-author-info">
                                         <li>MyName</li>
                                         <li>CEO, CompanyName</li>
@@ -245,7 +253,7 @@
                         </ul> <!-- cd-testimonials -->
                     </div> <!-- cd-testimonials-wrapper -->
 
-                    <div class="cd-see-all"><a href="#0" class="btn btn-1">See all</a></div>
+                    <div class="cd-see-all"><a href="#0" class="btn btn-3">Read More</a></div>
 
                     <div class="cd-testimonials-all">
                         <div class="cd-testimonials-all-wrapper">
