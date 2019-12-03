@@ -47,8 +47,11 @@ def profile(request):
         'u_form': u_form,
         'p_form': p_form
     }
-
-    return render(request, 'users/profile.html', context, {'title': 'Profile'})
+    form = UserCreationForm
+    return render(request=request,
+                  template_name="users/profile.html",
+                  context={"form": form})
+   # return render(request, 'users/profile.html', context, {'title': 'Profile'})
 
 
 def edit_profile(request):
@@ -70,6 +73,16 @@ def edit_profile(request):
         'p_form': p_form
     }
     return render(request, "users/edit_profile.html", context, {'title': 'Profile'})
+
+from django.shortcuts import render
+
+
+
+
+from django.contrib.auth.forms import UserCreationForm
+
+
+
 
 
 def client(request):

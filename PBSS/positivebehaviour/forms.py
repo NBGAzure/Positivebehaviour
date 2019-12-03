@@ -11,4 +11,3 @@ class NewsletterUserSignUpform(forms.ModelForm):
             email = self.cleaned_data.get('email')
 
             return email
-

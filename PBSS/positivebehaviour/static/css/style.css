@@ -145,7 +145,7 @@ header .hero-lead-in {margin-bottom: 30px; font-family:"Montserrat", Helvetica,A
 .box-content .heading h2{font-size: 45px;letter-spacing:2px;}
 .box-content .heading .intro{margin-bottom: 75px; font-family: "Montserrat", Helvetica,Arial; font-size:22px;}
 
-.box-content.box-style {background-attachment:fixed; background-image: url(/static/images/scroll.jpg); background-size: 100% auto; background-color: #222; color: white;}
+.box-content.box-style {background-attachment:fixed; background-image: url(/static/images/test.png); background-size: 100% auto; background-color: #222; color: white;}
 
 .space{
     margin-top: 6%;
@@ -318,12 +318,12 @@ footer-links
 {
     padding-left:0;
     list-style:none;
-    line-height: 1.5em;
+    line-height: 2em;
 }
 .footer-links li
 {
     display:block;
-    line-height: 1.5em;
+    line-height: 2.1em;
 }
 .footer-links a
 {
@@ -331,7 +331,7 @@ footer-links
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#6ECADC;
+  color:#2c51d8;
   text-decoration:none;
 }
 .footer-links.inline li
@@ -344,7 +344,7 @@ footer .col-footer{margin-bottom: 50px;}
 footer .col-footer .heading{text-align: center;}
 footer .col-footer .heading h4{color:#fff; font-size: 24px;margin-bottom: 25px;}
 footer .col-footer .content{
-    line-height: 1.5em;
+    line-height: 2.5em;
 }
 
 footer .col-footer.footer-1{}
@@ -1053,4 +1053,24 @@ input{
 
 #id_email{
     color: black;
+}
+
+.cd-testimonials p {
+    color: black;
+}
+
+.cd-testimonials{
+    color: black;
+    text-align: center;
+}
+
+.cd-author .cd-author-info {
+    line-height: 1.4;
+    color:
+    black;
+    text-align: center;
+}
+
+.cd-author .cd-author-info li:first-child {
+    text-align: center;
 }
