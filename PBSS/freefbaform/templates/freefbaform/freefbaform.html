@@ -1,6 +1,38 @@
 {%  extends "freefbaform/fbabase.html" %}
 {% block content %}
         {% load static %}
+<!--<script>-->
+<!--    var myCookies={};-->
+
+<!--    function saveCookies() {-->
+<!--        myCookies["_name"] = document.getElementById("Name").value;-->
+<!--        myCookies["_email"]=document.getElementById('email').value;-->
+
+<!--        document.cookie="";-->
+<!--        var expiresAttrib = new Date(Date.now()+60*1000).toString()-->
+<!--        var cookieString ="";-->
+<!--        for(var Key in myCookies){-->
+
+<!--            cookieString =Key+"="+myCookies[Key]+";"+expiresAttrib+";"-->
+<!--            document.cookie = cookieString;-->
+<!--        }-->
+<!--        document.getElementById("out").innerHTML = document.cookie;-->
+<!--    }-->
+
+<!--    function loadCookies() {-->
+<!--        myCookies = {};-->
+<!--        var kv = document.cookie.split(";");-->
+<!--        for(var id in kv)-->
+<!--        {-->
+<!--            var cookie = kv[id].split("=");-->
+<!--            myCookies[cookie[0].trim()]= cookie[1];-->
+<!--        }-->
+<!--        document.getElementById('user').value = myCookies["_name"];-->
+<!--        document.getElementById('email').value = myCookies["_email"];-->
+<!--    }-->
+
+<!--</script>-->
+
 
     <div id="page-content" class="index-page container-fluid">
                 <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
@@ -29,7 +61,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                            <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
+                                             <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -37,6 +69,7 @@
                                                 <input type="email" class="form-control input-lg" name="email" id="email" placeholder="name@example.com" required="required" />
                                             </div>
                                         </div>
+                                        <p id="out"></p>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -189,6 +222,11 @@
                         <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right; ">Print</button>
                         <a button class="btn btn-3 btn-sm"  style="float: right; margin-right: 2%;" href="{% url 'profile' %}"> Next </a> </button>
                         </div>
+<!--                                    <div id="Button3">-->
+<!--                        <button class="btn btn-3 btn-sm" onclick="saveCookies()" name="print" id="save" style="float: left; ">save cookie</button>-->
+<!--                         <button class="btn btn-3 btn-sm" onclick=" loadCookies()" name="print" id="load" style="float: left; ">Load cookie</button>-->
+
+<!--                        </div>-->
                             </div>
                             </div>
 

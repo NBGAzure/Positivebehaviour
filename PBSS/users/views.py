@@ -12,8 +12,8 @@ from django.views.generic import ListView
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-
-
+from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
 
 def register(request):
     if request.method == 'POST':
@@ -74,17 +74,6 @@ def edit_profile(request):
     }
     return render(request, "users/edit_profile.html", context, {'title': 'Profile'})
 
-from django.shortcuts import render
-
-
-
-
-from django.contrib.auth.forms import UserCreationForm
-
-
-
-
-
 def client(request):
     context = {
         'posts': Post.objects.all()
@@ -123,7 +112,6 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == post.author:
             return True
         return False
-
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/client'

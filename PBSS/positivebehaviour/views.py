@@ -1,7 +1,12 @@
-from django.shortcuts import render
+from django.core.checks import messages
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
+from django.shortcuts import render
 
+from .models import NewsletterUsers
+from .forms import NewsletterUserSignUpform
 # Create your views here.
 def index(request):
     form = NewsletterUserSignUpform(request.POST or None)
@@ -9,17 +14,18 @@ def index(request):
     if form.is_valid():
         instance = form.save(commit=False)
         if NewsletterUsers.objects.filter(email=instance.email).exists():
-            print("Sorry this email already exist")
+            messages.success(request, f'This email already exist')
+            return redirect('index')
         else:
             instance.save()
+            messages.success(request, f'Your request for subscription has been updated')
+            return redirect('index')
     context = {
         'form': form,
     }
     template = "positivebehaviour/base.html"
   #  return render(request, template, context)
     return render(request, 'positivebehaviour/index.html', context)
-
-
 
 
 def sitemap(request):
@@ -31,22 +37,16 @@ def fbaForm(request):
     return render(request, 'fbaform/fbaform.html', {'title': 'fbaform'})
 
 
-
-from django.shortcuts import render
-
-from .models import NewsletterUsers
-from .forms import NewsletterUserSignUpform
-
 def newsletter_signup(request):
     form = NewsletterUserSignUpform(request.POST or None)
-
     if form.is_valid():
         instance = form.save(commit=False)
         if NewsletterUsers.objects.filter(email=instance.email).exists():
-            print("Sorry this email already exist")
+            messages.success(request, f'Sorry this email already exist')
+            return redirect('index')
         else:
             instance.save()
-
+            messages.success(request, f'Email is saved successfully')
     context = {
         'form': form,
     }
