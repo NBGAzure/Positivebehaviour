@@ -119,6 +119,12 @@
                         <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
                             <p style="margin-bottom: 3%;"><a href="{% url 'profile' %}">Home</a></p>
                             <h4>Heading</h4>
+                             {% if user.is_authenticated %}
+                              <a class="btn btn-3 btn-sm" href="{% url 'client' %}" style="margin-left: 1%;" >Client List</a>
+                            {% else %}
+                            <a class="page-scroll" href="#portal">Signup</a>
+                        </li>
+                         {% endif %}
                         </div>
                     </div>
         <div class="row">
@@ -138,10 +144,10 @@
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
         </div>
       </div>
+  </main>
     </div>
 
-  </main>
-  <!-- page-content" -->
-</div>
+
+
 
 {% endblock content %}

@@ -1074,3 +1074,7 @@ input{
 .cd-author .cd-author-info li:first-child {
     text-align: center;
 }
+
+.col-md-8 {
+    width: 100%;
+}
