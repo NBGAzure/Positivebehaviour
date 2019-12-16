@@ -66,14 +66,19 @@
                         </div>
                     </div>
             <div class="container">
+                <h1 class="mb-3">Clients by {{ view.kwargs.username }} ({{ page_obj.paginator.count}})</h1>
                 {% for post in posts %}
+
+
                 <h2><a class="article-title" href="{% url 'client-detail' post.id %}">{{ post.client_name }}</a> </h2>
-                             <a class="mr-2" href="{% url 'user-client' post.author.username %}">By {{post.author}}</a>
-                            <div class="intro"> on {{ post.date_issued }}</div>
-                            <div class="intro">{{post.email}}</div>
+                             <div class="article-metadata">
+                                 <a class="mr-2" href="{% url 'user-client' post.author.username %}">By {{post.author}}</a><p> on {{ post.date_issued }}</p>
+                                 </div>
+                            <p>{{post.email}}</p>
                             <p>{{post.content}}</p>
+
                 {% endfor %}
-                <br><br>
+ <br><br>
                 {% if is_paginated %}
                     {% if page_obj.has_previous %}
                     <a type="button" class="btn btn-info" href="?page=1">First</a>
@@ -91,7 +96,6 @@
                     <a type="button" class="btn btn-info" href="?page={{ page_obj.next_page_number }}">Next</a>
                     <a type="button" class="btn btn-info" href="?page={{ page_obj.paginator.num_pages}}">Last</a>
                  {% endif %}
-
                 {% endif %}
 
                         </div>

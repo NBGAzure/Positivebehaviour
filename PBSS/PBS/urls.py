@@ -22,7 +22,7 @@ from django.urls import path, include
 from users import views as user_views
 from users.views import client
 from contact.views import contact
-from users.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
+from users.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView
 
 #from fbaform.views import fbaformfunc, addBehaviour, addTrigger Updated upstream
 from django.conf.urls import include, url
@@ -57,6 +57,7 @@ urlpatterns = [
     path('freefbaform/', include('freefbaform.urls')),
     path('contact/', contact, name="contact"),
     path('client/', PostListView.as_view(), name="client"),
+    path('client/<str:username>', UserPostListView.as_view(), name="user-client"),
     path('client/<int:pk>/', PostDetailView.as_view(), name="client-detail"),
     path('client/new/', PostCreateView.as_view(), name="client-create"),
     path('client/<int:pk>/update/', PostUpdateView.as_view(), name="client-update"),
