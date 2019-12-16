@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class List(models.Model):
     item = models.CharField(max_length=200)
@@ -13,6 +14,36 @@ class Anticident(models.Model):
 
     def __str__(self):
         return self.anticident + ' | ' + str(self.completed)
+
+class Anti(models.Model):
+    post = models.CharField(max_length=100)
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
+
+
+
+class Beh(models.Model):
+    post = models.CharField(max_length=100)
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
+
+
+class Con(models.Model):
+    post = models.CharField(max_length=100)
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #class Location(models.Model):
  #   wakingup = models.CharField(max_length=255)
@@ -35,3 +66,5 @@ class Anticident(models.Model):
 #     cues4 = models.CharField(max_length=255)
 #     cues5 = models.CharField(max_length=255)
 #     cues6 = models.CharField(max_length=255)
+
+

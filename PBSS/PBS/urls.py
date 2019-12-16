@@ -15,10 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from django.urls import path, include
 from users import views as user_views
 from users.views import client
 from contact.views import contact
@@ -50,9 +48,7 @@ urlpatterns = [
 
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
-
     path('edit_profile/', user_views.edit_profile, name='edit_profile'),
-
     path('fbaform/', include('fbaform.urls')),
     path('freefbaform/', include('freefbaform.urls')),
     path('contact/', contact, name="contact"),

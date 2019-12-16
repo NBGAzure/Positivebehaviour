@@ -74,6 +74,10 @@
 
   </nav>
   <!-- sidebar-wrapper  -->
+
+
+
+
   <main class="page-content">
     <div class="container">
        <h2 style="text-align: center;">Dashboard</h2>
@@ -83,6 +87,20 @@
           <p style="text-align: center;">Manage work on daily basis.</p>
         </div>
       </div>
+    <div>
+
+        <h1> Anticedent</h1>
+        <form method="post">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <input type="text">
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+
         <div class="container">
                     <div class="row heading">
                         <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
