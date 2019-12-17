@@ -2,6 +2,57 @@
 {% block content %}
         {% load static %}
         {% load crispy_forms_tags %}
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="{% url 'index' %}">PBSS</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li>
+                         {% if user.is_authenticated %}
+                     <li>
+                                 <a class="page-scroll" href="{% url 'client' %}">Client</a>
+                             </li>
+                             <li>
+                                 <a class="page-scroll" href="{% url 'profile' %}">Profile</a>
+                             </li>
+                             <li>
+                                 <a class="page-scroll" href="{% url 'logout' %}">Logout</a>
+                             </li>
+                     </li>
+                             <li>
+
+                         {% else %}
+                            <a class="page-scroll" href="#portal">Signup</a>
+                        </li>
+                         {% endif %}
+
+                        <li>
+                            <a class="page-scroll" href="{% url 'contact' %}">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
 
      <div id="page-content" class="index-page">
             <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
@@ -25,7 +76,7 @@
                                     {{ form| crispy }}
                                  </fieldset>
                                 <div class="form-group">
-                                 <button class="btn btn-3 btn-sm btn-block" type="submit" >Add in client list </button>
+                                 <button class="btn btn-3 btn-sm btn-block" type="submit" >Add Client </button>
                                 </div>
                             </form>
                         </div>
@@ -34,5 +85,223 @@
                 </div>
             </section>
      </div>
+
+<div id="page-content" class="index-page container-fluid">
+                <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
+                    <div class="container-fluid">
+                        <div class="row heading">
+                        <div class="col-lg-12">
+                            <h2>FBA form</h2>
+                            <hr>
+                        </div>
+                    </div>
+                        <div id="Button1">
+                        <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right;">Print</button>
+                        <a button class="btn btn-3 btn-sm"  style="float: right; margin-right: 2%;" href="{% url 'profile' %}">Next</a> </button>
+                        </div>
+                            <div class="row">
+                        <div class="col-md-4">
+                            <div id="Noprint">
+                            <div class="row box-item"><br><br>
+                                <p style="text-align: left; line-height: 2; padding-top: 8%; margin: 4%;">Functional behaviour assessment tool analyse the behaviour of an individual by there actions, we are providing a tool for everyone who wants to know more about the behaviour of an individual.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="contact-form">
+                                <form name="form1" method="post">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                             <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control input-lg" name="email" id="email" placeholder="name@example.com" required="required" />
+                                            </div>
+                                        </div>
+                                        <p id="out"></p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                            <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Gender" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control input-lg" name="phonenumber" id="phonenumber" pattern="^\d{4}-\d{3}-\d{4}$" placeholder="Mobile Number" required="required" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control input-lg" name="age" id="age" min="5" max="100" placeholder="Age" required="required" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="address" id="message" class="form-control" rows="2" cols="25" required="required"
+                                                placeholder="Address"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                 <div class="container-fluid">
+                    <div class="col-sm-3 box-item">
+                                <div class="col-lg-12"><br><br>
+                                <h4>Behaviour</h4>
+                                <hr>
+                                    <form>
+
+                                        <div class="intro" style="text-align: left; line-height: 2;">1. When the individual experiences, or is engaged in, one of the following:</div>
+                                       <select id="behaviour" class="select-box" onchange="singleSelectChangeValue()">
+                                    <option value="behaviour1">--Select an Item--</option>
+                                    <option value="behaviour2">Is in the community</option>
+                                    <option value="behaviour2">Has recently been disciplined</option>
+                                    <option value="behaviour2">Is engaged in an activity or task they dislike</option>
+                                      </select>
+
+                                     <!--   <input type="text" id="textFieldTextBehaviour" class="form-control" placeholder="get value on option select"> -->
+                                        <div class="intro" style="text-align: left; line-height: 2;">2. Often it’s when someone:</div>
+                                        <select id="boptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                      <!--  <input type="text" id="textFieldTextboptions" class="form-control" placeholder="get value on option select">  -->
+
+                                        <div class="intro" style="text-align: left; line-height: 2;">3. In particular, an:</div>
+                                        <select id="ageoptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                        <!-- <input type="text" id="textFieldTextageoptions" class="form-control" placeholder="get value on option select"> -->
+
+                                        <div class="intro" style="text-align: left; line-height: 2;">4. Interacts with the individual in the following way:</div>
+                                        <select id="interactionoptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                      <!--  <input type="text" id="textFieldTextinteractionoptions" class="form-control" placeholder="get value on option select"> -->
+                                    </form>
+                            </div>
+                            </div>
+                    <div class="col-sm-3 box-item">
+                                <div class="col-lg-12"><br><br>
+                                 <h4>Anticident</h4><hr>
+
+                                    <form>
+                                       <div class="intro" style="text-align: left; line-height: 2;">5. What do you see the observe him/her doing?</div>
+                                        <select id="observationoptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                      <!--  <input type="text" id="textFieldTextobservationoptions" class="form-control" placeholder="get value on option select"> -->
+
+                                        <div class="intro" style="text-align: left; line-height: 2;">6. What changes as a result of the individual engaging in this behaviour?</div>
+                                        <select id="enganingoptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                       <!-- <input type="text" id="textFieldTextenganingoptions" class="form-control" placeholder="get value on option select"> -->
+
+                                         <div class="intro" style="text-align: left; line-height: 2;">7. Select your response from the list below.</div>
+                                        <select id="responseoptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                       <!-- <input type="text" id="textFieldTextresponseoptions" class="form-control" placeholder="get value on option select"> -->
+                                    </form>
+
+                            </div>
+                            </div>
+                    <div class="col-sm-3 box-item">
+                                <div class="col-lg-12"><br><br>
+                               <h4>Consequences</h4><hr>
+
+                                        <form>
+                                        <div class="intro" style="text-align: left; line-height: 2;">8. Select your response from the list below.</div>
+                                        <select id="consequensesoptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                      <!--  <input type="text" id="textFieldTextconsequensesoptions" class="form-control" placeholder="get value on option select"> -->
+
+                                         <div class="intro" style="text-align: left; line-height: 2;">9. What behaviour would you accept as an alternative while teaching the desired behaviour?</div>
+                                        <select id="alternativeoptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                      <!--  <input type="text" id="textFieldTextalternativeoptions" class="form-control" placeholder="get value on option select"> -->
+
+                                        <div class="intro" style="text-align: left; line-height: 2;">10. Function - The function of behaviour is the reason people behave in a certain way.</div>
+                                        <select id="functionoptions" class="select-box">
+                                        <option value="">-- select one -- </option>
+                                    </select>
+                                       <!-- <input type="text" id="textFieldTextfunctionoptions" class="form-control" placeholder="get value on option select"> -->
+
+                                    </form>
+                            </div>
+                            </div>
+
+                     <div class="col-sm-3 box-item">
+                                <div class="col-lg-12"><br><br>
+                               <h4>Flowchart</h4>
+                                <hr>
+                                    <form>
+                                        <input type="text" id="textFieldTextBehaviour" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextboptions" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextageoptions" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextinteractionoptions" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextobservationoptions" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextenganingoptions" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextresponseoptions" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextconsequensesoptions" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextalternativeoptions" class="diagram-control">
+                                        <i class="down"></i>
+                                        <input type="text" id="textFieldTextfunctionoptions" class="diagram-control">
+                                  <!--  <img src="{% static 'images/freefbaform.png' %}" alt="freefbaform" class="freefbaform"> -->
+                                    </form>
+                                    <div id="Button2">
+                        <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right; ">Print</button>
+                        <a button class="btn btn-3 btn-sm"  style="float: right; margin-right: 2%;" href="{% url 'profile' %}"> Next </a> </button>
+                        </div>
+<!--                                    <div id="Button3">-->
+<!--                        <button class="btn btn-3 btn-sm" onclick="saveCookies()" name="print" id="save" style="float: left; ">save cookie</button>-->
+<!--                         <button class="btn btn-3 btn-sm" onclick=" loadCookies()" name="print" id="load" style="float: left; ">Load cookie</button>-->
+
+<!--                        </div>-->
+                            </div>
+                            </div>
+
+                 </div>
+                <div class="row">
+                            <div class="col-sm-6 box-item">
+                                <div class="col-lg-12"><br><br>
+
+                            </div>
+                            </div>
+
+
+                        <script>
+                                function myFunction() {
+                                window.print();
+                                }
+                        </script>
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+
 
 {% endblock content %}

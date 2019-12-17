@@ -23,7 +23,7 @@ class Post(models.Model):
         return self.client_name
 
     def get_absolute_url(self):
-        return reverse('client-detail', kwargs={'pk': self.pk})
+        return reverse('profile', kwargs={'pk': self.pk})
 
     "Below lines were to resize the profile pic images, however, It won't work with AWS"
     "def save(self):"

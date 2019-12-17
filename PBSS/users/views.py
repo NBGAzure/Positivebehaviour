@@ -1,8 +1,9 @@
 from typing import Type
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 # from PBSS.users.models import Post
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
@@ -79,17 +80,28 @@ def client(request):
         'posts': Post.objects.all()
     }
 
-    return render(request, 'users/client.html', context)
+    return render(request, 'users/profile.html', context)
 
 class PostListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = 'users/client.html'
+    template_name = 'users/profile.html'
     context_object_name = 'posts'
     ordering = ['-date_issued']
+    paginate_by = 5
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+class UserPostListView(LoginRequiredMixin, ListView):
+    model = Post
+    template_name = 'users/profile.html'
+    context_object_name = 'posts'
+    paginate_by = 2
+
+    def get_queryset(self):
+        user = get_object_or_404(User, username = self.kwargs.get('username'))
+        return Post.objects.filter(author=user).order_by('-date_issued')
 
 class PostDetailView(DetailView):
     model = Post

@@ -28,7 +28,7 @@
                     <li>
                          {% if user.is_authenticated %}
                      <li>
-                                 <a class="page-scroll" href="{% url 'client' %}">Client</a>
+                                 <a class="page-scroll" href="{% url 'client-create' %}">New Client</a>
                              </li>
                              <li>
                                  <a class="page-scroll" href="{% url 'profile' %}">Profile</a>
@@ -54,6 +54,7 @@
         <!-- /.container-fluid -->
     </nav>
 
+
      <div id="page-content" class="index-page">
             <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
                 <div class="container">
@@ -65,19 +66,41 @@
                         </div>
                     </div>
             <div class="container">
-							<h2>{{ object.client_name }} </h2>
-                            <a class="mr-2" href="{% url 'user-client' object.author.username %}">By {{object.author}}</a>
-                             {% if object.author == user %}
-                                <a class="btn btn-3 btn-sm btn-block" type="submit" href="{% url 'client-update' object.id %}">Update</a>
-                                <a class="btn btn-3 btn-sm btn-block" type="submit" href="{% url 'client-delete' object.id %}">Delete</a>
-                              {% endif %}
-                            <p>{{object.email}}</p>
-                            <p>{{object.content}}</p>
+                <h1 class="mb-3">Clients by {{ view.kwargs.username }} ({{ page_obj.paginator.count}})</h1>
+                {% for post in posts %}
+
+
+                <h2><a class="article-title" href="{% url 'client-detail' post.id %}">{{ post.client_name }}</a> </h2>
+                             <div class="article-metadata">
+                                 <a class="mr-2" href="{% url 'user-client' post.author.username %}">By {{post.author}}</a><p> on {{ post.date_issued }}</p>
+                                 </div>
+                            <p>{{post.email}}</p>
+                            <p>{{post.content}}</p>
+
+                {% endfor %}
+ <br><br>
+                {% if is_paginated %}
+                    {% if page_obj.has_previous %}
+                    <a type="button" class="btn btn-info" href="?page=1">First</a>
+                    <a type="button" class="btn btn-info" href="?page={{ page_obj.previous_page_number}}">Previous</a>
+                    {% endif %}
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if page_obj.number == num %}
+                 <a type="button" class="btn btn-info" href="?page={{ num }}">{{ num }}</a>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                 <a type="button" class="btn btn-info" href="?page={{ num }}">{{ num }}</a>
+                        {% endif %}
+                 {% endfor %}
+
+                 {% if page_obj.has_next %}
+                    <a type="button" class="btn btn-info" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a type="button" class="btn btn-info" href="?page={{ page_obj.paginator.num_pages}}">Last</a>
+                 {% endif %}
+                {% endif %}
+
                         </div>
                 </div>
-
             </section>
-
      </div>
 
 {% endblock content %}
