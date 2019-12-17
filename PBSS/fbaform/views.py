@@ -73,9 +73,10 @@ def edit(request, list_id):
 
 
 
+
 def get(self, request):
     form = Fba()
-    return render(request,{'form':form} )
+    return render(request, {'form': form})
 
 def post (self, request):
     form = Fba(request.POST)
@@ -85,6 +86,7 @@ def post (self, request):
         post.save()
         text = form.cleaned_data['post']
         form = Fba()
+        return redirect(self)
 
-    args = {'form': form, 'text': text}
-    return render(request, args)
+    args = {'form': form,'text': text}
+    return render(request, self, args)

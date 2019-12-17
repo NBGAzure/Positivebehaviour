@@ -21,5 +21,5 @@ class Fba(forms.ModelForm):
 
     class Meta:
         model = Anti
-        fields = ('post', )
+        fields = ('post',)
 

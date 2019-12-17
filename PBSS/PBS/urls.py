@@ -50,6 +50,7 @@ urlpatterns = [
     path('edit_profile/', user_views.edit_profile, name='edit_profile'),
     path('fbaform/', include('fbaform.urls')),
     path('freefbaform/', include('freefbaform.urls')),
+    #path('userfba/', include('userfba.urls')),
     path('contact/', contact, name="contact"),
     path('client/', PostListView.as_view(), name="client"),
     path('client/<int:pk>/', PostDetailView.as_view(), name="client-detail"),
@@ -57,6 +58,7 @@ urlpatterns = [
     path('client/<int:pk>/update/', PostUpdateView.as_view(), name="client-update"),
     path('client/<int:pk>/delete/', PostDeleteView.as_view(), name="client-delete"),
 
+    url(r'^userfba/', include('userfba.urls')),
     #  path('newsletter/', include('newsletter.urls')),
 
 

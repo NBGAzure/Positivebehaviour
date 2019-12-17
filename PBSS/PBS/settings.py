@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'fbaform',
     'freefbaform',
+    'userfba',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
