@@ -21,9 +21,10 @@
                             <form method="POST" style="">
                                  {% csrf_token %}
                                 <h2>Are you sure you want to delete the Client"{{object.client_name}}"</h2>
+                                <br><br>
                                  <fieldset class="form-group">
-                                     <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
-                                     <a class="btn btn-outline-secondary" href="{% url 'profile' object.id %}">Cancel</a>
+                                     <button class="btn-danger" type="submit">Yes, Delete </button>
+                                     <a class="btn-warning" href="{% url 'profile' object.id %}"> Cancel</a>
 
                                  </fieldset>
 

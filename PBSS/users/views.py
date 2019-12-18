@@ -82,16 +82,19 @@ def client(request):
 
     return render(request, 'users/profile.html', context)
 
-class PostListView(LoginRequiredMixin, ListView):
+class PostListView(LoginRequiredMixin,  ListView):
     model = Post
     template_name = 'users/profile.html'
     context_object_name = 'posts'
     ordering = ['-date_issued']
-    paginate_by = 5
+    paginate_by = 2
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    def get_queryset(self):
+        return super(PostListView, self).get_queryset().filter(author=self.request.user)
 
 class UserPostListView(LoginRequiredMixin, ListView):
     model = Post

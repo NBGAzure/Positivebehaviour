@@ -67,12 +67,13 @@
             <div class="container">
 							<h2>{{ object.client_name }} </h2>
                             <a class="mr-2" href="{% url 'user-client' object.author.username %}">By {{object.author}}</a>
-                             {% if object.author == user %}
-                                <a class="btn btn-3 btn-sm btn-block" type="submit" href="{% url 'client-update' object.id %}">Update</a>
-                                <a class="btn btn-3 btn-sm btn-block" type="submit" href="{% url 'client-delete' object.id %}">Delete</a>
-                              {% endif %}
                             <p>{{object.email}}</p>
                             <p>{{object.content}}</p>
+                            <br><br>
+                            {% if object.author == user %}
+                                <a class="btn btn-primary btn-lg" type="submit" href="{% url 'client-update' object.id %}">Update</a>
+                                <a class="btn btn-primary btn-lg" type="submit" href="{% url 'client-delete' object.id %}">Delete</a>
+                              {% endif %}
                         </div>
                 </div>
 

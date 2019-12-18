@@ -78,6 +78,11 @@
               <span>Home</span>
             </a>
           </li>
+            <li class="sidebar-dropdown">
+           <a href="{% url 'client-create' %}">
+              <span>New Client</span>
+            </a>
+          </li>
           <li class="sidebar-dropdown">
            <a href="{% url 'edit_profile' %}">
               <span>Edit Profile</span>
@@ -118,7 +123,7 @@
                     <div class="row heading">
                         <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
                             <p style="margin-bottom: 3%;"><a href="{% url 'profile' %}">Home</a></p>
-                            <h2 style="text-align: center;">Client List</h2>
+                            <h2 style="text-align: center;">Client Lists - ({{page_obj.paginator.count}})</h2>
 <!--                             {% if user.is_authenticated %}-->
 <!--                              <a class="btn btn-3 btn-sm" href="{% url 'client' %}" style="margin-left: 1%;" >Client List</a>-->
 <!--                            {% else %}-->
@@ -127,7 +132,7 @@
 <!--                         {% endif %}-->
 <!--                        </div>-->
 <!--                  </div>-->
-
+<br><br>
         <div class="container">
                 {% for post in posts %}
                 <h2><a class="article-title" href="{% url 'profile' post.id %}">{{ post.client_name }}</a> </h2>
