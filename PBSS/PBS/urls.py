@@ -14,14 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from django.contrib import admin
+from django.urls import path
+from form_fba import views
 from django.contrib.auth import views as auth_views
 from users import views as user_views
 from users.views import client
 from contact.views import contact
 from users.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView
-
 #from fbaform.views import fbaformfunc, addBehaviour, addTrigger Updated upstream
 from django.conf.urls import include, url
 from django.conf import settings
@@ -29,6 +28,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('std/', views.std),
+    path('view/', views.view),
     path('freefbaform/', include('freefbaform.urls')),
     path('positivebehaviour/', include('positivebehaviour.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
@@ -51,6 +52,7 @@ urlpatterns = [
     path('edit_profile/', user_views.edit_profile, name='edit_profile'),
     path('fbaform/', include('fbaform.urls')),
     path('freefbaform/', include('freefbaform.urls')),
+    #path('userfba/', include('userfba.urls')),
     path('contact/', contact, name="contact"),
     path('client/', PostListView.as_view(), name="client"),
     path('client/<str:username>', UserPostListView.as_view(), name="user-client"),
@@ -59,6 +61,7 @@ urlpatterns = [
     path('client/<int:pk>/update/', PostUpdateView.as_view(), name="client-update"),
     path('client/<int:pk>/delete/', PostDeleteView.as_view(), name="client-delete"),
 
+    url(r'^userfba/', include('userfba.urls')),
     #  path('newsletter/', include('newsletter.urls')),
 
 

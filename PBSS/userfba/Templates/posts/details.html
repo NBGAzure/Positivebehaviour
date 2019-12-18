@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>User_fba</title>
+</head>
+<body>
+
+<h1> User FBA </h1>
+
+{% block content %}
+
+<header class="container align-center"> <h3>FBA</h3> </header>
+<h3 class="align-center red">{{ post.title }}</h3>
+<div class="card">
+    <div class="card-content">
+        {{ post.body }}
+    </div>
+    <div class="card-action">
+        {{ post.created_at }}
+    </div>
+
+
+</div>
+
+
+<a class="btn-1" href="/posts" > back </a>
+{% endblock %}
+
+
+
+</body>
+</html>
