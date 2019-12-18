@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FBA</title>
+</head>
+<body>
+<form method="POST" class="post-form" action="/std/">
+    {% csrf_token %}
+    <div class="container">
+
+        <br>
+
+        <div class="form-group row">
+            <label class="col-sm-1"> </label>
+                <div class="col-sm-4">
+        <h3> Enter your FBA form</h3>
+                </div>
+        </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">User</label>
+        <div class="col-sm-4">{{ form.user }} </div>
+
+    </div>
+
+     <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Anticident</label>
+        <div class="col-sm-4">{{ form.anticedent }} </div>
+
+    </div>  <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Behaviour</label>
+        <div class="col-sm-4">{{ form.behaviour }} </div>
+
+    </div>  <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Consequence</label>
+        <div class="col-sm-4">{{ form.consequence }} </div>
+
+    </div>  <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Intensity</label>
+        <div class="col-sm-4">{{ form.intensity }} </div>
+
+    </div>
+
+
+        <button type="submit" class="btn btn-primary">Save</button>
+
+
+
+    </div>
+</form>
+</body>
+</html>

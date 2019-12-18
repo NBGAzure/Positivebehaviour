@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'crispy_forms',
     'fbaform',
+    'form_fba',
     'freefbaform',
     'userfba',
     'django.contrib.admin',
