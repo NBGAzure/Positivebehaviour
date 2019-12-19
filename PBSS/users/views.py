@@ -87,7 +87,7 @@ class PostListView(LoginRequiredMixin,  ListView):
     template_name = 'users/profile.html'
     context_object_name = 'posts'
     ordering = ['-date_issued']
-    paginate_by = 2
+    paginate_by = 6
 
     def form_valid(self, form):
         form.instance.author = self.request.user

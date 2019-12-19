@@ -74,18 +74,13 @@
             <span style="font-size: 24px; margin-top: 4%; margin-bottom: 4%;">General</span>
           </li>
              <li class="sidebar-dropdown">
-           <a href="{% url 'profile' %}">
+           <a href="{% url 'client' %}">
               <span>Home</span>
             </a>
           </li>
             <li class="sidebar-dropdown">
            <a href="{% url 'client-create' %}">
               <span>New Client</span>
-            </a>
-          </li>
-          <li class="sidebar-dropdown">
-           <a href="{% url 'edit_profile' %}">
-              <span>Edit Profile</span>
             </a>
           </li>
           <li class="sidebar-dropdown">
@@ -96,6 +91,11 @@
           <li class="sidebar-dropdown">
             <a href="{% url 'fbaform' %}" >
               <span>FBA form</span>
+            </a>
+          </li>
+            <li class="sidebar-dropdown">
+           <a href="{% url 'edit_profile' %}">
+              <span>Edit Profile</span>
             </a>
           </li>
             <li class="sidebar-dropdown">
