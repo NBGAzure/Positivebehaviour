@@ -15,7 +15,7 @@ class Profile(models.Model):
 
 class Post(models.Model):
     client_name = models.CharField(max_length=100)
-    # DOB = models.DateField(auto_now_add=False, auto_now=False, blank=True)
+    DOB = models.DateField(auto_now_add=False, auto_now=False, blank=True)
     email = models.EmailField()
     content = models.TextField()
     date_issued = models.DateTimeField(auto_now_add=True)

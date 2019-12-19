@@ -1,59 +1,7 @@
-
-{%  extends "users/userbase.html" %}
+{%  extends "users/dashboardbase.html" %}
 {% block content %}
         {% load static %}
         {% load crispy_forms_tags %}
-<nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="{% url 'index' %}">PBSS</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="{% url 'index' %}">Home</a>
-                    </li>
-                    <li>
-                         {% if user.is_authenticated %}
-                     <li>
-                                 <a class="page-scroll" href="{% url 'client' %}">Client</a>
-                             </li>
-                             <li>
-                                 <a class="page-scroll" href="{% url 'profile' %}">Profile</a>
-                             </li>
-                             <li>
-                                 <a class="page-scroll" href="{% url 'logout' %}">Logout</a>
-                             </li>
-                     </li>
-                             <li>
-
-                         {% else %}
-                            <a class="page-scroll" href="#portal">Signup</a>
-                        </li>
-                         {% endif %}
-
-                        <li>
-                            <a class="page-scroll" href="{% url 'contact' %}">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
      <div id="page-content" class="index-page">
             <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
                 <div class="container">
