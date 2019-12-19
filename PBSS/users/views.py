@@ -87,7 +87,7 @@ class PostListView(LoginRequiredMixin,  ListView):
     template_name = 'users/profile.html'
     context_object_name = 'posts'
     ordering = ['-date_issued']
-    paginate_by = 6
+    paginate_by = 5
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -111,14 +111,14 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['client_name', 'email','content']
+    fields = ['client_name', 'DOB','email','content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['client_name', 'email', 'content']
+    fields = ['client_name', 'DOB','email','content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)

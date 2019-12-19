@@ -51,11 +51,9 @@
                     </li>
                     <li>
                          {% if user.is_authenticated %}
-                    <li>
-                                 <a class="page-scroll" href="{% url 'client' %}">Client</a>
-                             </li>
+
                              <li>
-                                 <a class="page-scroll" href="{% url 'profile' %}">Profile</a>
+                                 <a class="page-scroll" href="{% url 'client' %}">Profile</a>
                              </li>
                              <li>
                                  <a class="page-scroll" href="{% url 'logout' %}">Logout</a>
