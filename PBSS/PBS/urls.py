@@ -60,8 +60,6 @@ urlpatterns = [
     path('client/new/', PostCreateView.as_view(), name="client-create"),
     path('client/<int:pk>/update/', PostUpdateView.as_view(), name="client-update"),
     path('client/<int:pk>/delete/', PostDeleteView.as_view(), name="client-delete"),
-
-    url(r'^userfba/', include('userfba.urls')),
     #  path('newsletter/', include('newsletter.urls')),
 
 

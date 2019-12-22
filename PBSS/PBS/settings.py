@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'fbaform',
     'form_fba',
     'freefbaform',
-    'userfba',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
