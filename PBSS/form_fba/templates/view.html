@@ -1,11 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <table class = "table table-striped table-bordered table-sm">
+{%  extends "users/dashboardbase.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+  <main class="page-content">
+    <div class="container-fluid">
+       <h2 style="text-align: center;">Dashboard</h2>
+        <hr>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <p style="text-align: center;">Manage work on daily basis.</p>
+        </div>
+      </div>
+
+                   <div class="row heading">
+                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
+                            <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a> > <a href="#"> Functional Behaviour Assessment</a></p>
+                            <h4>Functional Behaviour Assessment</h4>
+                        </div>
+                    </div>
+
+               <form method="POST" class="post-form" action="/std/">
+    {% csrf_token %}
+
+
+        <br>
+
+        <div class="form-group row">
+                <div class="col-sm-12">
+        <p style="margin-bottom: 2%;">Your information has been added to the system.</p>
+                </div>
+        </div>
+
+    <div class="form-group row">
+        <table class = "table table-striped table-bordered table-sm">
     <thead class="thead-dark">
     <tr>
         <th>User</th>
@@ -23,8 +51,8 @@
         <td>{{ forms.consequence }} </td>
         <td>{{ forms.intensity }} </td>
         <td>
-            <a href="/edit/{{ forms.id }}"> <span class="glyphicon glyphicon-pencil"> Edit</span> </a>
-            <a href="/delete/{{ forms.id }}"> Delete </a>
+            <a href="/edit/{{ forms.id }}"> <span class="glyphicon glyphicon-pencil"></span> Edit </a></td>
+            <td><a href="/delete/{{ forms.id }}"> Delete </a>
 
         </td>
     </tr>
@@ -32,6 +60,14 @@
     {% endfor %}
 
     </table>
+    </div>
+</form>
 
-</body>
-</html>
+        </div></div></div></div>
+  </main>
+    </div>
+
+
+
+{% endblock content %}
+
