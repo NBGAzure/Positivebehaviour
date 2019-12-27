@@ -23,9 +23,9 @@
                 <h2><a class="article-title" href="{% url 'profile' post.id %}">{{ post.client_name }}</a> </h2>
                              <a class="mr-2" href="{% url 'user-client' post.author.username %}">By {{post.author}}</a>
                             <div class="intro"> on {{ post.date_issued }}</div>
-                            <div class="intro">{{post.DOB}}</div>
-                            <div class="intro">{{post.email}}</div>
-                            <p>{{post.content}}</p>
+                            <div class="intro">Date Of Birth: {{post.DOB}}</div>
+                            <div class="intro">Email-id: {{post.email}}</div>
+                            <div class="intro">Comment: {{post.content}}</div>
                 {% endfor %}
                 <br><br>
                 {% if is_paginated %}
