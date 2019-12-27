@@ -25,7 +25,7 @@
                     <div>
                         {%  if messages %}
                             {% for message in messages %}
-                               <div class="alert alert-{{ message.tags }}">
+                               <div class="alert alert-{{ message.tags }}" style="font-size: 25px; text-align: center;">
                                 {{ message }}
                                </div>
                             {% endfor %}
@@ -381,7 +381,7 @@
                         </div>	<!-- cd-testimonials-all-wrapper -->
                         <a href="#0" class="close-btn">Close</a>
                     </div> <!-- cd-testimonials-all -->
-                </div>
+                     </div></div>
             </section>
 
 {% endblock content %}
