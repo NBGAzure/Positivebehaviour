@@ -15,7 +15,7 @@ def std(request):
                 pass
     else:
         form = FbaForm()
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'fbaindex.html', {'form': form})
 
 
 def view(request):
