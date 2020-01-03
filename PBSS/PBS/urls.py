@@ -25,6 +25,7 @@ from users.views import PostListView, PostDetailView, PostCreateView, PostUpdate
 from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
+from form_fba.views import fbaChart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -61,9 +62,9 @@ urlpatterns = [
     path('client/<int:pk>/update/', PostUpdateView.as_view(), name="client-update"),
     path('client/<int:pk>/delete/', PostDeleteView.as_view(), name="client-delete"),
     #  path('newsletter/', include('newsletter.urls')),
+    path('chart/', fbaChart.as_view(), name='chart')
 
-
-# fbaform url
+    # fbaform url
 
     #path('fbaform/', fbaformfunc),
    # path('addBehaviour/', addBehaviour),
