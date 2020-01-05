@@ -1,0 +1,38 @@
+{%  extends "users/userbase.html" %}
+{% block content %}
+        {% load static %}
+        {% load crispy_forms_tags %}
+
+     <div id="page-content" class="index-page">
+            <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
+                <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12">
+                            <h2>Delete client</h2>
+                            <hr>
+                            <div class="intro">Be a part of positive behaviour support.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 box-item">
+<!--                            <img src="{% static 'images/password.png' %}" alt="checklist" class="password">-->
+                        </div>
+                        <div class="col-sm-6 box-item" style="text-align: left;">
+                            <form method="POST" style="">
+                                 {% csrf_token %}
+                                <h2>Are you sure you want to delete the Client"{{object.client_name}}"</h2>
+                                 <fieldset class="form-group">
+                                     <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                                     <a class="btn btn-outline-secondary" href="{% url 'client-detail' object.id %}">Cancel</a>
+
+                                 </fieldset>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+     </div>
+
+{% endblock content %}

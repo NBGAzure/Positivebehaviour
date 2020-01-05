@@ -1,0 +1,10 @@
+
+  <h2>Person Form</h2>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit">Save</button>
+    <a href="{% url 'person_changelist' %}">Nevermind</a>
+  </form>

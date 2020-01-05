@@ -1,8 +1,18 @@
+from typing import Type
+
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
+# from PBSS.users.models import Post
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from .models import Post
+from django.views.generic import ListView
 # Create your views here.
+from django.http import HttpResponseRedirect
+from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+
 
 
 def register(request):
@@ -59,7 +69,54 @@ def edit_profile(request):
         'u_form': u_form,
         'p_form': p_form
     }
-
     return render(request, "users/edit_profile.html", context, {'title': 'Profile'})
 
 
+def client(request):
+    context = {
+        'posts': Post.objects.all()
+    }
+
+    return render(request, 'users/client.html', context)
+
+class PostListView(LoginRequiredMixin, ListView):
+    model = Post
+    template_name = 'users/client.html'
+    context_object_name = 'posts'
+    ordering = ['-date_issued']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+class PostDetailView(DetailView):
+    model = Post
+
+class PostCreateView(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = ['client_name', 'email','content']
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Post
+    fields = ['client_name', 'email', 'content']
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+    def test_func(self):
+        post =self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Post
+    success_url = '/client'
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
