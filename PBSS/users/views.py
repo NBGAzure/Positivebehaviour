@@ -118,14 +118,14 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     content = forms.CharField(required='true', label=(''), max_length=30,
                              widget=forms.TextInput(attrs={"placeholder": "Content"}))
     model = Post
-    fields = ['client_name', 'DOB', 'email', 'content']
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['client_name', 'DOB', 'email', 'content']
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
