@@ -1,8 +1,15 @@
 from typing import Type
 
+<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+=======
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+>>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
 
 # from PBSS.users.models import Post
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
@@ -12,8 +19,13 @@ from django.views.generic import ListView
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+<<<<<<< HEAD
 
 
+=======
+from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
+>>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
 
 def register(request):
     if request.method == 'POST':
@@ -47,8 +59,11 @@ def profile(request):
         'u_form': u_form,
         'p_form': p_form
     }
-
-    return render(request, 'users/profile.html', context, {'title': 'Profile'})
+    form = UserCreationForm
+    return render(request=request,
+                  template_name="users/profile.html",
+                  context={"form": form})
+   # return render(request, 'users/profile.html', context, {'title': 'Profile'})
 
 
 def edit_profile(request):
@@ -71,7 +86,63 @@ def edit_profile(request):
     }
     return render(request, "users/edit_profile.html", context, {'title': 'Profile'})
 
+def client(request):
+    context = {
+        'posts': Post.objects.all()
+    }
 
+    return render(request, 'users/profile.html', context)
+
+class PostListView(LoginRequiredMixin,  ListView):
+    model = Post
+    template_name = 'users/profile.html'
+    context_object_name = 'posts'
+    ordering = ['-date_issued']
+    paginate_by = 5
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def get_queryset(self):
+        return super(PostListView, self).get_queryset().filter(author=self.request.user)
+
+class UserPostListView(LoginRequiredMixin, ListView):
+    model = Post
+    template_name = 'users/profile.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self):
+        user = get_object_or_404(User, username = self.kwargs.get('username'))
+        return Post.objects.filter(author=user).order_by('-date_issued')
+
+class PostDetailView(DetailView):
+    model = Post
+
+class PostCreateView(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = ['client_name', 'DOB','email','content']
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Post
+    fields = ['client_name', 'DOB','email','content']
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+    def test_func(self):
+        post =self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Post
+    success_url = '/client'
+
+<<<<<<< HEAD
 def client(request):
     context = {
         'posts': Post.objects.all()
@@ -115,6 +186,8 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/client'
 
+=======
+>>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
     def test_func(self):
         post = self.get_object()
         if self.request.user == post.author:

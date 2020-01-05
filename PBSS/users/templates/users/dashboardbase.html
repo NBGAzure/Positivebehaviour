@@ -26,9 +26,86 @@
         <title>Positive Behaviour</title>
     {% endif %}
 </head>
+ <div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+          <a class="navbar-brand page-scroll" style="font-size: 26px;" href="{% url 'client' %}">PBSS</a>
+      </div>
+        <div>
+                        {%  if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" style="text-align: center">
+                        {{ message }}
+                        </div>
+                        {% endfor %}
+                        {%  endif %}
+                        </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="{{ user.profile.image.url }}"
+            alt="User picture">
+        </div>
 
+
+<<<<<<< HEAD
+=======
+
+        <div class="user-info">
+          <span class="user-name" style="margin-top: 6%; margin-bottom: 6%;">Hello, {{ user.username }}</span>
+            <span class="user-name" style="margin-top: 6%;">Mail ID:</span>  <span class="user-name" style="margin-top: 6%;">{{ user.email }}</span>
+        </div>
+      </div>
+
+
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span style="font-size: 24px; margin-top: 4%; margin-bottom: 4%;">General</span>
+          </li>
+             <li class="sidebar-dropdown">
+           <a href="{% url 'client' %}">
+              <span>Home</span>
+            </a>
+          </li>
+            <li class="sidebar-dropdown">
+           <a href="{% url 'client-create' %}">
+              <span>New Client</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="{% url 'fbaform' %}" >
+              <span>BR Report</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="{% url 'std' %}" >
+              <span>FBA form</span>
+            </a>
+          </li>
+            <li class="sidebar-dropdown">
+           <a href="{% url 'edit_profile' %}">
+              <span>Edit Profile</span>
+            </a>
+          </li>
+            <li class="sidebar-dropdown">
+            <a href="{% url 'logout' %}" >
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+
+  </nav>x
 <body>
 
+>>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
     {% block content %}{% endblock content %}
 
 

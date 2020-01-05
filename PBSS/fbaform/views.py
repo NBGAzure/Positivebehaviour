@@ -8,6 +8,8 @@ from .models import Anticident
 from .forms import ListForm
 from .forms import AnticidentForm
 from django.contrib import messages
+from .forms import Fba
+from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
@@ -69,3 +71,22 @@ def edit(request, list_id):
         item = List.objects.get(pk=list_id)
         return render(request, 'fbaform/editfbaform.html', {'item': item})
 
+
+
+
+def get(self, request):
+    form = Fba()
+    return render(request, {'form': form})
+
+def post (self, request):
+    form = Fba(request.POST)
+    if form.is_valid():
+        post = form.save(commit=False)
+        post.user = request.user
+        post.save()
+        text = form.cleaned_data['post']
+        form = Fba()
+        return redirect(self)
+
+    args = {'form': form,'text': text}
+    return render(request, self, args)
