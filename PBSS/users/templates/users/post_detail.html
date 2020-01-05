@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-
-{%  extends "users/userbase.html" %}
-{% block content %}
-        {% load static %}
-        {% load crispy_forms_tags %}
-
-=======
 {%  extends "users/dashboardbase.html" %}
 {% block content %}
         {% load static %}
         {% load crispy_forms_tags %}
->>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
      <div id="page-content" class="index-page">
             <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
                 <div class="container">
@@ -23,18 +14,6 @@
                     </div>
             <div class="container">
 							<h2>{{ object.client_name }} </h2>
-<<<<<<< HEAD
-                            <p>By {{object.author}} on {{ object.date_issued }}</p>
-                             {% if object.author == user %}
-                                <a class="btn btn-3 btn-sm btn-block" type="submit" href="{% url 'client-update' object.id %}">Update</a>
-                                <a class="btn btn-3 btn-sm btn-block" type="submit" href="{% url 'client-delete' object.id %}">Delete</a>
-                              {% endif %}
-                            <p>{{object.email}}</p>
-                            <p>{{object.content}}</p>
-                        </div>
-                </div>
-            </section>
-=======
                             <a class="mr-2" href="{% url 'user-client' object.author.username %}">By {{object.author}}</a>
                             <p>{{object.email}}</p>
                             <p>{{object.content}}</p>
@@ -48,7 +27,6 @@
 
             </section>
 
->>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
      </div>
 
 {% endblock content %}

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-{%  extends "users/userbase.html" %}
-=======
 {%  extends "users/dashboardbase.html" %}
->>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
 {% block content %}
         {% load static %}
         {% load crispy_forms_tags %}
@@ -25,16 +21,10 @@
                             <form method="POST" style="">
                                  {% csrf_token %}
                                 <h2>Are you sure you want to delete the Client"{{object.client_name}}"</h2>
-<<<<<<< HEAD
-                                 <fieldset class="form-group">
-                                     <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
-                                     <a class="btn btn-outline-secondary" href="{% url 'client-detail' object.id %}">Cancel</a>
-=======
                                 <br><br>
                                  <fieldset class="form-group">
                                      <button class="btn-danger" type="submit">Yes, Delete </button>
                                      <a class="btn-warning" href="{% url 'profile' object.id %}"> Cancel</a>
->>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
 
                                  </fieldset>
 

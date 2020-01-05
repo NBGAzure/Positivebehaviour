@@ -1,15 +1,10 @@
 from typing import Type
 
-<<<<<<< HEAD
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-=======
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
->>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
+from django import forms
 
 # from PBSS.users.models import Post
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
@@ -19,13 +14,8 @@ from django.views.generic import ListView
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-<<<<<<< HEAD
-
-
-=======
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
->>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
 
 def register(request):
     if request.method == 'POST':
@@ -121,15 +111,21 @@ class PostDetailView(DetailView):
     model = Post
 
 class PostCreateView(LoginRequiredMixin, CreateView):
+    email = forms.EmailField(required='true', label=(''), max_length=30,
+                             widget=forms.TextInput(attrs={"placeholder": "Email"}))
+    client_name = forms.CharField(label=(''), max_length=30,
+                               widget=forms.TextInput(attrs={"placeholder": "Username"}))
+    content = forms.CharField(required='true', label=(''), max_length=30,
+                             widget=forms.TextInput(attrs={"placeholder": "Content"}))
     model = Post
-    fields = ['client_name', 'DOB','email','content']
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['client_name', 'DOB','email','content']
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -142,52 +138,6 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/client'
 
-<<<<<<< HEAD
-def client(request):
-    context = {
-        'posts': Post.objects.all()
-    }
-
-    return render(request, 'users/client.html', context)
-
-class PostListView(LoginRequiredMixin, ListView):
-    model = Post
-    template_name = 'users/client.html'
-    context_object_name = 'posts'
-    ordering = ['-date_issued']
-
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-
-class PostDetailView(DetailView):
-    model = Post
-
-class PostCreateView(LoginRequiredMixin, CreateView):
-    model = Post
-    fields = ['client_name', 'email','content']
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-
-class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = Post
-    fields = ['client_name', 'email', 'content']
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-    def test_func(self):
-        post =self.get_object()
-        if self.request.user == post.author:
-            return True
-        return False
-
-class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    model = Post
-    success_url = '/client'
-
-=======
->>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
     def test_func(self):
         post = self.get_object()
         if self.request.user == post.author:

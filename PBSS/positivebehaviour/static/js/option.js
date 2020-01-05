@@ -111,7 +111,3 @@ $('.mdb-select').materialSelect();
         //Setting Value
         $("#textFieldTextfunctionoptions").val(selValue);
     });
-<<<<<<< HEAD
-
-=======
->>>>>>> f0b6e1e02998a9fb873eb5e1342154cd2d91a7de
