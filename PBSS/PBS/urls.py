@@ -30,6 +30,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('std/', views.std, name='std'),
     path('view/', views.view),
+    path('delete/<int:id>', views.delete),
+    path('edit/<int:id>', views.edit),
+
     path('freefbaform/', include('freefbaform.urls')),
     path('positivebehaviour/', include('positivebehaviour.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
