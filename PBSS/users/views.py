@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django import forms
 
 # from PBSS.users.models import Post
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
@@ -110,15 +111,21 @@ class PostDetailView(DetailView):
     model = Post
 
 class PostCreateView(LoginRequiredMixin, CreateView):
+    email = forms.EmailField(required='true', label=(''), max_length=30,
+                             widget=forms.TextInput(attrs={"placeholder": "Email"}))
+    client_name = forms.CharField(label=(''), max_length=30,
+                               widget=forms.TextInput(attrs={"placeholder": "Username"}))
+    content = forms.CharField(required='true', label=(''), max_length=30,
+                             widget=forms.TextInput(attrs={"placeholder": "Content"}))
     model = Post
-    fields = ['client_name', 'DOB','email','content']
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['client_name', 'DOB','email','content']
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
