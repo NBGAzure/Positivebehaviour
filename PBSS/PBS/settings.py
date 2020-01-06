@@ -95,17 +95,27 @@ WSGI_APPLICATION = 'PBS.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ictatjcu_pbs',
+#         'USER': 'ictatjcu_pbs',
+#         'PASSWORD': '123zxc',
+#         'HOST': '77.104.167.238',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ictatjcu_pbs',
-        'USER': 'ictatjcu_pbs',
-        'PASSWORD': '123zxc',
-        'HOST': '77.104.167.238',
+        'NAME': 'u130344086_pbss',
+        'USER': 'u130344086_pbssuser',
+        'PASSWORD': 'pbss123',
+        'HOST': '213.190.6.64',
         'PORT': '3306',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
