@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from form_fba.forms import FbaForm
 from form_fba.models import Fba
+from django.contrib import messages
 from django.views.generic import TemplateView
 
 # Create your views here.
@@ -35,8 +36,10 @@ class fbaChart(TemplateView):
 def delete(request, id):
     form_fba = Fba.objects.get(id=id)
     form_fba.delete()
+    messages.success(request, ' The following user is now deleted!')
     return redirect("/view")
 
 def edit(request, id):
     form_fba = Fba.objects.get(id=id)
-    return redirect(request, 'edit.html', {'form_fba': form_fba})
+    messages.success(request, ' The following user information is now updated!')
+    return render(request, "edit.html", {'form_fba': form_fba})
