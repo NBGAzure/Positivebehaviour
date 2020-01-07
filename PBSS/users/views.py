@@ -118,14 +118,14 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     content = forms.CharField(required='true', label=(''), max_length=30,
                              widget=forms.TextInput(attrs={"placeholder": "Content"}))
     model = Post
-    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
+    fields = ['client_name', 'email', 'content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
+    fields = ['client_name', 'email', 'content']
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -134,6 +134,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == post.author:
             return True
         return False
+
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/client'
