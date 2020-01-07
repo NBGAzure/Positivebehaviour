@@ -14,10 +14,16 @@ class Profile(models.Model):
 
 
 class Post(models.Model):
-
+    GENDER_CHOICES = (
+        (u'M', u'Male'),
+        (u'F', u'Female'),
+    )
     client_name = models.CharField(max_length=100)
-
+    DOB = models.DateField(auto_now_add=False, auto_now=False, blank=True)
     email = models.EmailField()
+    location = models.CharField(max_length=100, null=True)
+    history = models.CharField(max_length=100, null=True)
+    gender = models.CharField(max_length=2, choices=GENDER_CHOICES, null=True)
     content = models.TextField()
     date_issued = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
