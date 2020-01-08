@@ -19,7 +19,7 @@
                         </div>
                     </div>
 
-               <form method="POST" class="post-form" action="/update/{{ form_fba.id }}">
+               <form method="POST" class="post-form" action="/edit/{{ form_fba.id }}">
                    <input type="hidden" name="id" id="id" required maxlength="20" value="{{ form_fba.id }}"/>
     {% csrf_token %}
 

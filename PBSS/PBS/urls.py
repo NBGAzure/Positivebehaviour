@@ -27,12 +27,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from form_fba.views import fbaChart
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('std/', views.std, name='std'),
     path('view/', views.view),
     path('delete/<int:id>', views.delete),
     path('edit/<int:id>', views.edit),
+
 
     path('freefbaform/', include('freefbaform.urls')),
     path('positivebehaviour/', include('positivebehaviour.urls')),
@@ -66,6 +69,7 @@ urlpatterns = [
     path('client/<int:pk>/delete/', PostDeleteView.as_view(), name="client-delete"),
     #  path('newsletter/', include('newsletter.urls')),
     path('chart/', fbaChart.as_view(), name='chart')
+    # url(r'^(?P<id>\d+)/update/$', user_edit, name='user_edit')
 
     # fbaform url
 
