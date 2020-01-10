@@ -34,7 +34,10 @@ urlpatterns = [
     path('std/', views.std, name='std'),
     path('view/', views.view),
     path('delete/<int:id>', views.delete),
-    path('edit/<int:id>', views.edit),
+    path('edit/<int:id>', views.edit, name='id'),
+
+
+
 
 
     path('freefbaform/', include('freefbaform.urls')),
