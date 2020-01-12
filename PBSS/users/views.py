@@ -110,6 +110,8 @@ class UserPostListView(LoginRequiredMixin, ListView):
 class PostDetailView(DetailView):
     model = Post
 
+
+
 class PostCreateView(LoginRequiredMixin, CreateView):
     email = forms.EmailField(required='true', label=(''), max_length=30,
                              widget=forms.TextInput(attrs={"placeholder": "Email"}))

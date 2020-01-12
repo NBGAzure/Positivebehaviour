@@ -10,10 +10,4 @@ class FbaForm(forms.ModelForm):
 class EditFba(forms.ModelForm):
     class Meta:
         model = Fba
-        fields = [
-            'user',
-            'anticedent',
-            'behaviour',
-            'consequence',
-            'intensity',
-        ]
+        fields = "__all__"

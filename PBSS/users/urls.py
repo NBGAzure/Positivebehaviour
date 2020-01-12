@@ -6,5 +6,6 @@ from . import views
 
 urlpatterns = [
     path('', views.add_fbaclient, name='add_fbaclient'),
+    
 
 ]
