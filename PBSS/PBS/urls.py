@@ -35,6 +35,7 @@ urlpatterns = [
     path('view/', views.view),
     path('delete/<int:id>', views.delete),
     path('edit/<int:id>', views.edit),
+    path('brreport/', views.brreport, name='brreport'),
 
 
     path('freefbaform/', include('freefbaform.urls')),
