@@ -13,9 +13,9 @@ class Fba(models.Model):
     intensity = models.IntegerField()
 
     def get_absolute_url(self):
-        return reverse("posts:detail", kwargs={"id": self.id})
+        return reverse("forms:detail", kwargs={"is": self.id})
 
-    
+
 
 class Meta:
     db_table = 'fba'

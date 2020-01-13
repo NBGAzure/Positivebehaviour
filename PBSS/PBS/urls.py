@@ -33,9 +33,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('std/', views.std, name='std'),
     path('view/', views.view),
-    path('delete/<int:id>', views.delete),
-    path('edit/<int:id>', views.edit, name='id'),
 
+    path('delete/<int:id>', views.delete),
+    path('edit/<int:id>', views.edit, name='edit'),
+    # url(r'^$/', views.view, name='view'),
+    # url(r'^form_fba/(?P<id>[-\w]+)/edit/$', views.edit, name='edit'),
+    # url(r'^form_fba/edit/$', views.edit, name='edit'),
 
 
 
