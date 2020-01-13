@@ -39,6 +39,7 @@ urlpatterns = [
     # url(r'^$/', views.view, name='view'),
     # url(r'^form_fba/(?P<id>[-\w]+)/edit/$', views.edit, name='edit'),
     # url(r'^form_fba/edit/$', views.edit, name='edit'),
+    path('brreport/', views.brreport, name='brreport'),
 
 
 
