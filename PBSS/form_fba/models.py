@@ -6,7 +6,7 @@ from django.urls import reverse
 # Create your models here.
 
 class Fba(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="fba", null=True)
     anticedent = models.CharField(max_length=200)
     behaviour = models.CharField(max_length=200)
     consequence = models.CharField(max_length=200)

@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from form_fba.forms import FbaForm, EditFba
-from form_fba.models import Fba
+from form_fba.models import Fba, User
 from django.contrib import messages
 from django.views.generic import TemplateView
+from django.contrib.auth.models import User
 # from .forms import EditFba
 
 
@@ -92,14 +93,12 @@ def delete(request, id):
 #     return render(request, "edit.html", context)
 
 
-
-
 def edit(request, id):
     instance = Fba.objects.get(id=id)
 
     if request.method == 'POST':
 
-        user_form = EditFba(request.POST, instance = instance )
+        user_form = EditFba(request.POST, instance=instance)
         if user_form.is_valid():
 
             instance = user_form.save(commit=False)
@@ -137,14 +136,17 @@ def edit(request, id):
 #     return render(request, template_name, context)
 
 def view(request):
-    instance =  Fba.objects.all()
+    #instance = Fba.objects.get(id=id)
+    instance = Fba.objects.all()
+    #instance = Fba.objects.get(id=id)
 
-    template= 'view.html'
-    context = {
-        'form_fba': instance,
-    }
-    return render(request, template, context)
-
+    if instance in request.user.fba.all():
+        template = 'view.html'
+        context = {
+            'form_fba': instance,
+                }
+        return render(request, template, context)
+    return render(request, "view.html")
 
 # def view(request):
 #     form_fba = Fba.objects.all()
