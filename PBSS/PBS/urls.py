@@ -63,7 +63,7 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
     path('edit_profile/', user_views.edit_profile, name='edit_profile'),
-    path('fbaform/', include('fbaform.urls')),
+    # path('fbaform/', include('fbaform.urls')),
     path('freefbaform/', include('freefbaform.urls')),
     #path('userfba/', include('userfba.urls')),
     path('contact/', contact, name="contact"),

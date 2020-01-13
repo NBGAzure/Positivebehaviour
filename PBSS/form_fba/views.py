@@ -104,7 +104,7 @@ def edit(request, id):
 
             instance = user_form.save(commit=False)
             instance.save()
-            
+
             return redirect('/view')
 
     context = {
