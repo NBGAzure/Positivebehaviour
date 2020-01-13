@@ -111,3 +111,22 @@ $('.mdb-select').materialSelect();
         //Setting Value
         $("#textFieldTextfunctionoptions").val(selValue);
     });
+
+
+
+          var e = document.getElementById('foo');
+            e.onclick = calculateTotal;
+
+    function calculateTotal(){
+
+            var elems = document.getElementsByClassName('Assessment');
+            var myLength = elems.length,
+            total = 0;
+            for (var i = 0; i < myLength; ++i) {
+              total += parseInt(elems[i].value * 1);
+            }
+            document.getElementById('ScoreTot').value = total;
+
+    }
+
+

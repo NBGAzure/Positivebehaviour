@@ -41,6 +41,11 @@ class fbaChart(TemplateView):
         context["qs"] = Fba.objects.all()
         return context
 
+def brreport(request):
+
+    return render(request, 'brreport.html', {'title': 'Br Report'})
+
+
 def delete(request, id):
     form_fba = Fba.objects.get(id=id)
     form_fba.delete()
@@ -105,7 +110,7 @@ def edit(request, id):
     context = {
                 "form_fba": instance,
             }
-
+    messages.success(request, ' The following user information is now updated!')
     return render(request, "edit.html", context)
 
 
