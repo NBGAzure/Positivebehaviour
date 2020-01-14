@@ -1,0 +1,83 @@
+{% extends "users/dashboardbase.html" %}
+{% block content %}
+        {% load static %}
+
+ <main class="page-content">
+    <div class="container">
+       <h2 style="text-align: center;">Dashboard</h2>
+        <hr>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <p style="text-align: center;">Manage work on daily basis.</p>
+        </div>
+      </div>
+    <div>
+
+        <h1> Anticedent</h1>
+        <form method="post">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <input type="text">
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+
+        <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
+                               <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a> > <a href="{% url 'fbaform' %}"> FBA Form</a></p>
+                            <div class="profile-form" style= "margin: 0%;">
+                             <form class="my-2 my-lg-0" method="POST">
+                {% csrf_token %}
+                <h3 class="text-center">BR Report</h3><br>
+
+                <fieldset class="form-group">
+                <div class="row">
+                    <input type="text" class="form-control input-lg" name="item" id="name" placeholder="Enter BR Report" required="required" />
+                    <button type="submit" class="btn btn-3 btn-block" name="btnadd" id="btnadd">Add</button>
+        <br>
+                {%  if messages %}
+                {%  for message in messages %}
+                    <div class = "alert alert-warning alert-dismissable" role="alert">
+                        <button class="close" data-dismiss="alert">
+                            <small><sup>x</sup></small>
+                        </button>
+                    </div>
+                {% endfor %}
+                {% endif %}
+            {% if all_items %}
+                 <table class="table table-bothered">
+                {% for things in all_items %}
+                    {% if things.completed %}
+                        <tr class="table-secondary">
+                            <td><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td>
+                          <td><a href="{% url 'delete' things.id %}">Delete</a></td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td>
+                        <td><a href="{% url 'delete' things.id %}">Delete</a></td>
+                        </tr>
+                    {% endif %}
+            {% endfor %}
+                </table>
+            {% endif %}
+                </div>
+                    <script>
+                                function myFunction() {
+                                window.print();
+                                }
+                        </script>
+
+                        <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right;">Print</button>
+
+                </fieldset></form>
+                        </div>
+                    </div>
+                    </div></div></div>
+       </main>
+           </div>
+{% endblock content %}

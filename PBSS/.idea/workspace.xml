@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="629a3155-c05d-4b9a-88cb-87e8ce3fa629" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/fbaform/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/migrations/0002_remove_triggers_location.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/migrations/0003_auto_20190923_1819.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/migrations/0004_anticident.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/migrations/0005_anti_beh_con.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/pdf.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/templates/fbaform/editfbaform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/templates/fbaform/fbabase.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/templates/fbaform/fbaform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbaform/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/form_fba/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/form_fba/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form_fba/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/form_fba/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
+            <state relative-caret-position="357">
               <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="22" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -80,17 +65,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+            <state>
+              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/templates/users/edit_profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/users/templates/users/edit_profile.html">
+        <entry file="file://$PROJECT_DIR$/form_fba/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+            <state relative-caret-position="123">
+              <caret line="140" column="38" lean-forward="true" selection-start-line="140" selection-start-column="38" selection-end-line="140" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/form_fba/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -151,7 +178,6 @@
         <option value="$PROJECT_DIR$/env_vars.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/users/templates/users/edit_profile.html" />
-        <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html" />
         <option value="$PROJECT_DIR$/freefbaform/views.py" />
         <option value="$PROJECT_DIR$/freefbaform/urls.py" />
@@ -174,7 +200,6 @@
         <option value="$PROJECT_DIR$/userfba/Templates/posts/index.html" />
         <option value="$PROJECT_DIR$/userfba/Templates/posts/details.html" />
         <option value="$PROJECT_DIR$/userfba/urls.py" />
-        <option value="$PROJECT_DIR$/form_fba/models.py" />
         <option value="$PROJECT_DIR$/fbaform/urls.py" />
         <option value="$PROJECT_DIR$/form_fba/forms.py" />
         <option value="$PROJECT_DIR$/form_fba/templates/index.html" />
@@ -182,17 +207,19 @@
         <option value="$PROJECT_DIR$/PBS/settings.py" />
         <option value="$PROJECT_DIR$/users/templates/users/dashboardbase.html" />
         <option value="$PROJECT_DIR$/PBS/urls.py" />
-        <option value="$PROJECT_DIR$/form_fba/views.py" />
         <option value="$PROJECT_DIR$/form_fba/templates/fbaindex.html" />
         <option value="$PROJECT_DIR$/form_fba/templates/edit.html" />
+        <option value="$PROJECT_DIR$/users/views.py" />
+        <option value="$PROJECT_DIR$/form_fba/models.py" />
+        <option value="$PROJECT_DIR$/form_fba/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="266" />
-    <option name="y" value="101" />
+    <option name="x" value="337" />
+    <option name="y" value="212" />
     <option name="width" value="1440" />
-    <option name="height" value="773" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -202,6 +229,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,26 +240,23 @@
             <path>
               <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
               <item name="PBSS" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="form_fba" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
               <item name="PBSS" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="form_fba" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
               <item name="PBSS" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,16 +374,18 @@
       <workItem from="1577609698667" duration="8861000" />
       <workItem from="1578201957212" duration="996000" />
       <workItem from="1578873869224" duration="1711000" />
+      <workItem from="1578902007081" duration="6855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196379000" />
+    <option name="totallyTimeSpent" value="203234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.2191689" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.22184986" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.502008" side_tool="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49932975" weight="0.32956153" />
@@ -373,8 +400,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.2524377" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.4269437" side_tool="true" weight="0.3592645" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.5730563" weight="0.27298445" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32761088" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.5730563" visible="true" weight="0.37340876" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32673267" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -589,42 +616,15 @@
     <entry file="file://$PROJECT_DIR$/fbaform/pdf.py" />
     <entry file="file://$PROJECT_DIR$/freefbaform/forms.py" />
     <entry file="file://$PROJECT_DIR$/freefbaform/templates/freefbaform/fbabase.html" />
-    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/fbabase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="116" column="48" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/fbabase.html" />
     <entry file="file://$PROJECT_DIR$/freefbaform/views.py" />
-    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/editfbaform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/editfbaform.html" />
     <entry file="file://$PROJECT_DIR$/PBS/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/fbaform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="109" column="32" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/fbaform.html" />
     <entry file="file://$PROJECT_DIR$/freefbaform/models.py" />
-    <entry file="file://$PROJECT_DIR$/fbaform/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/views.py" />
     <entry file="file://$PROJECT_DIR$/users/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -635,13 +635,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fbaform/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/forms.py" />
     <entry file="file://$PROJECT_DIR$/userfba/models.py" />
     <entry file="file://$PROJECT_DIR$/userfba/admin.py" />
     <entry file="file://$PROJECT_DIR$/userfba/Templates/posts/index.html" />
@@ -649,27 +643,9 @@
     <entry file="file://$PROJECT_DIR$/userfba/views.py" />
     <entry file="file://$PROJECT_DIR$/userfba/urls.py" />
     <entry file="file://$PROJECT_DIR$/form_fba/tests.py" />
-    <entry file="file://$PROJECT_DIR$/fbaform/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/urls.py" />
     <entry file="file://$PROJECT_DIR$/users/urls.py" />
-    <entry file="file://$PROJECT_DIR$/fbaform/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/models.py" />
     <entry file="file://$PROJECT_DIR$/form_fba/forms.py" />
     <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/base.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -717,34 +693,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/form_fba/templates/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -764,7 +716,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="357">
           <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="22" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -772,17 +724,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
+    <entry file="file://$PROJECT_DIR$/users/templates/users/edit_profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="87">
+          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/edit_profile.html">
+    <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state>
+          <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="140" column="38" lean-forward="true" selection-start-line="140" selection-start-column="38" selection-end-line="140" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
