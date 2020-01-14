@@ -81,7 +81,6 @@ def client(request):
     context = {
         'posts': Post.objects.all()
     }
-
     return render(request, 'users/profile.html', context)
 
 class PostListView(LoginRequiredMixin,  ListView):
