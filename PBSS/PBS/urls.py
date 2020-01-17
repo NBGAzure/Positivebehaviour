@@ -27,19 +27,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from form_fba.views import fbaChart
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('std/', views.std, name='std'),
     path('view/', views.view),
     path('delete/<int:id>', views.delete),
-    path('edit/<int:id>', views.edit, name='id'),
-
-
-
-
-
+    path('edit/<int:id>', views.edit),
+    path('businessleader/', include('businessleader.urls')),
     path('freefbaform/', include('freefbaform.urls')),
     path('positivebehaviour/', include('positivebehaviour.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),

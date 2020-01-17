@@ -1,4 +1,4 @@
- {%  extends "users/dashboardbase.html" %}
+{%  extends "users/dashboardbase.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
 {% load static %}
@@ -20,7 +20,6 @@
                     </div>
 
                <form method="POST" class="post-form" action="/edit/{{ form_fba.id }}">
-                 <!-- <form method="POST" class="post-form" action="/edit/{{ form_fba.id }}"> -->
                    <input type="hidden" name="id" id="id" required maxlength="20" value="{{ form_fba.id }}"/>
     {% csrf_token %}
 
@@ -35,33 +34,33 @@
 
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">User</label>
-
+        <div class="col-sm-4">{{ form.user }} </div>
         <input type="text" name="user" value="{{ form_fba.user }}">
     </div>
 
      <div class="form-group row">
         <label class="col-sm-2 col-form-label">Anticident</label>
-
+        <div class="col-sm-4">{{ form.anticedent }} </div>
         <input type="text" name="anticedent" value="{{ form_fba.anticedent }}">
     </div>
        <div class="form-group row">
         <label class="col-sm-2 col-form-label">Behaviour</label>
-
+        <div class="col-sm-4">{{ form.behaviour }} </div>
         <input type="text" name="behaviour" value="{{ form_fba.behaviour }}">
     </div>
                    <div class="form-group row">
         <label class="col-sm-2 col-form-label">Consequence</label>
-
+        <div class="col-sm-4">{{ form.consequence }} </div>
         <input type="text" name="consequence" value="{{ form_fba.consequence }}">
     </div>
                    <div class="form-group row">
         <label class="col-sm-2 col-form-label">Intensity</label>
-
+        <div class="col-sm-4">{{ form.intensity }} </div>
         <input type="text" name="intensity" value="{{ form_fba.intensity }}">
     </div>
         <button type="submit" class="btn btn-primary">Update Information</button>
 </form>
-        </div>
+        </div></div></div></div>
   </main>
     </div>
 

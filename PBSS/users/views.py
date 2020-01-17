@@ -1,16 +1,11 @@
 from typing import Type
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django import forms
-
-# from PBSS.users.models import Post
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import Post
-from django.views.generic import ListView
-# Create your views here.
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -88,7 +83,7 @@ class PostListView(LoginRequiredMixin,  ListView):
     template_name = 'users/profile.html'
     context_object_name = 'posts'
     ordering = ['-date_issued']
-    paginate_by = 5
+    paginate_by = 4
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -101,7 +96,7 @@ class UserPostListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'users/profile.html'
     context_object_name = 'posts'
-    paginate_by = 5
+    paginate_by = 4
 
     def get_queryset(self):
         user = get_object_or_404(User, username = self.kwargs.get('username'))
@@ -109,8 +104,6 @@ class UserPostListView(LoginRequiredMixin, ListView):
 
 class PostDetailView(DetailView):
     model = Post
-
-
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     email = forms.EmailField(required='true', label=(''), max_length=30,

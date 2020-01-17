@@ -1,5 +1,5 @@
 from django import forms
-from form_fba.models import Fba
+from .models import Fba
 
 
 class FbaForm(forms.ModelForm):
@@ -10,4 +10,10 @@ class FbaForm(forms.ModelForm):
 class EditFba(forms.ModelForm):
     class Meta:
         model = Fba
-        fields = "__all__"
+        fields = [
+            'user',
+            'anticedent',
+            'behaviour',
+            'consequence',
+            'intensity',
+        ]
