@@ -3,7 +3,10 @@
 {% block content %}
 {% load static %}
 
+  {% if user.is_authenticated %}
   <main class="page-content">
+
+
     <div class="container-fluid">
        <h2 style="text-align: center;">Dashboard</h2>
         <hr>
@@ -38,7 +41,7 @@
     <br><br>
     <tr>
         <th>User</th>
-        <th>Anticedent</th>
+        <th>Antecedent</th>
         <th>Behaviour</th>
         <th>Consequence</th>
         <th>Intensity</th>
@@ -68,6 +71,6 @@
   </main>
     </div>
 
-
+{% endif %}
 
 {% endblock content %}

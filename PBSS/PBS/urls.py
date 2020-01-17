@@ -30,10 +30,18 @@ from form_fba.views import fbaChart
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('std/', views.std, name='std'),
-    path('view/', views.view),
+    path('view/', views.view, name='view'),
+
     path('delete/<int:id>', views.delete),
-    path('edit/<int:id>', views.edit),
-    path('businessleader/', include('businessleader.urls')),
+    path('edit/<int:id>', views.edit, name='edit'),
+    # url(r'^$/', views.view, name='view'),
+    # url(r'^form_fba/(?P<id>[-\w]+)/edit/$', views.edit, name='edit'),
+    # url(r'^form_fba/edit/$', views.edit, name='edit'),
+    path('brreport/', views.brreport, name='brreport'),
+
+
+
+
     path('freefbaform/', include('freefbaform.urls')),
     path('positivebehaviour/', include('positivebehaviour.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
@@ -54,7 +62,7 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
     path('edit_profile/', user_views.edit_profile, name='edit_profile'),
-    path('fbaform/', include('fbaform.urls')),
+    # path('fbaform/', include('fbaform.urls')),
     path('freefbaform/', include('freefbaform.urls')),
     #path('userfba/', include('userfba.urls')),
     path('contact/', contact, name="contact"),

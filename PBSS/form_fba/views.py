@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from .forms import FbaForm
-from .models import Fba
+from form_fba.forms import FbaForm, EditFba
+from form_fba.models import Fba, User
 from django.contrib import messages
 from django.views.generic import TemplateView
-from .forms import EditFba
+from django.contrib.auth.models import User
+# from .forms import EditFba
 
 
 from .forms import forms
@@ -14,7 +15,7 @@ from django.shortcuts import HttpResponse, HttpResponseRedirect
 
 
 def std(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = FbaForm(request.POST)
         if form.is_valid():
             try:
@@ -27,9 +28,11 @@ def std(request):
     return render(request, 'fbaindex.html', {'form': form})
 
 
-def view(request):
-    form_fba = Fba.objects.all()
-    return render(request, "view.html", {'form_fba': form_fba})
+
+#
+# def view(request):
+#     form_fba = Fba.objects.all()
+#     return render(request, "view.html", {'form_fba': form_fba})
 
 class fbaChart(TemplateView):
     template_name = 'charts.html'
@@ -38,6 +41,10 @@ class fbaChart(TemplateView):
         context = super().get_context_data(**kwargs)
         context["qs"] = Fba.objects.all()
         return context
+
+def brreport(request):
+
+    return render(request, 'brreport.html', {'title': 'Br Report'})
 
 
 def delete(request, id):
@@ -62,62 +69,19 @@ def delete(request, id):
 #     return render(request, "edit.html", context)
 
 
-
-
-
-
-# def edit(request, id=None):
-#     u1 = get_object_or_404(Fba, id=id)
-#     user_form = Fba(request.POST, instance=u1)
-#     if user_form.is_valid():
-#             form_fba = user_form.save(commit=False)
-#             form_fba.save()
-#             return HttpResponseRedirect(form_fba.get_absolute_url())
-#
-#     # if request.method == "POST":
-#     #     form = FbaForm(request.POST)
-#     #     if form.is_valid():
-#     #
-#
-#     messages.success(request, ' The following user information is now updated!')
-#     # context = {
-#     #     'form_fba': form_fba,
-#     #     'user_form': user_form,
-#     # }
-#     return render(request, "view.html", {"u1": u1})
-
-
-
-
-
-
-
-
-#
-#
-# def edit(request, id=None):
-#     user = get_object_or_404(Fba, id=id)
-#     user_form = EditFba(request.POST or None, user=user)
-#     if user_form.is_valid():
-#         user = EditFba.save(commit=False)
-#         user.save()
-#         return HttpResponseRedirect(user.get_absolute_url())
-#
-#     context = {
-#
-#         "user": user,
-#
-#     }
-#     return render(request, "edit.html", context)
-#
-
-#
 def edit(request, id):
-    form_fba = Fba.objects.get(id=id)
+    instance = Fba.objects.get(id=id)
+
     if request.method == 'POST':
-        user_form = Fba(request.POST, instance=request.Fba)
+
+        user_form = EditFba(request.POST, instance=instance)
         if user_form.is_valid():
-            user_form.save()
+
+            instance = user_form.save(commit=False)
+            instance.save()
+
+            return redirect('/view')
+
     context = {
                 "form_fba": form_fba,
             }
@@ -125,3 +89,41 @@ def edit(request, id):
     return render(request, "edit.html", context)
 
 
+
+#
+# def edit(request, id):
+#     instance = Fba.objects.get(id=id)
+#     if request.method == "POST":
+#         form = EditFba(request.POST, instance = instance)
+#         if form.is_valid():
+#             messages.success(request, ' in the loop!')
+#             instance = form.save(commit=False)
+#             instance.save()
+#             messages.success(request, ' end loop')
+#             return redirect('view.html')
+#     else:
+#         form = EditFba(instance=instance)
+#     template_name = 'fbaindex.html'
+#
+#     context = {
+#                 "form_fba": form,
+#             }
+#
+#     return render(request, template_name, context)
+
+def view(request):
+    #instance = Fba.objects.get(id=id)
+    instance = Fba.objects.all()
+    #instance = Fba.objects.get(id=id)
+
+    if instance in request.user.fba.all():
+        template = 'view.html'
+        context = {
+            'form_fba': instance,
+                }
+        return render(request, template, context)
+    return render(request, "view.html")
+
+# def view(request):
+#     form_fba = Fba.objects.all()
+#     return render(request, "view.html", {'form_fba': form_fba})

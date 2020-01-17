@@ -3,6 +3,26 @@
 
 
   {% block scripts %}
+
+     <div class="page-content">
+    <div class="container-fluid">
+       <h2 style="text-align: center;">Dashboard</h2>
+        <hr>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <p style="text-align: center;">Manage work on daily basis.</p>
+        </div>
+      </div>
+        <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+             <div class="container">
+                    <div class="row heading">
+                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
+                            <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a> > <a href="#"> Data Evaluation </a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+
   <script>
   $(document).ready(function(){
 
@@ -163,5 +183,10 @@
     <canvas id="myChart2"  width="800" height="100"></canvas>
     <canvas id="myChart3"  width="800" height="100"></canvas>
 
-
+                    </div>
+             </div>
+        </div>
+        </div>
+    </div>
+     </div>
   {%endblock content %}

@@ -3,6 +3,8 @@
 {% block content %}
 {% load static %}
 
+
+{% if user.is_authenticated %}
   <main class="page-content">
     <div class="container-fluid">
        <h2 style="text-align: center;">Dashboard</h2>
@@ -58,8 +60,7 @@
 
 
         <button type="submit" class="btn btn-primary">Save</button>
-
-
+                   <a class="btn btn-primary" href="{% url 'view' %}">History</a>
 
 </form>
 
@@ -67,6 +68,6 @@
   </main>
     </div>
 
-
+{% endif %}
 
 {% endblock content %}

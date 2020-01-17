@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="629a3155-c05d-4b9a-88cb-87e8ce3fa629" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBS/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PBS/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/form_fba/templates/fbaindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/form_fba/templates/fbaindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form_fba/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/form_fba/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form_fba/templates/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/form_fba/templates/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,30 +53,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
+        <entry file="file://$PROJECT_DIR$/users/templates/users/edit_profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            <state relative-caret-position="595">
+              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/form_fba/templates/edit.html">
+        <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="22" />
+            <state relative-caret-position="-119">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,41 +75,67 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form_fba/models.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1241">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+              <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/form_fba/views.py">
+        <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="65" lean-forward="true" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+            <state relative-caret-position="322">
+              <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PBS/urls.py">
+        <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="512">
+              <caret line="139" column="24" lean-forward="true" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PBS/settings.py">
+        <entry file="file://$PROJECT_DIR$/users/templates/users/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+            <state relative-caret-position="357">
+              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/templates/users/register.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/templates/users/login.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/templates/users/dashboardbase.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1411">
+              <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -139,6 +157,7 @@
       <find>BR Report</find>
       <find>ent</find>
       <find>Print</find>
+      <find>login</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,13 +191,11 @@
         <option value="$PROJECT_DIR$/users/signals.py" />
         <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/users/templates/users/register.html" />
-        <option value="$PROJECT_DIR$/users/models.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/env_vars.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/users/templates/users/edit_profile.html" />
-        <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html" />
         <option value="$PROJECT_DIR$/freefbaform/views.py" />
         <option value="$PROJECT_DIR$/freefbaform/urls.py" />
@@ -201,25 +218,27 @@
         <option value="$PROJECT_DIR$/userfba/Templates/posts/index.html" />
         <option value="$PROJECT_DIR$/userfba/Templates/posts/details.html" />
         <option value="$PROJECT_DIR$/userfba/urls.py" />
-        <option value="$PROJECT_DIR$/form_fba/models.py" />
         <option value="$PROJECT_DIR$/fbaform/urls.py" />
         <option value="$PROJECT_DIR$/form_fba/forms.py" />
         <option value="$PROJECT_DIR$/form_fba/templates/index.html" />
-        <option value="$PROJECT_DIR$/form_fba/templates/view.html" />
         <option value="$PROJECT_DIR$/PBS/settings.py" />
         <option value="$PROJECT_DIR$/users/templates/users/dashboardbase.html" />
         <option value="$PROJECT_DIR$/PBS/urls.py" />
-        <option value="$PROJECT_DIR$/form_fba/views.py" />
-        <option value="$PROJECT_DIR$/form_fba/templates/fbaindex.html" />
         <option value="$PROJECT_DIR$/form_fba/templates/edit.html" />
+        <option value="$PROJECT_DIR$/form_fba/models.py" />
+        <option value="$PROJECT_DIR$/form_fba/views.py" />
+        <option value="$PROJECT_DIR$/users/views.py" />
+        <option value="$PROJECT_DIR$/users/models.py" />
+        <option value="$PROJECT_DIR$/form_fba/templates/view.html" />
+        <option value="$PROJECT_DIR$/form_fba/templates/fbaindex.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2404" />
-    <option name="y" value="358" />
-    <option name="width" value="1549" />
-    <option name="height" value="838" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="976" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -229,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,11 +267,46 @@
               <item name="form_fba" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="positivebehaviour" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PBSS" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,16 +423,21 @@
       <workItem from="1577588989521" duration="1001000" />
       <workItem from="1577609698667" duration="8861000" />
       <workItem from="1578201957212" duration="996000" />
+      <workItem from="1578873869224" duration="1711000" />
+      <workItem from="1578902007081" duration="7594000" />
+      <workItem from="1579086991244" duration="651000" />
+      <workItem from="1579167098395" duration="5206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194668000" />
+    <option name="totallyTimeSpent" value="209830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.21641791" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18070363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.502008" side_tool="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49932975" weight="0.32956153" />
@@ -392,8 +452,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.2524377" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.4269437" side_tool="true" weight="0.3592645" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.5730563" visible="true" weight="0.27410617" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32761088" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.5730563" visible="true" weight="0.28602383" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32673267" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -401,12 +461,12 @@
       <window_info anchor="right" id="Database" order="4" weight="0.121313676" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.25754526" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.2191689" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.502008" side_tool="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49932975" weight="0.32956153" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32904148" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3281471" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -416,8 +476,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.2524377" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.4269437" side_tool="true" weight="0.3592645" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.5730563" visible="true" weight="0.36194563" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.3281471" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.5730563" visible="true" weight="0.27298445" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32761088" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -477,121 +537,6 @@
     <SUITE FILE_PATH="coverage/PBSS$env_vars.coverage" NAME="env_vars Coverage Results" MODIFIED="1569890277787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/freefbaform/urls.py" />
-    <entry file="file://$PROJECT_DIR$/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195">
-          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="62" column="66" lean-forward="true" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freefbaform/templates/freefbaform/freefbaform.html" />
-    <entry file="uml://DATABASE/b40be6b8-b2ef-414d-9d71-97a0626f5daf">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>b40be6b8-b2ef-414d-9d71-97a0626f5daf</OriginalElement>
-          <nodes>
-            <node x="25.96759259259261" y="243.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_group</node>
-            <node x="216.92592592592592" y="221.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_permission</node>
-            <node x="441.33333333333337" y="144.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user</node>
-            <node x="610.0" y="464.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.django_admin_log</node>
-            <node x="567.0" y="713.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.sqlite_sequence</node>
-            <node x="0.0" y="713.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.sqlite_master</node>
-            <node x="373.0" y="519.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user_user_permissions</node>
-            <node x="168.0" y="713.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.django_migrations</node>
-            <node x="0.0" y="519.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_group_permissions</node>
-            <node x="365.0" y="713.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.django_session</node>
-            <node x="467.59722222222223" y="0.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.django_content_type</node>
-            <node x="208.00000000000003" y="519.0">b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user_groups</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_group_permissions" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_group">
-              <point x="-47.0" y="-47.0" />
-              <point x="47.0" y="444.0" />
-              <point x="58.46759259259261" y="444.0" />
-              <point x="-32.5" y="36.0" />
-            </edge>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.django_admin_log" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.django_content_type">
-              <point x="46.5" y="-102.0" />
-              <point x="749.5" y="119.0" />
-              <point x="592.0972222222222" y="119.0" />
-              <point x="41.5" y="47.0" />
-            </edge>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user_groups" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_group">
-              <point x="-36.25" y="-47.0" />
-              <point x="244.25000000000003" y="434.0" />
-              <point x="123.46759259259261" y="434.0" />
-              <point x="32.5" y="36.0" />
-            </edge>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.django_admin_log" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user">
-              <point x="-46.5" y="-102.0" />
-              <point x="656.5" y="444.0" />
-              <point x="570.5" y="444.0" />
-              <point x="51.66666666666666" y="135.0" />
-            </edge>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user_groups" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user">
-              <point x="36.25" y="-47.0" />
-              <point x="316.75" y="444.0" />
-              <point x="467.1666666666667" y="444.0" />
-              <point x="-51.666666666666664" y="135.0" />
-            </edge>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_permission" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.django_content_type">
-              <point x="0.0" y="-58.0" />
-              <point x="295.9259259259259" y="119.0" />
-              <point x="509.09722222222223" y="119.0" />
-              <point x="-41.5" y="47.0" />
-            </edge>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_group_permissions" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_permission">
-              <point x="47.0" y="-47.0" />
-              <point x="141.0" y="444.0" />
-              <point x="256.4259259259259" y="444.0" />
-              <point x="-39.5" y="58.0" />
-            </edge>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user_user_permissions" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_permission">
-              <point x="-54.25" y="-47.0" />
-              <point x="427.25" y="434.0" />
-              <point x="335.4259259259259" y="434.0" />
-              <point x="39.5" y="58.0" />
-            </edge>
-            <edge source="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user_user_permissions" target="b40be6b8-b2ef-414d-9d71-97a0626f5daf.TABLE:main.auth_user">
-              <point x="54.25" y="-47.0" />
-              <point x="535.75" y="444.0" />
-              <point x="518.8333333333334" y="444.0" />
-              <point x="0.0" y="135.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/positivebehaviour/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#1#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/positivebehaviour/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -619,42 +564,15 @@
     <entry file="file://$PROJECT_DIR$/fbaform/pdf.py" />
     <entry file="file://$PROJECT_DIR$/freefbaform/forms.py" />
     <entry file="file://$PROJECT_DIR$/freefbaform/templates/freefbaform/fbabase.html" />
-    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/fbabase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="116" column="48" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/fbabase.html" />
     <entry file="file://$PROJECT_DIR$/freefbaform/views.py" />
-    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/editfbaform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/editfbaform.html" />
     <entry file="file://$PROJECT_DIR$/PBS/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/fbaform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="109" column="32" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/templates/fbaform/fbaform.html" />
     <entry file="file://$PROJECT_DIR$/freefbaform/models.py" />
-    <entry file="file://$PROJECT_DIR$/fbaform/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/views.py" />
     <entry file="file://$PROJECT_DIR$/users/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -665,16 +583,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fbaform/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/forms.py" />
     <entry file="file://$PROJECT_DIR$/userfba/models.py" />
     <entry file="file://$PROJECT_DIR$/userfba/admin.py" />
     <entry file="file://$PROJECT_DIR$/userfba/Templates/posts/index.html" />
@@ -682,27 +591,9 @@
     <entry file="file://$PROJECT_DIR$/userfba/views.py" />
     <entry file="file://$PROJECT_DIR$/userfba/urls.py" />
     <entry file="file://$PROJECT_DIR$/form_fba/tests.py" />
-    <entry file="file://$PROJECT_DIR$/fbaform/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/urls.py" />
     <entry file="file://$PROJECT_DIR$/users/urls.py" />
-    <entry file="file://$PROJECT_DIR$/fbaform/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fbaform/models.py" />
     <entry file="file://$PROJECT_DIR$/form_fba/forms.py" />
     <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/base.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -713,13 +604,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/sitemap.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" column="22" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/form_fba/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/positivebehaviour/views.py">
@@ -743,65 +627,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/dashboardbase.html">
+    <entry file="file://$PROJECT_DIR$/form_fba/templates/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="135">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PBS/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="374">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PBS/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
+        <state relative-caret-position="625">
           <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/templates/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="22" />
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/form_fba/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="65" lean-forward="true" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+        <state relative-caret-position="311">
+          <caret line="140" column="38" selection-start-line="140" selection-end-line="141" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/user_client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="36" column="73" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/dashboardbase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/edit_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/register.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/positivebehaviour/templates/positivebehaviour/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="139" column="24" lean-forward="true" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
         </state>
       </provider>
     </entry>

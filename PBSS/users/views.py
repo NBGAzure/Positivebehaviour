@@ -12,6 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 
+
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -71,12 +72,13 @@ def edit_profile(request):
     }
     return render(request, "users/edit_profile.html", context, {'title': 'Profile'})
 
+
 def client(request):
     context = {
         'posts': Post.objects.all()
     }
-
     return render(request, 'users/profile.html', context)
+
 
 class PostListView(LoginRequiredMixin,  ListView):
     model = Post
@@ -92,6 +94,7 @@ class PostListView(LoginRequiredMixin,  ListView):
     def get_queryset(self):
         return super(PostListView, self).get_queryset().filter(author=self.request.user)
 
+
 class UserPostListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'users/profile.html'
@@ -99,11 +102,13 @@ class UserPostListView(LoginRequiredMixin, ListView):
     paginate_by = 4
 
     def get_queryset(self):
-        user = get_object_or_404(User, username = self.kwargs.get('username'))
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(author=user).order_by('-date_issued')
+
 
 class PostDetailView(DetailView):
     model = Post
+
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     email = forms.EmailField(required='true', label=(''), max_length=30,
@@ -114,21 +119,26 @@ class PostCreateView(LoginRequiredMixin, CreateView):
                              widget=forms.TextInput(attrs={"placeholder": "Content"}))
     model = Post
     fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
+
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
     def test_func(self):
-        post =self.get_object()
+        post = self.get_object()
         if self.request.user == post.author:
             return True
         return False
+
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
