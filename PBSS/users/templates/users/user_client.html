@@ -63,9 +63,11 @@
                             <h2>Client Details</h2>
                             <hr>
                             <div class="intro">Be a part of positive behaviour support.</div>
+
                         </div>
                     </div>
             <div class="container">
+
                 <h1 class="mb-3">Clients by {{ view.kwargs.username }} ({{ page_obj.paginator.count}})</h1>
                 {% for post in posts %}
 
@@ -76,6 +78,7 @@
                                  </div>
                             <p>{{post.email}}</p>
                             <p>{{post.content}}</p>
+
 
                 {% endfor %}
  <br><br>
