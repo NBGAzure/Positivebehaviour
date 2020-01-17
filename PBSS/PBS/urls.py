@@ -40,8 +40,6 @@ urlpatterns = [
     path('brreport/', views.brreport, name='brreport'),
 
 
-
-
     path('freefbaform/', include('freefbaform.urls')),
     path('positivebehaviour/', include('positivebehaviour.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
@@ -58,6 +56,7 @@ urlpatterns = [
     path('password-complete/',
          auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),
          name='password_reset_complete'),
+    path('businessleader/', include('businessleader.urls')),
 
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
