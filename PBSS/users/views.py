@@ -1,15 +1,17 @@
 from typing import Type
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django import forms
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import Post
 from django.http import HttpResponseRedirect
-from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render
+from django import forms
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -113,10 +115,6 @@ class PostDetailView(DetailView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     email = forms.EmailField(required='true', label=(''), max_length=30,
                              widget=forms.TextInput(attrs={"placeholder": "Email"}))
-    client_name = forms.CharField(label=(''), max_length=30,
-                               widget=forms.TextInput(attrs={"placeholder": "Username"}))
-    content = forms.CharField(required='true', label=(''), max_length=30,
-                             widget=forms.TextInput(attrs={"placeholder": "Content"}))
     model = Post
     fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
 
@@ -125,7 +123,11 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+
+
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    email = forms.EmailField(required='true', label=(''), max_length=30,
+                             widget=forms.TextInput(attrs={"placeholder": "Email"}))
     model = Post
     fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
 
@@ -143,6 +145,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/client'
+    success_message = 'client deleted successfully saved!!!!'
 
     def test_func(self):
         post = self.get_object()
