@@ -1,17 +1,19 @@
 from typing import Type
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django import forms
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import Post
 from django.http import HttpResponseRedirect
-from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render
+from django import forms
 from django.contrib.auth.forms import UserCreationForm
-
+from crispy_forms.helper import FormHelper
 
 def register(request):
     if request.method == 'POST':
@@ -111,26 +113,34 @@ class PostDetailView(DetailView):
 
 
 class PostCreateView(LoginRequiredMixin, CreateView):
-    email = forms.EmailField(required='true', label=(''), max_length=30,
-                             widget=forms.TextInput(attrs={"placeholder": "Email"}))
-    client_name = forms.CharField(label=(''), max_length=30,
-                               widget=forms.TextInput(attrs={"placeholder": "Username"}))
-    content = forms.CharField(required='true', label=(''), max_length=30,
-                             widget=forms.TextInput(attrs={"placeholder": "Content"}))
+    success_url = '/client'
+    success_message = 'client added successfully!'
     model = Post
     fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
+    # initial = {"client_name": "Your Name", "DOB": "Date of birth", "email": "Your e-mail",
+    #            "location": "You Location", "history": "Your History", "content": "Description"}
+    # labels = {
+    #     'client_name': '',
+    #     'DOB': '',
+    # }
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        messages.success(self.request, self.success_message)
         return super().form_valid(form)
 
 
+
+
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    success_url = '/client'
+    success_message = 'client details are updated successfully!'
     model = Post
     fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        messages.success(self.request, self.success_message)
         return super().form_valid(form)
 
     def test_func(self):
@@ -143,6 +153,11 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/client'
+    success_message = 'client deleted successfully!'
+
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(PostDeleteView, self).delete(request, *args, **kwargs)
 
     def test_func(self):
         post = self.get_object()

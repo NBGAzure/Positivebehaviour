@@ -9,6 +9,7 @@
       <div class="row">
         <div class="form-group col-md-12">
           <p style="text-align: center;">Manage work on daily basis.</p>
+            <a href="{% url 'client' %}"><i class="fa fa-arrow-circle-left" style="font-size:40px; border: none; float: left; color: blue;"></i></a>
 
             <div class="intro" style="float: right; margin-bottom: 0%;"><a class="btn btn-3 btn-lg" type="submit"
                                                         href="{% url 'client-create' %}">
@@ -29,6 +30,7 @@
                             <div class="container-fluid">
                  <div class="container" style="-webkit-box-shadow: 0 10px 6px -6px #777;-moz-box-shadow: 0 10px 6px -6px #777;
             box-shadow: 0 10px 6px -6px #777; margin-bottom: 3%; width: 100%; float: left;">
+
                                <div class="intro" style="float: right;"><a class="btn btn-2 btn-lg" type="submit" href="{% url 'brreport' %}" > BR Report </a></div>
                     <div class="intro" style="float: right; margin-right: 1%; ">  <a class="btn btn-2 btn-lg" type="submit" href="{% url 'std' %}" >FBA form </a></div>
                             <h2 style="color: black; font-size: 30px;">{{ object.client_name }} </h2>

@@ -1079,3 +1079,19 @@ input{
     width: 100%;
 }
 
+.col-form-label.requiredField {
+    margin-bottom: 1%;
+}
+
+.col-form-label {
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.asteriskField {
+    display: none;
+}
+
+.alert {
+    line-height: 1.6;
+}
