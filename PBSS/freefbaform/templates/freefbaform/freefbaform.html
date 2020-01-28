@@ -1,38 +1,6 @@
 {%  extends "freefbaform/fbabase.html" %}
 {% block content %}
         {% load static %}
-<!--<script>-->
-<!--    var myCookies={};-->
-
-<!--    function saveCookies() {-->
-<!--        myCookies["_name"] = document.getElementById("Name").value;-->
-<!--        myCookies["_email"]=document.getElementById('email').value;-->
-
-<!--        document.cookie="";-->
-<!--        var expiresAttrib = new Date(Date.now()+60*1000).toString()-->
-<!--        var cookieString ="";-->
-<!--        for(var Key in myCookies){-->
-
-<!--            cookieString =Key+"="+myCookies[Key]+";"+expiresAttrib+";"-->
-<!--            document.cookie = cookieString;-->
-<!--        }-->
-<!--        document.getElementById("out").innerHTML = document.cookie;-->
-<!--    }-->
-
-<!--    function loadCookies() {-->
-<!--        myCookies = {};-->
-<!--        var kv = document.cookie.split(";");-->
-<!--        for(var id in kv)-->
-<!--        {-->
-<!--            var cookie = kv[id].split("=");-->
-<!--            myCookies[cookie[0].trim()]= cookie[1];-->
-<!--        }-->
-<!--        document.getElementById('user').value = myCookies["_name"];-->
-<!--        document.getElementById('email').value = myCookies["_email"];-->
-<!--    }-->
-
-<!--</script>-->
-
 
     <div id="page-content" class="index-page container-fluid" style="padding-right: 0px; padding-left: 0px;">
                 <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
@@ -108,9 +76,9 @@
 
                                         <div class="intro" style="text-align: left; line-height: 2;">1. When the individual experiences, or is engaged in, one of the following:</div>
                                        <select id="behaviour" class="select-box" onchange="singleSelectChangeValue()">
-                                    <option value="behaviour1">--Select an Item--</option>
-                                    <option value="behaviour2">Is in the community</option>
-                                    <option value="behaviour2">Has recently been disciplined</option>
+                                        <option value="behaviour1">--Select an Item--</option>
+                                        <option value="behaviour2">Is in the community</option>
+                                           <option value="behaviour2">Has recently been disciplined</option>
                                     <option value="behaviour2">Is engaged in an activity or task they dislike</option>
                                       </select>
 
@@ -218,12 +186,7 @@
                         <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print" style="float: right; ">Print</button>
                         <a button class="btn btn-3 btn-sm"  style="float: right; margin-right: 2%;" href="{% url 'client' %}"> Next </a> </button>
                         </div>
-<!--                                    <div id="Button3">-->
-<!--                        <button class="btn btn-3 btn-sm" onclick="saveCookies()" name="print" id="save" style="float: left; ">save cookie</button>-->
-<!--                         <button class="btn btn-3 btn-sm" onclick=" loadCookies()" name="print" id="load" style="float: left; ">Load cookie</button>-->
-
-<!--                        </div>-->
-                            </div>
+                                </div>
                             </div>
 
                  </div>
