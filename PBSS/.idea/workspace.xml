@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="629a3155-c05d-4b9a-88cb-87e8ce3fa629" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form_fba/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/form_fba/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form_fba/templates/fbaindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/form_fba/templates/fbaindex.html" afterDir="false" />
-    </list>
+    <list default="true" id="629a3155-c05d-4b9a-88cb-87e8ce3fa629" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="544">
               <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -76,15 +72,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form_fba/templates/brreport.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2313" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
+            <state relative-caret-position="1241">
               <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="11" />
             </state>
           </provider>
@@ -93,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="612">
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -130,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/templates/users/dashboardbase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="66" column="110" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="110" />
+            <state relative-caret-position="1122">
+              <caret line="66" column="110" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -231,10 +225,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="976" />
-    <option name="height" value="1056" />
+    <option name="x" value="240" />
+    <option name="y" value="128" />
+    <option name="width" value="1440" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -424,17 +418,17 @@
       <workItem from="1579086991244" duration="651000" />
       <workItem from="1579167098395" duration="5206000" />
       <workItem from="1579219825523" duration="4224000" />
+      <workItem from="1580201975846" duration="1081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214054000" />
+    <option name="totallyTimeSpent" value="215135000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18230277" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18498659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.502008" side_tool="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49932975" weight="0.32956153" />
@@ -449,7 +443,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.2524377" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.4269437" side_tool="true" weight="0.3592645" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.5730563" visible="true" weight="0.28602383" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.5730563" visible="true" weight="0.2857143" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32673267" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -678,11 +672,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="544">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/templates/brreport.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -693,9 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/register.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/templates/users/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -703,32 +711,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/dashboardbase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="66" column="110" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="110" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/register.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/users/templates/users/login.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/templates/brreport.html">
+    <entry file="file://$PROJECT_DIR$/users/templates/users/dashboardbase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2313" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/templates/fbaindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form_fba/templates/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="11" />
+        <state relative-caret-position="1122">
+          <caret line="66" column="110" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="110" />
         </state>
       </provider>
     </entry>
