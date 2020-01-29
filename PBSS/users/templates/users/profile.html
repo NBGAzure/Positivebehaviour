@@ -28,8 +28,8 @@
                 <div class="container" style="-webkit-box-shadow: 0 10px 6px -6px #777;-moz-box-shadow: 0 10px 6px -6px #777;
             box-shadow: 0 10px 6px -6px #777; margin-bottom: 3%; width: 48%; float: left;">
                 <h2><a class="article-title" style="color: black; font-size: 30px;" href="{% url 'profile' post.id %}">{{ post.client_name }}</a> </h2>
-                             <a class="mr-2" href="{% url 'user-client' post.author.username %}" style="line-height: 2;">By {{post.author}}</a>
-                            <div class="intro" style="float: right;"> on {{ post.date_issued }}</div><br>
+                             <a class="mr-2" href="{% url 'user-client' post.author.username %}" style="line-height: 2; margin-top: 2%;">By {{post.author}}</a>
+                            <div class="intro" style="float: right; margin-top: 2%;"> on {{ post.date_issued }}</div><br>
                             <div class="intro" style="line-height: 2; float: right;">Gender: {{post.gender}}</div>
                             <div class="intro" style="line-height: 2;">Date Of Birth: {{post.DOB}}</div>
                             <div class="intro" style="line-height: 2;">Email-id: {{post.email}}</div>
@@ -38,8 +38,6 @@
                             <div class="intro" style="line-height: 2;">Comment: {{post.content}}</div>
                     <div class="intro" style="line-height: 2; font-weight: bold;">History: {{post.history}}</div><br>
                     <div class="intro" style="float: right; margin-left: 1%; "><a class="btn btn-2 btn-lg" type="submit" href="{% url 'profile' post.id %}">Update Information</a></div>
-                       <div class="intro" style="float: right;"><a class="btn btn-2 btn-lg" type="submit" href="{% url 'brreport' %}" > BR Report </a></div>
-                    <div class="intro" style="float: right; margin-right: 1%; ">  <a class="btn btn-2 btn-lg" type="submit" href="{% url 'std' %}" >FBA form </a></div>
                 </div>
 
                 {% endfor %}

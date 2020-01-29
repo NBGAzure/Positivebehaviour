@@ -164,6 +164,8 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
+
+
 from django.shortcuts import render, redirect
 from form_fba.forms import FbaForm, EditFba
 from form_fba.models import Fba, User

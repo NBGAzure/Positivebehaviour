@@ -1,25 +1,33 @@
-{%  extends "businessleader/dashboard.html" %}
+{%  extends "users/dashboardbase.html" %}
 {% block content %}
         {% load static %}
         {% load crispy_forms_tags %}
 
-     <div id="page-content" class="index-page">
-            <section id="" class="box-content box-1" style="background: white; margin-top: 3%;">
-                <div class="container">
+<div class="page-content">
+    <div class="container-fluid">
+       <h2 style="text-align: center;">Dashboard</h2>
+        <hr>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <p style="text-align: center;">Manage work on daily basis.</p>
+        </div>
+      </div>
+        <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+             <div class="container">
                     <div class="row heading">
-                        <div class="col-lg-12">
-                            <a href="{% url 'index' %}"><i class="fa fa-arrow-circle-left" style="font-size:40px; border: none; float: left; color: blue;"></i></a>
-                            <h2>Business Leader Dashboard</h2>
-                            <hr style="margin-left: 46%;">
-                            <div class="intro">Add a support worker.</div>
+                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
+<!--                            <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a> > <a href=""> Add a new client</a></p>-->
+                            <h4>Enter information</h4>
                         </div>
-                    </div> <section id="about" class="box-content box-3">
-                <div class="container">
-
+                    </div>
                     <div class="row">
-                        <div class="col-sm-6 box-item">
-                            <img src="{% static 'images/password.png' %}" alt="checklist" class="password">
+                    <div class="col-sm-6 box-item" style="text-align: left;">
+                    <p style="line-height: 3;">Enter details of your new support worker.</p>
+                        <div style="text-align: center; margin-top: 10%;">
+                        <img src="{% static 'images/checklist.png' %}" alt="checklist" class="checklist" >
                         </div>
+                   </div>
                         <div class="col-sm-6 box-item" style="text-align: left;">
                             <form method="POST" style="">
                                  {% csrf_token %}
@@ -28,19 +36,23 @@
                                     {{ form| crispy }}
                                  </fieldset>
                                 <div class="form-group">
-                                 <button class="btn btn-3 btn-sm btn-block" type="submit" >Add</button>
+                                 <button class="btn btn-3 btn-sm btn-block" type="submit" href="{% url 'client' %}">Add Client</button>
                                 </div>
                             </form>
-<!--                             <div class="border-top pr-3">-->
-<!--                        <small class="text-muted">-->
-<!--                            Already have an account? <a class="ml-2" href="{% url 'login' %}"> Sign In</a>-->
-<!--                        </small>-->
-<!--                    </div>-->
-                        </div>
-                    </div>
+
+        <div class="border-top pr-3">
+
+            </div></div></div>
+
+
+        </div></div></div></div>
+  </main>
+    </div>
 
                 </div>
-            </section>
-     </div>
+        </div>
+        </div>
+    </div></div></div>
+  </main>
 
                 {% endblock content %}
