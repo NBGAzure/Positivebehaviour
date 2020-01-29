@@ -1,5 +1,6 @@
 from django.forms import ModelForm, Textarea
 from django.db import models
+from users.models import Post
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.core.validators import MinValueValidator, MaxValueValidator
@@ -8,7 +9,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Fba(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="fba", null=True)
+    client = models.ForeignKey(Post, on_delete=models.CASCADE)
     anticedent = models.CharField(blank=False, max_length=200)
     behaviour = models.CharField(blank=False, max_length=200)
     consequence = models.CharField(blank=False, max_length=200)
