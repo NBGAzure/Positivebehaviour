@@ -27,11 +27,12 @@
             <div class="container">
                {% for User in users %}
                 <div class="container" style="-webkit-box-shadow: 0 10px 6px -6px #777;-moz-box-shadow: 0 10px 6px -6px #777;
-            box-shadow: 0 10px 16px -6px #777; margin-bottom: 3%; width: 33%; float: left;">
-                    <h2><a class="article-title" style="color: black; font-size: 30px;" >{{ User.username }}</a></h2>
-                   <div class="intro" style="line-height: 2;">{{User.email }}</div>
-                     <div class="intro" style="float: right; margin-right: 1%; ">
-                    <form action="/PostDeleteViewBl/{{user.id}}/"
+            box-shadow: 0 10px 6px -6px #777; margin-bottom: 3%; width: 48%; float: left;">
+                <h2><a class="article-title" >{{ User.username }}</a> </h2>
+                             <a class="mr-2"  style="line-height: 2;">{{User.email }}</a>
+                            <br>
+                    <form action="{% %}/PostDeleteViewBl/{{user.id}}/"
+                          style="display: inline;"
                           method="post">{% csrf_token %}
                         <input type="submit" class="btn btn-2 btn-lg" value="Delete"/></form> </div>
                     <br>

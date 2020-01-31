@@ -47,7 +47,7 @@ def PostListViewBlSw(request):
 class PostDeleteViewBl(DeleteView):
     model = User
     success_url = '/businessleader'
-    template_name = 'businessleader/user_confirm_delete.html'
+    # template_name = 'businessleader/user_confirm_delete.html'
 
 
 
