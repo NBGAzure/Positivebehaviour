@@ -20,7 +20,7 @@ from django.contrib.auth import views as auth_views
 from users import views as user_views
 from users.views import client
 from contact.views import contact
-from users.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView
+from users.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView, brreport
 #from fbaform.views import fbaformfunc, addBehaviour, addTrigger Updated upstream
 from django.conf.urls import include, url
 from django.conf import settings
@@ -30,6 +30,7 @@ from form_fba.views import fbaChart
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('std/', views.std, name='std'),
+    path('brreport/', views.std1, name='std1'),
     path('view/', views.view, name='view'),
 
     path('delete/<int:id>', views.delete),

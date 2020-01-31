@@ -1095,3 +1095,8 @@ input{
 .alert {
     line-height: 1.6;
 }
+
+
+#id_client{
+    padding: 3%;
+}

@@ -8,6 +8,7 @@
     <div class="container-fluid">
        <h2 style="text-align: center;">Dashboard</h2>
         <hr>
+        {% if user.is_authenticated %}
       <div class="row">
         <div class="form-group col-md-12">
           <p style="text-align: center;">Manage work on daily basis.</p>
@@ -15,6 +16,8 @@
               <a href="{% url 'client' %}"><i class="fa fa-arrow-circle-left" style="font-size:40px; border: none; float: left; color: blue;"></i></a>
 
       </div>
+        <form method="POST" class="post-form" action="/std1/">
+            {% csrf_token %}
         <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
              <div class="container">
@@ -26,7 +29,17 @@
                     <div class="row">
 
                     <div class="col-sm-12 box-item" style="text-align: left;">
+                        <div class="form-group row" style="border-style: solid;">
+
+        <label class="col-sm-2 col-form-label" style="line-height: 1.7;"> Please confirm the client name: </label>
+        <div class="col-sm-4" style="border-style: solid;">{{ form.client }} </div>
+
+    </div>
+
+
                         <div style="background-color: #f2f2f2; padding: 1%;">
+
+
                         Did the person increased respectful and positive behaviour from last day?
                         <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
                        <select name="SELECT1" id="select1" class="Assessment" style="padding: 8px 16px;">
@@ -221,6 +234,7 @@
 
                        </div>
                         <div class="col-sm-6 box-item" style="text-align: left;">
+                        </form>
 
      </div></div>
                 </div>
@@ -228,5 +242,8 @@
         </div>
     </div></div></div>
   </main>
+
+{% endif %}
+
 
 {% endblock content %}
