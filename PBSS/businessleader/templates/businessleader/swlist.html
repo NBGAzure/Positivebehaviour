@@ -25,7 +25,7 @@
                 <h2><a class="article-title" >{{ User.username }}</a> </h2>
                              <a class="mr-2"  style="line-height: 2;">{{User.email }}</a>
                             <br>
-                    <form action="/PostDeleteViewBl/{{user.id}}/"
+                    <form action="{% %}/PostDeleteViewBl/{{user.id}}/"
                           style="display: inline;"
                           method="post">{% csrf_token %}
                     <input type="submit" value="Delete"/></form>
