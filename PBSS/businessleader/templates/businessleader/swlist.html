@@ -1,4 +1,4 @@
-{%  extends "businessleader/dashboard.html" %}
+{%  extends "users/dashboardbase.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
 {% load static %}
@@ -14,12 +14,18 @@
       </div>
          <div class="container">
                     <div class="row heading">
-                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
+                         <div class="row heading">
+                        <div class="intro" style="float: right; margin-bottom: 0%;"><a class="btn btn-3 btn-lg" type="submit"
+                                                                                            href="{% url 'businessleader' %}" style="float: right; margin-right: 4%;">
+                            <span>Add New Support Worker</span></a>
+                  <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
+
                           <!--  <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a></p> -->
                             <h2 style="text-align: center;">Support Workers List</h2>
+
                     <br><br>
-        <div class="container">
-                {% for User in users %}
+            <div class="container">
+               {% for User in users %}
                 <div class="container" style="-webkit-box-shadow: 0 10px 6px -6px #777;-moz-box-shadow: 0 10px 6px -6px #777;
             box-shadow: 0 10px 6px -6px #777; margin-bottom: 3%; width: 48%; float: left;">
                 <h2><a class="article-title" >{{ User.username }}</a> </h2>
@@ -28,52 +34,38 @@
                     <form action="{% %}/PostDeleteViewBl/{{user.id}}/"
                           style="display: inline;"
                           method="post">{% csrf_token %}
-                    <input type="submit" value="Delete"/></form>
-                </div>
+                        <input type="submit" class="btn btn-2 btn-lg" value="Delete"/></form> </div>
+                    <br>
+                    </div>
 
-                {% endfor %}
-        </div>
-                <br><br>
+
+
+               {% endfor %}
+ <br><br>
                 {% if is_paginated %}
                     {% if page_obj.has_previous %}
-                    <a type="button" class="btn btn-2" href="?page=1">First</a>
-                    <a type="button" class="btn btn-2" href="?page={{ page_obj.previous_page_number}}">Previous</a>
+                    <a type="button" class="btn btn-info" href="?page=1">First</a>
+                    <a type="button" class="btn btn-info" href="?page={{ page_obj.previous_page_number}}">Previous</a>
                     {% endif %}
                     {% for num in page_obj.paginator.page_range %}
                         {% if page_obj.number == num %}
-                 <a type="button" class="btn btn-2" href="?page={{ num }}">{{ num }}</a>
+                 <a type="button" class="btn btn-info" href="?page={{ num }}">{{ num }}</a>
                         {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-                 <a type="button" class="btn btn-2" href="?page={{ num }}">{{ num }}</a>
+                 <a type="button" class="btn btn-info" href="?page={{ num }}">{{ num }}</a>
                         {% endif %}
                  {% endfor %}
 
                  {% if page_obj.has_next %}
-                    <a type="button" class="btn btn-2" href="?page={{ page_obj.next_page_number }}">Next</a>
-                    <a type="button" class="btn btn-2" href="?page={{ page_obj.paginator.num_pages}}">Last</a>
+                    <a type="button" class="btn btn-info" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a type="button" class="btn btn-info" href="?page={{ page_obj.paginator.num_pages}}">Last</a>
                  {% endif %}
-
                 {% endif %}
-        </div>
-        <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 
-        </div>
-        </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-
+                        </div>
                 </div>
-        </div>
-            <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-
-          </div>
-        </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-        </div>
-      </div>
-  </main>
-    </div>
-
+            </section>
+     </div>
+                         </div></div></div></div></main>
 
 
 {% endblock content %}

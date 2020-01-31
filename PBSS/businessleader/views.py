@@ -1,15 +1,12 @@
 from typing import Type
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django import forms
-
 # from PBSS.users.models import Post
 from users.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from users.models import Post
-
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView
 # from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -34,9 +31,12 @@ class PostListViewBl(ListView):
     context_object_name = 'posts'
     ordering = ['-date_issued']
     paginate_by = 6
+
+
 class PostDetailViewBl(DetailView):
     model = User
     template_name = 'businessleader/user_detail.html'
+
 def PostListViewBlSw(request):
     context ={
         'users': User.objects.all()
@@ -48,4 +48,7 @@ class PostDeleteViewBl(DeleteView):
     model = User
     success_url = '/businessleader'
     # template_name = 'businessleader/user_confirm_delete.html'
+
+
+
 

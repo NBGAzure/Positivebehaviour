@@ -1,13 +1,14 @@
 from django import forms
 from .models import Fba
-
+from .models import User
+from users.models import Post
 
 
 class FbaForm(forms.ModelForm):
     class Meta:
         model = Fba
         fields = (
-        'user',
+        'client',
         'anticedent',
         'behaviour',
         'consequence',
@@ -15,14 +16,14 @@ class FbaForm(forms.ModelForm):
         )
 
     def save(self, commit=True):
-        user = super(FbaForm, self).save(commit=False)
-        user.anticedent = self.cleaned_data['anticedent']
-        user.behaviour = self.cleaned_data['behaviour']
-        user.consequence = self.cleaned_data['consequence']
-        user.intensity = self.cleaned_data['intensity']
+        client = super(Post, self).save(commit=False)
+        client.anticedent = self.cleaned_data['anticedent']
+        client.behaviour = self.cleaned_data['behaviour']
+        client.consequence = self.cleaned_data['consequence']
+        client.intensity = self.cleaned_data['intensity']
         if commit:
-            user.save()
-        return user
+            client.save()
+        return client
 
 class EditFba(forms.ModelForm):
     class Meta:
