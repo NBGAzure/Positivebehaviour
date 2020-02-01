@@ -1,5 +1,4 @@
 from django.urls import path
-
 from django.conf.urls import url
 from . import views
 from .views import newsletter_signup, newsletter_unsubcribe

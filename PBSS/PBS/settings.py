@@ -27,7 +27,7 @@ DEBUG = True
 # ALLOWED_HOSTS = ['pbss.herokuapp.com']
 # To be checked.
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 STATICFILES_DIRS = []
 
@@ -109,6 +109,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'u130344086_pbss',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        },
         'USER': 'u130344086_pbssuser',
         'PASSWORD': 'pbss123',
         'HOST': '213.190.6.64',
