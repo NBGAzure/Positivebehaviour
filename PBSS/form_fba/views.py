@@ -28,6 +28,18 @@ def std(request):
         form = FbaForm()
     return render(request, 'fbaindex.html', {'form': form})
 
+# def std1(request):
+#     if request.method == 'POST':
+#         form = brForm(request.POST)
+#         if form.is_valid():
+#             try:
+#                 form.save()
+#                 return redirect('/view')
+#             except:
+#                 pass
+#     else:
+#         form = brForm()
+#     return render(request, 'brreport.html', {'form': form})
 
 #
 # def view(request):

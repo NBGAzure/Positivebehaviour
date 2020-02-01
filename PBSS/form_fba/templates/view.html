@@ -36,29 +36,28 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <table class="table table-striped table-bordered table-sm">
-                    <thead class="thead-dark">
-                    <br><br>
-                    <tr>
-                        <th>User</th>
-                        <th>Antecedent</th>
-                        <th>Behaviour</th>
-                        <th>Consequence</th>
-                        <th>Intensity</th>
-                    </tr>
-                    </thead>
-                    {% for forms in form_fba %}
-                    <tr>
-                        <td>{{ forms.user }}</td>
-                        <td>{{ forms.anticedent }}</td>
-                        <td>{{ forms.behaviour }}</td>
-                        <td>{{ forms.consequence }}</td>
-                        <td>{{ forms.intensity }}</td>
-                        <td>
-                            <a href="/edit/{{ forms.id }}"> <span class="glyphicon glyphicon-pencil"></span> Edit </a>
-                        </td>
-                        <td><a href="/delete/{{ forms.id }}"> Delete </a>
+    <div class="form-group row">
+        <table class = "table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <br><br>
+    <tr>
+        <th>Client</th>
+        <th>Antecedent</th>
+        <th>Behaviour</th>
+        <th>Consequence</th>
+        <th>Intensity</th>
+    </tr>
+    </thead>
+    {% for forms in form_fba %}
+    <tr>
+        <td>{{ forms.user }} </td>
+        <td>{{ forms.anticedent }} </td>
+        <td>{{ forms.behaviour }} </td>
+        <td>{{ forms.consequence }} </td>
+        <td>{{ forms.intensity }} </td>
+        <td>
+            <a href="/edit/{{ forms.id }}"> <span class="glyphicon glyphicon-pencil"></span> Edit </a></td>
+            <td><a href="/delete/{{ forms.id }}"> Delete </a>
 
                         </td>
                     </tr>

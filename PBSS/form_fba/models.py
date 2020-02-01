@@ -22,3 +22,14 @@ class Fba(models.Model):
 
 class Meta:
     db_table = 'fba'
+
+#
+# class Br(models.Model):
+#     client = models.ForeignKey(Post, on_delete=models.CASCADE)
+#
+#     def get_absolute_url(self):
+#         return reverse("forms:detail", kwargs={"is": self.id})
+#
+#
+# class Meta:
+#     db_table = 'fba'

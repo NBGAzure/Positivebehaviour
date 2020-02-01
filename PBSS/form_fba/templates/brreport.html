@@ -1,243 +1,249 @@
-{%  extends "users/dashboardbase.html" %}
-{% block content %}
-{% load static %}
-{% load crispy_forms_tags %}
+<!--{%  extends "users/dashboardbase.html" %}-->
+<!--{% block content %}-->
+<!--{% load static %}-->
+<!--{% load crispy_forms_tags %}-->
 
-<!-- sidebar-wrapper  -->
-<div class="page-content">
-    <div class="container-fluid">
-        <h2 style="text-align: center;">Dashboard</h2>
-        <hr>
-        <div class="row">
-            <div class="form-group col-md-12">
-                <p style="text-align: center;">Manage work on daily basis.</p>
-            </div>
-            <a href="{% url 'client' %}"><i class="fa fa-arrow-circle-left"
-                                            style="font-size:40px; border: none; float: left; color: blue;"></i></a>
+<!-- &lt;!&ndash; sidebar-wrapper  &ndash;&gt;-->
+<!--  <div class="page-content">-->
+<!--    <div class="container-fluid">-->
+<!--       <h2 style="text-align: center;">Dashboard</h2>-->
+<!--        <hr>-->
+<!--        {% if user.is_authenticated %}-->
+<!--      <div class="row">-->
+<!--        <div class="form-group col-md-12">-->
+<!--          <p style="text-align: center;">Manage work on daily basis.</p>-->
+<!--        </div>-->
+<!--              <a href="{% url 'client' %}"><i class="fa fa-arrow-circle-left" style="font-size:40px; border: none; float: left; color: blue;"></i></a>-->
 
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="container">
-                    <div class="row heading">
-                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
-                            <h4 style=" text-transform: capitalize; ">Please fill in the survey related to client to
-                                calculate the improvement in past few days.</h4>
-                        </div>
-                    </div>
-                    <div class="row">
+<!--      </div>-->
+<!--        <form method="POST" class="post-form" action="/std1/">-->
+<!--            {% csrf_token %}-->
+<!--        <div class="row">-->
+<!--        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">-->
+<!--             <div class="container">-->
+<!--                    <div class="row heading">-->
+<!--                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">-->
+<!--                           <h4 style=" text-transform: capitalize; ">Please fill in the survey related to client to calculate the improvement in past few days.</h4>-->
+<!--                        </div>-->
+<!--                   </div>-->
+<!--                    <div class="row">-->
 
-                        <div class="col-sm-12 box-item" style="text-align: left;">
-                            <div style="background-color: #f2f2f2; padding: 1%;">
-                                Did the person increased respectful and positive behaviour from last day?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="SELECT1" id="select1" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style=" padding: 1%;">
-                                Did the person increased time focused on instruction?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select2" id="select2" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style="background-color: #f2f2f2; padding: 1%;">
-                                Did the person improved social-emotional wellbeing positive and respectful relationships
-                                among people around them?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select3" id="select3" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style="padding: 1%;">
-                                On the scale of 1-10, how much response they are providing to the positive support they
-                                are getting?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select4" id="select4" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style="background-color: #f2f2f2; padding: 1%;">
-                                from 0 - not al all, 10 - easy to predict
-                                Warning signs or frustration clues?
-                                Does the client act in a predictable way prior to problem behaviours occurring?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select5" id="select5" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style="padding: 1%;">
-                                from scale 1 - 10, did the client react to specific things - tests, other people’
-                                comments, loud noise, bright lights?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select6" id="select6" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style="background-color: #f2f2f2; padding: 1%;">
-                                From the scale of 1 (being bad) - 10 (yes), Does the client have one or more ‘positive’
-                                friendships?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select7" id="select7" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style="padding: 1%;">
-                                Is the client teased? What about? Are those who tease given appropriate consequences?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select8" id="select8" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style="background-color: #f2f2f2; padding: 1%;">
-                                0- not at all and 10- More than appropriate.
-                                Do you think that appropriate interventions and modifications are being implemented and
-                                practiced on client?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select9" id="select9" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <div style="padding: 1%;">
-                                From 0 - bad and 10 being effective, Are there alternatives, helping the client to
-                                improve over the time.?
-                                <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                                    <select name="select10" id="select10" class="Assessment" style="padding: 8px 16px;">
-                                        <option value="0"> Select Intensity</option>
-                                        <option value="1"> 1</option>
-                                        <option value="2"> 2</option>
-                                        <option value="3"> 3</option>
-                                        <option value="4"> 4</option>
-                                        <option value="5"> 5</option>
-                                        <option value="6"> 6</option>
-                                        <option value="7"> 7</option>
-                                        <option value="8"> 8</option>
-                                        <option value="9"> 9</option>
-                                        <option value="10"> 10</option>
-                                    </select><br>
-                                </div>
-                            </div>
-                            <p>Graph will be generated according to Intensity:</p> <br>
-                            <input type="text" name="ScoreTot" id="ScoreTot" value="" style="margin-bottom: 2%;">
-                            <div style="margin-top: 2%;">
-                                <input type="button" id="foo" value="Add"/>
-                                <div style="margin-top: 2%;">
-                                    <a href="{% url 'chart' %}"> <input type="button" id="#" value="Visualize Chart"/>
-                                    </a>
-                                </div>
-                            </div>
+<!--                    <div class="col-sm-12 box-item" style="text-align: left;">-->
+<!--                        <div class="form-group row" style="border-style: solid;">-->
+
+<!--        <label class="col-sm-2 col-form-label" style="line-height: 1.7;"> Please confirm the client name: </label>-->
+<!--        <div class="col-sm-4" style="border-style: solid;">{{ form.client }} </div>-->
+
+<!--    </div>-->
 
 
-                        </div>
-                        <div class="col-sm-6 box-item" style="text-align: left;">
+<!--                        <div style="background-color: #f2f2f2; padding: 1%;">-->
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div></div>
-</main>
 
-{% endblock content %}
+<!--                        Did the person increased respectful and positive behaviour from last day?-->
+<!--                        <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                       <select name="SELECT1" id="select1" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                            <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                        </div>-->
+<!--                        </div>-->
+<!--                         <div style=" padding: 1%;">-->
+<!--                        Did the person increased time focused on instruction?-->
+<!--                         <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                    <select name="select2" id="select2" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                         <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                         </div>-->
+<!--                         </div>-->
+<!--                         <div style="background-color: #f2f2f2; padding: 1%;">-->
+<!--                        Did the person improved social-emotional wellbeing positive and respectful relationships among people around them?-->
+<!--                     <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                        <select name="select3" id="select3" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                         <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                     </div>-->
+<!--                         </div>-->
+<!--                         <div style="padding: 1%;">-->
+<!--                        On the scale of 1-10, how much response they are providing to the positive support they are getting?-->
+<!--                         <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                        <select name="select4" id="select4" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                         <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                         </div>-->
+<!--                         </div>-->
+<!--                         <div style="background-color: #f2f2f2; padding: 1%;">-->
+<!--                        from 0 - not al all, 10 - easy to predict-->
+<!--                        Warning signs or frustration clues?-->
+<!--                        Does the client act in a predictable way prior to problem behaviours occurring?-->
+<!--                         <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                         <select name="select5" id="select5" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                         <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                         </div>-->
+<!--                         </div>-->
+<!--                         <div style="padding: 1%;">-->
+<!--                        from scale 1 - 10, did the client react to specific things - tests, other people’ comments, loud noise, bright lights?-->
+<!--                         <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                        <select name="select6" id="select6" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                         <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                         </div>-->
+<!--                         </div>-->
+<!--                         <div style="background-color: #f2f2f2; padding: 1%;">-->
+<!--                        From the scale of 1 (being bad) - 10 (yes), Does the client have one or more ‘positive’ friendships?-->
+<!--                         <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                        <select name="select7" id="select7" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                         <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                         </div>-->
+<!--                         </div>-->
+<!--                         <div style="padding: 1%;">-->
+<!--                        Is the client teased? What about? Are those who tease given appropriate consequences?-->
+<!--                        <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                         <select name="select8" id="select8" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                         <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                         </div>-->
+<!--                         </div>-->
+<!--                         <div style="background-color: #f2f2f2; padding: 1%;">-->
+<!--                        0- not at all and 10- More than appropriate.-->
+<!--                        Do you think that appropriate interventions and modifications are being implemented and practiced on client?-->
+<!--                        <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                        <select name="select9" id="select9" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                         <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                        </select><br>-->
+<!--                         </div>-->
+<!--                         </div>-->
+<!--                         <div style="padding: 1%;">-->
+<!--                        From 0 - bad and 10 being effective, Are there alternatives, helping the client to improve over the time.?-->
+<!--                       <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">-->
+<!--                         <select name="select10" id="select10" class="Assessment" style="padding: 8px 16px;">-->
+<!--                            <option value="0"> Select Intensity </option>-->
+<!--                            <option value="1"> 1 </option>-->
+<!--                            <option value="2"> 2 </option>-->
+<!--                            <option value="3"> 3 </option>-->
+<!--                            <option value="4"> 4 </option>-->
+<!--                            <option value="5"> 5 </option>-->
+<!--                            <option value="6"> 6 </option>-->
+<!--                            <option value="7"> 7 </option>-->
+<!--                            <option value="8"> 8 </option>-->
+<!--                            <option value="9"> 9 </option>-->
+<!--                            <option value="10"> 10 </option>-->
+<!--                    </select><br>-->
+<!--                         </div>-->
+<!--                         </div>-->
+<!--                        <p>Graph will be generated according to Intensity:</p> <br>-->
+<!--                        <input type="text" name="ScoreTot" id="ScoreTot" value="" style="margin-bottom: 2%;">-->
+<!--                    <div style="margin-top: 2%;">-->
+<!--                        <input type="button" id="foo" value="Add" />-->
+<!--                        <div style="margin-top: 2%;">-->
+<!--                            <a href="{% url 'chart' %}"> <input type="button" id="#"   value="Visualize Chart" /> </a>-->
+<!--                    </div>-->
+<!--                    </div>-->
+
+
+<!--                       </div>-->
+<!--                        <div class="col-sm-6 box-item" style="text-align: left;">-->
+<!--                        </form>-->
+
+<!--     </div></div>-->
+<!--                </div>-->
+<!--        </div>-->
+<!--        </div>-->
+<!--    </div></div></div>-->
+<!--  </main>-->
+
+<!--{% endif %}-->
+
+
+<!--{% endblock content %}-->

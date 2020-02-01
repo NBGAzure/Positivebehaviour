@@ -20,7 +20,6 @@ class FbaForm(forms.ModelForm):
         client.anticedent = self.cleaned_data['anticedent']
         client.behaviour = self.cleaned_data['behaviour']
         client.consequence = self.cleaned_data['consequence']
-        client.intensity = self.cleaned_data['intensity']
         if commit:
             client.save()
         return client
@@ -36,3 +35,16 @@ class EditFba(forms.ModelForm):
             'consequence',
             'intensity'
         )
+
+# class brForm(forms.ModelForm):
+#     class Meta:
+#         model = Br
+#         fields = (
+#         'client',
+#         )
+#
+#     def save(self, commit=True):
+#         client = super(Post, self).save(commit=False)
+#         if commit:
+#             client.save()
+#         return client
