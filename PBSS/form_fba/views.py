@@ -23,6 +23,7 @@ def std(request):
                 form.save()
                 return redirect('/view')
             except:
+                messages.warning(request, 'Please keep limit between 0 and 10!')
                 pass
     else:
         form = FbaForm()
@@ -61,13 +62,13 @@ def edit(request, id):
 
             instance = user_form.save(commit=False)
             instance.save()
-
+            messages.success(request, ' The client information is now updated!')
             return redirect('/view')
 
     context = {
                 "form_fba": instance,
             }
-    messages.success(request, ' The following user information is now updated!')
+
     return render(request, "edit.html", context)
 
 
