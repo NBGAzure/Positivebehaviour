@@ -164,36 +164,36 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 # from .forms import EditFba
 
 
-from .forms import forms
-from django.shortcuts import render, get_object_or_404
-
-
-def std(request):
-    if request.method == 'POST':
-        form = FbaForm(request.POST)
-        if form.is_valid():
-            try:
-                form.save()
-                return redirect('/view')
-            except:
-                pass
-    else:
-        form = FbaForm()
-    return render(request, 'fbaindex.html', {'form': form})
-
-
+# from .forms import forms
+# from django.shortcuts import render, get_object_or_404
 #
-# def view(request):
-#     form_fba = Fba.objects.all()
-#     return render(request, "view.html", {'form_fba': form_fba})
-
-class fbaChart(TemplateView):
-    template_name = 'charts.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["qs"] = Fba.objects.all()
-        return context
+#
+# def std(request):
+#     if request.method == 'POST':
+#         form = FbaForm(request.POST)
+#         if form.is_valid():
+#             try:
+#                 form.save()
+#                 return redirect('/view')
+#             except:
+#                 pass
+#     else:
+#         form = FbaForm()
+#     return render(request, 'fbaindex.html', {'form': form})
+#
+#
+# #
+# # def view(request):
+# #     form_fba = Fba.objects.all()
+# #     return render(request, "view.html", {'form_fba': form_fba})
+#
+# class fbaChart(TemplateView):
+#     template_name = 'charts.html'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context["qs"] = Fba.objects.all()
+#         return context
 
 
 def brreport(request):

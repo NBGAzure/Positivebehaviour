@@ -28,23 +28,6 @@ def std(request):
         form = FbaForm()
     return render(request, 'fbaindex.html', {'form': form})
 
-# def std1(request):
-#     if request.method == 'POST':
-#         form = brForm(request.POST)
-#         if form.is_valid():
-#             try:
-#                 form.save()
-#                 return redirect('/view')
-#             except:
-#                 pass
-#     else:
-#         form = brForm()
-#     return render(request, 'brreport.html', {'form': form})
-
-#
-# def view(request):
-#     form_fba = Fba.objects.all()
-#     return render(request, "view.html", {'form_fba': form_fba})
 
 class fbaChart(TemplateView):
     template_name = 'charts.html'
@@ -66,6 +49,61 @@ def delete(request, id):
     return redirect("/view")
 
 
+
+
+def edit(request, id):
+    instance = Fba.objects.get(id=id)
+
+    if request.method == 'POST':
+
+        user_form = EditFba(request.POST, instance = instance )
+        if user_form.is_valid():
+
+            instance = user_form.save(commit=False)
+            instance.save()
+
+            return redirect('/view')
+
+    context = {
+                "form_fba": instance,
+            }
+    messages.success(request, ' The following user information is now updated!')
+    return render(request, "edit.html", context)
+
+
+def view(request):
+    instance = Fba.objects.all()
+
+    template = 'view.html'
+    context = {
+        'form_fba': instance,
+    }
+    return render(request, template, context)
+
+
+###TESTING IN PROGRESS
+
+# def std1(request):
+#     if request.method == 'POST':
+#         form = brForm(request.POST)
+#         if form.is_valid():
+#             try:
+#                 form.save()
+#                 return redirect('/view')
+#             except:
+#                 pass
+#     else:
+#         form = brForm()
+#     return render(request, 'brreport.html', {'form': form})
+
+#
+# def view(request):
+#     form_fba = Fba.objects.all()
+#     return render(request, "view.html", {'form_fba': form_fba})
+
+
+
+
 # def edit(request,id=None):
 #     instance = get_object_or_404(Fba, id=id)
 #     form_fba = EditFba(request.POST or None, instance=instance)
@@ -80,24 +118,27 @@ def delete(request, id):
 #     return render(request, "edit.html", context)
 
 
-def edit(request, id):
-    instance = Fba.objects.get(id=id)
 
-    if request.method == 'POST':
 
-        user_form = EditFba(request.POST, instance=instance)
-        if user_form.is_valid():
-            instance = user_form.save(commit=False)
-            instance.save()
-
-            return redirect('/view')
-
-    context = {
-        "form_fba": form_fba,
-    }
-    messages.success(request, ' The following user information is now updated!')
-    return render(request, "edit.html", context)
-
+#TESTING - FOUND differences >> current
+# def edit(request, id):
+#     instance = Fba.objects.get(id=id)
+#
+#     if request.method == 'POST':
+#
+#         user_form = EditFba(request.POST, instance=instance)
+#         if user_form.is_valid():
+#             instance = user_form.save(commit=False)
+#             instance.save()
+#
+#             return redirect('/view')
+#
+#     context = {
+#         "form_fba": form_fba,
+#     }
+#     messages.success(request, ' The following user information is now updated!')
+#     return render(request, "edit.html", context)
+#
 
 #
 # def edit(request, id):
@@ -120,19 +161,21 @@ def edit(request, id):
 #
 #     return render(request, template_name, context)
 
-def view(request):
-    # instance = Fba.objects.get(id=id)
-    instance = Fba.objects.all()
-    # instance = Fba.objects.get(id=id)
 
-    if instance in request.user.fba.all():
-        template = 'view.html'
-        context = {
-            'form_fba': instance,
-        }
-        return render(request, template, context)
-    return render(request, "view.html")
+
+##Testing in PROGRESS..DO NOT REMOVE>>cu
+
 
 # def view(request):
 #     form_fba = Fba.objects.all()
 #     return render(request, "view.html", {'form_fba': form_fba})
+
+
+##TESTING IN PROGRESS >>Current
+
+# def view(request):
+#     form_fba = Fba.objects.all()
+#     return render(request, "view.html", {'form_fba': form_fba})
+#
+#     context["qs"] = Fba.objects.all()
+#     return context
