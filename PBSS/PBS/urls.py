@@ -21,7 +21,7 @@ from users import views as user_views
 from users.views import client
 from contact.views import contact
 from users.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView
-#from fbaform.views import fbaformfunc, addBehaviour, addTrigger Updated upstream
+# from fbaform.views import fbaformfunc, addBehaviour, addTrigger Updated upstream
 from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
@@ -38,7 +38,6 @@ urlpatterns = [
     # url(r'^form_fba/(?P<id>[-\w]+)/edit/$', views.edit, name='edit'),
     # url(r'^form_fba/edit/$', views.edit, name='edit'),
     path('brreport/', views.brreport, name='brreport'),
-
 
     path('freefbaform/', include('freefbaform.urls')),
     path('positivebehaviour/', include('positivebehaviour.urls')),
@@ -63,7 +62,7 @@ urlpatterns = [
     path('edit_profile/', user_views.edit_profile, name='edit_profile'),
     # path('fbaform/', include('fbaform.urls')),
     path('freefbaform/', include('freefbaform.urls')),
-    #path('userfba/', include('userfba.urls')),
+    # path('userfba/', include('userfba.urls')),
     path('contact/', contact, name="contact"),
     path('client/', PostListView.as_view(), name="client"),
     path('client/<str:username>', UserPostListView.as_view(), name="user-client"),
@@ -71,16 +70,9 @@ urlpatterns = [
     path('client/new/', PostCreateView.as_view(), name="client-create"),
     path('client/<int:pk>/update/', PostUpdateView.as_view(), name="client-update"),
     path('client/<int:pk>/delete/', PostDeleteView.as_view(), name="client-delete"),
-    #  path('newsletter/', include('newsletter.urls')),
     path('chart/', fbaChart.as_view(), name='chart')
-    # url(r'^(?P<id>\d+)/update/$', user_edit, name='user_edit')
 
-    # fbaform url
-
-    #path('fbaform/', fbaformfunc),
-   # path('addBehaviour/', addBehaviour),
-   # path('addTrigger/', addTrigger),
-]
+    ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,45 +1,51 @@
 {%  extends "users/dashboardbase.html" %}
 {% block content %}
-        {% load static %}
-        {% load crispy_forms_tags %}
-     <main class="page-content">
+{% load static %}
+{% load crispy_forms_tags %}
+<main class="page-content">
     <div class="container-fluid">
-       <h2 style="text-align: center;">Dashboard</h2>
+        <h2 style="text-align: center;">Dashboard</h2>
         <hr>
-      <div class="row">
-        <div class="form-group col-md-12">
-          <p style="text-align: center;">Manage work on daily basis.</p>
-        </div>
-           <a href="{% url 'profile' post.id %}"><i class="fa fa-arrow-circle-left" style="font-size:40px; border: none; float: left; color: blue;"></i></a>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <p style="text-align: center;">Manage work on daily basis.</p>
+            </div>
+            <a href="{% url 'profile' post.id %}"><i class="fa fa-arrow-circle-left"
+                                                     style="font-size:40px; border: none; float: left; color: blue;"></i></a>
 
-      </div>
-         <div class="container">
-                    <div class="row heading">
-                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
-                          <!--  <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a></p> -->
+        </div>
+        <div class="container">
+            <div class="row heading">
+                <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
+                    <!--  <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a></p> -->
 
                     <br><br>
                     <div class="row">
                         <div class="col-sm-6 box-item" style="-webkit-box-shadow: 0 10px 6px -6px #777;-moz-box-shadow: 0 10px 6px -6px #777;
             box-shadow: 0 10px 6px -6px #777; margin-bottom: 3%;width: 100%; float: left;">
-                             <form method="POST" style="">
-                                 {% csrf_token %}
-                                 <h2>Are you sure you want to delete the Client "<span style="color: #2c51d8">{{object.client_name}}</span>"</h2>
+                            <form method="POST" style="">
+                                {% csrf_token %}
+                                <h2>Are you sure you want to delete the Client "<span style="color: #2c51d8">{{object.client_name}}</span>"
+                                </h2>
                                 <br><br>
-                                 <fieldset class="form-group">
-                                     <button class="btn btn-2" type="submit">Yes, Delete </button>
-                                     <a class="btn btn-2" href="{% url 'profile' object.id %}"> Cancel</a>
-                                 </fieldset>
+                                <fieldset class="form-group">
+                                    <button class="btn btn-2" type="submit">Yes, Delete</button>
+                                    <a class="btn btn-2" href="{% url 'profile' object.id %}"> Cancel</a>
+                                </fieldset>
                             </form>
-                             <h2 style="color: black; font-size: 30px;">{{ object.client_name }} </h2>
-                             <a class="mr-2" href="{% url 'user-client' post.author.username %}" style="line-height: 2;">By {{object.author}}</a>
-                            <div class="intro" style="float: right;"> on {{ object.date_issued }}</div><br><br>
+                            <h2 style="color: black; font-size: 30px;">{{ object.client_name }} </h2>
+                            <a class="mr-2" href="{% url 'user-client' post.author.username %}" style="line-height: 2;">By
+                                {{object.author}}</a>
+                            <div class="intro" style="float: right;"> on {{ object.date_issued }}</div>
+                            <br><br>
                             <div class="intro" style="line-height: 2;">Gender: {{object.gender}}</div>
                             <div class="intro" style="line-height: 2;">Date Of Birth: {{object.DOB}}</div>
                             <div class="intro" style="line-height: 2;">Email-id: {{object.email}}</div>
                             <div class="intro" style="line-height: 2;">Location: {{object.location}}</div>
                             <div class="intro" style="line-height: 2;">Comment: {{post.content}}</div>
-                    <div class="intro" style="line-height: 2; font-weight: bold;">History: {{post.history}}</div><br>
+                            <div class="intro" style="line-height: 2; font-weight: bold;">History: {{post.history}}
+                            </div>
+                            <br>
                         </div>
                         <div class="col-sm-6 box-item" style="text-align: left;">
 
@@ -47,7 +53,9 @@
                     </div>
 
                 </div>
-            </section>
-     </div>
-         </div></div></main>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
 {% endblock content %}

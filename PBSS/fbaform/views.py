@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-
 from django.shortcuts import render, redirect
 from .models import List
 from .models import Anticident
@@ -12,6 +11,7 @@ from .forms import Fba
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+
 
 # Create your views here.
 
@@ -41,11 +41,13 @@ def anticident(request):
         all_anticident = Anticident.objects.all
         return render(request, 'fbaform/fbaform.html', {'all_anticident': all_anticident})
 
+
 def delete(request, list_id):
     item = List.objects.get(pk=list_id)
     item.delete()
     messages.success(request, ('Behaviour has been deleted'))
     return redirect('fbaform')
+
 
 def cross_off(request, list_id):
     item = List.objects.get(pk=list_id)
@@ -53,11 +55,13 @@ def cross_off(request, list_id):
     item.save()
     return redirect('fbaform')
 
+
 def uncross(request, list_id):
     item = List.objects.get(pk=list_id)
     item.completed = False
     item.save()
     return redirect('fbaform')
+
 
 def edit(request, list_id):
     if request.method == "POST":
@@ -72,13 +76,12 @@ def edit(request, list_id):
         return render(request, 'fbaform/editfbaform.html', {'item': item})
 
 
-
-
 def get(self, request):
     form = Fba()
     return render(request, {'form': form})
 
-def post (self, request):
+
+def post(self, request):
     form = Fba(request.POST)
     if form.is_valid():
         post = form.save(commit=False)
@@ -88,5 +91,5 @@ def post (self, request):
         form = Fba()
         return redirect(self)
 
-    args = {'form': form,'text': text}
+    args = {'form': form, 'text': text}
     return render(request, self, args)

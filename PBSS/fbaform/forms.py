@@ -5,10 +5,12 @@ from .models import Anti
 from .models import Beh
 from .models import Con
 
+
 class ListForm(forms.ModelForm):
     class Meta:
         model = List
         fields = ["item", "completed"]
+
 
 class AnticidentForm(forms.ModelForm):
     class Meta:
@@ -22,4 +24,3 @@ class Fba(forms.ModelForm):
     class Meta:
         model = Anti
         fields = ('post',)
-

@@ -11,6 +11,7 @@ from .forms import forms
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import HttpResponse, HttpResponseRedirect
 
+
 # Create your views here.
 
 
@@ -28,7 +29,6 @@ def std(request):
     return render(request, 'fbaindex.html', {'form': form})
 
 
-
 #
 # def view(request):
 #     form_fba = Fba.objects.all()
@@ -42,8 +42,8 @@ class fbaChart(TemplateView):
         context["qs"] = Fba.objects.all()
         return context
 
-def brreport(request):
 
+def brreport(request):
     return render(request, 'brreport.html', {'title': 'Br Report'})
 
 
@@ -52,7 +52,6 @@ def delete(request, id):
     form_fba.delete()
     messages.success(request, ' The following user is now deleted!')
     return redirect("/view")
-
 
 
 # def edit(request,id=None):
@@ -76,18 +75,16 @@ def edit(request, id):
 
         user_form = EditFba(request.POST, instance=instance)
         if user_form.is_valid():
-
             instance = user_form.save(commit=False)
             instance.save()
 
             return redirect('/view')
 
     context = {
-                "form_fba": form_fba,
-            }
+        "form_fba": form_fba,
+    }
     messages.success(request, ' The following user information is now updated!')
     return render(request, "edit.html", context)
-
 
 
 #
@@ -112,15 +109,15 @@ def edit(request, id):
 #     return render(request, template_name, context)
 
 def view(request):
-    #instance = Fba.objects.get(id=id)
+    # instance = Fba.objects.get(id=id)
     instance = Fba.objects.all()
-    #instance = Fba.objects.get(id=id)
+    # instance = Fba.objects.get(id=id)
 
     if instance in request.user.fba.all():
         template = 'view.html'
         context = {
             'form_fba': instance,
-                }
+        }
         return render(request, template, context)
     return render(request, "view.html")
 

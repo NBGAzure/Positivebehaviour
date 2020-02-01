@@ -1,12 +1,12 @@
 from django.core.checks import messages
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.template import loader
 from django.shortcuts import render
 
 from .models import NewsletterUsers
 from .forms import NewsletterUserSignUpform
+
+
 # Create your views here.
 def index(request):
     form = NewsletterUserSignUpform(request.POST or None)
@@ -24,16 +24,15 @@ def index(request):
         'form': form,
     }
     template = "positivebehaviour/base.html"
-  #  return render(request, template, context)
+    #  return render(request, template, context)
     return render(request, 'positivebehaviour/index.html', context)
 
 
 def sitemap(request):
-
     return render(request, 'positivebehaviour/sitemap.html', {'title': 'sitemap'})
 
-def fbaForm(request):
 
+def fbaForm(request):
     return render(request, 'fbaform/fbaform.html', {'title': 'fbaform'})
 
 
@@ -53,6 +52,7 @@ def newsletter_signup(request):
     template = "positivebehaviour/base.html"
     return render(request, template, context)
 
+
 def newsletter_unsubcribe(request):
     form = NewsletterUserSignUpform(request.POST or None)
 
@@ -64,11 +64,7 @@ def newsletter_unsubcribe(request):
             print("sorry we couldnt find your email address")
 
     context = {
-        "form":form,
+        "form": form,
     }
     template = "positivebehaviour/base.html"
     return render(request, template, context)
-
-
-
-

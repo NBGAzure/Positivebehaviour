@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+
 # Create your models here.
 
 
@@ -21,5 +22,3 @@ class Fba(models.Model):
 
 class Meta:
     db_table = 'fba'
-
-

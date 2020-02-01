@@ -7,9 +7,9 @@ from django.forms.widgets import PasswordInput
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(required='true', label=(''), max_length=30,
-                                 widget=forms.TextInput(attrs={"placeholder": "Email"}))
+                             widget=forms.TextInput(attrs={"placeholder": "Email"}))
     username = forms.CharField(label=(''), max_length=30,
-                                 widget=forms.TextInput(attrs={"placeholder": "Username"}))
+                               widget=forms.TextInput(attrs={"placeholder": "Username"}))
     password1 = forms.CharField(label=(''), widget=PasswordInput(attrs={'placeholder': 'Password'}))
     password2 = forms.CharField(label=(''), widget=PasswordInput(attrs={'placeholder': 'Confirm Password'}))
 
@@ -33,6 +33,3 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image']
-
-
-
