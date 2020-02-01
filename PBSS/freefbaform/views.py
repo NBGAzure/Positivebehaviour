@@ -3,8 +3,10 @@ from django.contrib import messages
 from positivebehaviour.models import NewsletterUsers
 from positivebehaviour.forms import NewsletterUserSignUpform
 
+
 def freefbaform(request):
     return render(request, "freefbaform/freefbaform.html")
+
 
 def newsletter_signup(request):
     form = NewsletterUserSignUpform(request.POST or None)
@@ -21,4 +23,3 @@ def newsletter_signup(request):
     }
     template = "positivebehaviour/base.html"
     return render(request, template, context)
-

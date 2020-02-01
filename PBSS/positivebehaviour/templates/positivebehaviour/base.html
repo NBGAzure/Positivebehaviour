@@ -2,20 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/bootstrap.min.css' %}">
     <!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css"
+    <link rel="stylesheet" type="text/css"
           href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/style.css' %}">
-	<link rel="stylesheet" type="text/css"
+    <link rel="stylesheet" type="text/css"
           href="{% static 'css/animated-logo.min.css' %}">
-	<link rel="stylesheet" type="text/css"
+    <link rel="stylesheet" type="text/css"
           href="{% static 'css/our-team.css' %}">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,175 +23,180 @@
     <title>Positive Behaviour</title>
 </head>
 <body>
-	<!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="{% url 'index' %}">PBSS</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="{% url 'index' %}">Home</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About us</a>
-                    </li>
-                    <li>
-                         {% if user.is_authenticated %}
-
-                             <li>
-                                 <a class="page-scroll" href="{% url 'client' %}">Profile</a>
-                             </li>
-                             <li>
-                                 <a class="page-scroll" href="{% url 'logout' %}">Logout</a>
-                             </li>
-                            <li>
-                                 <a class="page-scroll" href="{% url 'BL_view' %}">Business Leader</a>
-                             </li>
-                     </li>
-                             <li>
-
-                         {% else %}
-                            <a class="page-scroll" href="#portal">My Account</a>
-                        </li>
-                         {% endif %}
-
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#fbaform">FBA Form</a>
-                    </li>
-
-                        <li>
-                            <a class="page-scroll" href="{% url 'contact' %}">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="{% url 'index' %}">PBSS</a>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-	<!-- Navigation -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'index' %}">Home</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">About us</a>
+                </li>
+                <li>
+                    {% if user.is_authenticated %}
+
+                <li>
+                    <a class="page-scroll" href="{% url 'client' %}">Profile</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'logout' %}">Logout</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'BL_view' %}">Business Leader</a>
+                </li>
+                </li>
+                <li>
+
+                    {% else %}
+                    <a class="page-scroll" href="#portal">My Account</a>
+                </li>
+                {% endif %}
+
+                <li>
+                    <a class="page-scroll" href="#services">Services</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#fbaform">FBA Form</a>
+                </li>
+
+                <li>
+                    <a class="page-scroll" href="{% url 'contact' %}">Contact us</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- Navigation -->
 
 
-    {% block content %}{% endblock content %}
+{% block content %}{% endblock content %}
 
-    <!-- Footer -->
-	<footer>
-		<div class="wrap-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 col-footer footer-1">
-                        <div class=""><h6>PBSS</h6></div>
-						<div class="content">
-							<p>A PBS plan will tell the people what needs to be done proactively to
-                                prevent the challenging behaviour. Proactive strategy will improve the
-                                quality of life by supporting throughout the process. </p>
-                        </div>
-					</div>
-
-
-						<div class="col-xs-6 col-md-4 col-footer footer-3">
-                            <h6>Quick Links</h6>
-                                <ul class="footer-links">
-                                      <li><a href="{% url 'index' %}">Home</a></li>
-                                      <li><a href="#">About us</a></li>
-                                      <li><a href="{% url 'register' %}">Signin/Signup</a></li>
-                                      <li><a href="#">Services</a></li>
-                                      <li><a href="{% url 'freefbaform' %}">FBA Form</a></li>
-                                      <li><a href="#">Contact us</a></li>
-                                </ul>
-                        </div>
-
-                    <div class="col-md-4 col-footer footer-2">
-						<div class=""><h6>Subscribe us</h6></div>
-						<div class="content">
-							<p></p>
-							<div class="subscribe-form">
-								 <form method="post">
-                <div class = "form-group" style="display: block;">
-                    {% csrf_token %}
-                    {{ form }}<br>
-                    <span class="input-group-btn">
-                       <button type="submit" name="Submit" class="btn btn-4 btn-block" style="width: 100%; margin-top: 4%;">Subscribe</button>
-                    </span>
+<!-- Footer -->
+<footer>
+    <div class="wrap-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-footer footer-1">
+                    <div class=""><h6>PBSS</h6></div>
+                    <div class="content">
+                        <p>A PBS plan will tell the people what needs to be done proactively to
+                            prevent the challenging behaviour. Proactive strategy will improve the
+                            quality of life by supporting throughout the process. </p>
+                    </div>
                 </div>
-            </form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<p style=" font-size: 15px;">Copyright &copy; PBSS - Designed by Team 03<a href="#"></a></p>
-					</div>
-					<div class="col-md-4">
-						<ul class="list-inline">
-							<li><a href="#"><i class="fa fa-twitter"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-facebook"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-google"></i></a>
-                            </li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul class="list-inline">
-							•<li><a href="#">Privacy Policy</a>
-							</li>
-							•<li><a href="#">Terms of Use</a>
-							</li>
-                            •<li><a href="/positivebehaviour/sitemap/">Sitemap</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer -->
+
+
+                <div class="col-xs-6 col-md-4 col-footer footer-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="{% url 'register' %}">Signin/Signup</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="{% url 'freefbaform' %}">FBA Form</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-footer footer-2">
+                    <div class=""><h6>Subscribe us</h6></div>
+                    <div class="content">
+                        <p></p>
+                        <div class="subscribe-form">
+                            <form method="post">
+                                <div class="form-group" style="display: block;">
+                                    {% csrf_token %}
+                                    {{ form }}<br>
+                                    <span class="input-group-btn">
+                       <button type="submit" name="Submit" class="btn btn-4 btn-block"
+                               style="width: 100%; margin-top: 4%;">Subscribe</button>
+                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p style=" font-size: 15px;">Copyright &copy; PBSS - Designed by Team 03<a href="#"></a></p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-google"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline">
+                        •
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        •
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                        •
+                        <li><a href="/positivebehaviour/sitemap/">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
 <!-- Js -->
-	    <script src= "{% static 'js/modernizr.js' %}"></script>
-        <script src= "{% static 'js/html5shiv.js' %}"></script>
-        <script src= "{% static 'js/respond.min.js' %}"></script>
-    <![endif]-->
+<script src="{% static 'js/modernizr.js' %}"></script>
+<script src="{% static 'js/html5shiv.js' %}"></script>
+<script src="{% static 'js/respond.min.js' %}"></script>
+<![endif]-->
 <!-- jQuery -->
-	<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
-	<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
-	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-	<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
+<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
+<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
 
-	<!-- Bootstrap Core JavaScript -->
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-	<!-- Custom Theme JavaScript -->
-	<script src="{% static 'js/agency.js'%}"></script>
+<!-- Custom Theme JavaScript -->
+<script src="{% static 'js/agency.js'%}"></script>
 
-	<!-- Animated Top -->
-	<script src="{% static 'js/jquery.easing.min.js'%}"></script>
-	<script src="{% static 'js/classie.js'%}"></script>
-	<script src="{% static 'js/cbpAnimatedHeader.js'%}"></script>
-	<!-- Footer -->
+<!-- Animated Top -->
+<script src="{% static 'js/jquery.easing.min.js'%}"></script>
+<script src="{% static 'js/classie.js'%}"></script>
+<script src="{% static 'js/cbpAnimatedHeader.js'%}"></script>
+<!-- Footer -->
 
 </body>
 </html>

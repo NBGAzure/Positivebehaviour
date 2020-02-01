@@ -6,8 +6,8 @@ from businessleader import views as LeaderView
 urlpatterns = [
     path('', PostListViewBl.as_view(), name='BL_view'),
     path('registerSW/', LeaderView.blregister, name='businessleader'),
-    path('supportworker/',PostListViewBlSw, name='supportworker'),
-    path('user/<int:pk>/delete',PostDeleteViewBl, name='user_delete'),
+    path('supportworker/', PostListViewBlSw, name='supportworker'),
+    path('user/<int:pk>/delete', PostDeleteViewBl, name='user_delete'),
     path('user/<int:pk>/', PostDetailViewBl.as_view(), name='user-detail'),
 
 ]

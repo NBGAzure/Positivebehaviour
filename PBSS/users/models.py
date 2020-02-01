@@ -29,8 +29,6 @@ class Post(models.Model):
     date_issued = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
-
-
     def __str__(self):
         return self.client_name
 

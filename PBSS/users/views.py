@@ -1,19 +1,16 @@
-from typing import Type
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib import messages
-from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
-from django import forms
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from .models import Post
-from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.shortcuts import render
-from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from crispy_forms.helper import FormHelper
+from django.shortcuts import render, redirect
+from form_fba.forms import FbaForm, EditFba
+from form_fba.models import Fba, User
+from django.contrib import messages
+from django.views.generic import TemplateView
+from django.contrib.auth.models import User
+
 
 def register(request):
     if request.method == 'POST':
@@ -51,7 +48,6 @@ def profile(request):
     return render(request=request,
                   template_name="users/profile.html",
                   context={"form": form})
-   # return render(request, 'users/profile.html', context, {'title': 'Profile'})
 
 
 def edit_profile(request):
@@ -82,7 +78,7 @@ def client(request):
     return render(request, 'users/profile.html', context)
 
 
-class PostListView(LoginRequiredMixin,  ListView):
+class PostListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'users/profile.html'
     context_object_name = 'posts'
@@ -117,6 +113,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     success_message = 'client added successfully!'
     model = Post
     fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
+
     # initial = {"client_name": "Your Name", "DOB": "Date of birth", "email": "Your e-mail",
     #            "location": "You Location", "history": "Your History", "content": "Description"}
     # labels = {
@@ -128,8 +125,6 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         messages.success(self.request, self.success_message)
         return super().form_valid(form)
-
-
 
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -166,20 +161,11 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
 
-from django.shortcuts import render, redirect
-from form_fba.forms import FbaForm, EditFba
-from form_fba.models import Fba, User
-from django.contrib import messages
-from django.views.generic import TemplateView
-from django.contrib.auth.models import User
 # from .forms import EditFba
 
 
 from .forms import forms
 from django.shortcuts import render, get_object_or_404
-from django.shortcuts import HttpResponse, HttpResponseRedirect
-
-# Create your views here.
 
 
 def std(request):
@@ -196,7 +182,6 @@ def std(request):
     return render(request, 'fbaindex.html', {'form': form})
 
 
-
 #
 # def view(request):
 #     form_fba = Fba.objects.all()
@@ -210,8 +195,8 @@ class fbaChart(TemplateView):
         context["qs"] = Fba.objects.all()
         return context
 
-def brreport(request):
 
+def brreport(request):
     return render(request, 'brreport.html', {'title': 'Br Report'})
 
 
@@ -220,7 +205,6 @@ def delete(request, id):
     form_fba.delete()
     messages.success(request, ' The following user is now deleted!')
     return redirect("/view")
-
 
 
 # def edit(request,id=None):
@@ -244,18 +228,16 @@ def edit(request, id):
 
         user_form = EditFba(request.POST, instance=instance)
         if user_form.is_valid():
-
             instance = user_form.save(commit=False)
             instance.save()
 
             return redirect('/view')
 
     context = {
-                "form_fba": form_fba,
-            }
+        "form_fba": form_fba,
+    }
     messages.success(request, ' The following user information is now updated!')
     return render(request, "edit.html", context)
-
 
 
 #
@@ -280,15 +262,15 @@ def edit(request, id):
 #     return render(request, template_name, context)
 
 def view(request):
-    #instance = Fba.objects.get(id=id)
+    # instance = Fba.objects.get(id=id)
     instance = Fba.objects.all()
-    #instance = Fba.objects.get(id=id)
+    # instance = Fba.objects.get(id=id)
 
     if instance in request.user.fba.all():
         template = 'view.html'
         context = {
             'form_fba': instance,
-                }
+        }
         return render(request, template, context)
     return render(request, "view.html")
 

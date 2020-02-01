@@ -8,11 +8,11 @@ class FbaForm(forms.ModelForm):
     class Meta:
         model = Fba
         fields = (
-        'client',
-        'anticedent',
-        'behaviour',
-        'consequence',
-        'intensity'
+            'client',
+            'anticedent',
+            'behaviour',
+            'consequence',
+            'intensity'
         )
 
     def save(self, commit=True):
@@ -24,14 +24,16 @@ class FbaForm(forms.ModelForm):
             client.save()
         return client
 
+
 class EditFba(forms.ModelForm):
     class Meta:
         model = Fba
         fields = (
-        'anticedent',
-        'behaviour',
-        'consequence',
-        'intensity'
+
+            'anticedent',
+            'behaviour',
+            'consequence',
+            'intensity'
         )
 
 # class brForm(forms.ModelForm):
