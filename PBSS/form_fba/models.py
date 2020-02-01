@@ -10,7 +10,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Fba(models.Model):
-    client = models.ForeignKey(Post, on_delete=models.CASCADE)
+    client = models.ForeignKey(Post, on_delete=models.CASCADE, null=False)
     anticedent = models.CharField(blank=False, max_length=200)
     behaviour = models.CharField(blank=False, max_length=200)
     consequence = models.CharField(blank=False, max_length=200)
