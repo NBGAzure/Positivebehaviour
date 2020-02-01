@@ -1,5 +1,5 @@
 from django import forms
-from .models import Fba, Br
+from .models import Fba
 from .models import User
 from users.models import Post
 
@@ -34,15 +34,15 @@ class EditFba(forms.ModelForm):
         'intensity'
         )
 
-class brForm(forms.ModelForm):
-    class Meta:
-        model = Br
-        fields = (
-        'client',
-        )
-
-    def save(self, commit=True):
-        client = super(Post, self).save(commit=False)
-        if commit:
-            client.save()
-        return client
+# class brForm(forms.ModelForm):
+#     class Meta:
+#         model = Br
+#         fields = (
+#         'client',
+#         )
+#
+#     def save(self, commit=True):
+#         client = super(Post, self).save(commit=False)
+#         if commit:
+#             client.save()
+#         return client

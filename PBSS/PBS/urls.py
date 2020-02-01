@@ -30,7 +30,7 @@ from form_fba.views import fbaChart
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('std/', views.std, name='std'),
-    path('brreport/', views.std1, name='std1'),
+   # path('brreport/', views.std1, name='std1'),
     path('view/', views.view, name='view'),
 
     path('delete/<int:id>', views.delete),
