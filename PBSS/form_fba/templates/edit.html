@@ -34,33 +34,45 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">User</label>
-
-                <input type="text" name="user" value="{{ form_fba.user }}">
-            </div>
+<!--            <div class="form-group row">-->
+<!--                <label class="col-sm-2 col-form-label">User</label>-->
+<!--                <input type="text" name="user" value="{{ form_fba.user }}" style="width: 20%;">-->
+<!--            </div>-->
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Anticident</label>
 
-                <input type="text" name="anticedent" value="{{ form_fba.anticedent }}">
+                <input type="text" name="anticedent" value="{{ form_fba.anticedent }}" style="width: 20%;">
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Behaviour</label>
 
-                <input type="text" name="behaviour" value="{{ form_fba.behaviour }}">
+                <input type="text" name="behaviour" value="{{ form_fba.behaviour }}" style="width: 20%;">
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Consequence</label>
 
-                <input type="text" name="consequence" value="{{ form_fba.consequence }}">
+                <input type="text" name="consequence" value="{{ form_fba.consequence }}" style="width: 20%;">
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Intensity</label>
-
-                <input type="text" name="intensity" value="{{ form_fba.intensity }}">
+                <input type="text" name="intensity" value="{{ form_fba.intensity }}" style="width: 20%;">
             </div>
-            <button type="submit" class="btn btn-primary">Update Information</button>
+            <button type="submit" class="btn btn-2 btn-lg">Update Information</button>
+             {% if form.errors %}
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endif %}
         </form>
     </div>
     </div></div></div>

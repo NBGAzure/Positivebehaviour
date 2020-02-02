@@ -26,6 +26,7 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
 from form_fba.views import fbaChart
+from django.conf.urls import handler400,handler403,handler404,handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),

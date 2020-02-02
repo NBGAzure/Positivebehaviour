@@ -2,6 +2,7 @@ from typing import Type
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from users.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from users.models import Post
 from django.http import HttpResponseRedirect
@@ -22,12 +23,12 @@ def blregister(request):
     return render(request, 'businessleader/base.html', {'form': form})
 
 
-class PostListViewBl(ListView):
+class PostListViewBl(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'businessleader/userlist.html'
     context_object_name = 'posts'
     ordering = ['-date_issued']
-    paginate_by = 6
+    paginate_by = 4
 
 
 class PostDetailViewBl(DetailView):
@@ -36,14 +37,31 @@ class PostDetailViewBl(DetailView):
 
 
 def PostListViewBlSw(request):
+
     context = {
         'users': User.objects.all()
     }
 
+
     return render(request, 'businessleader/swlist.html', context)
 
 
-class PostDeleteViewBl(DeleteView):
+# delete functionality of support worker in progress
+
+class PostDeleteViewBl(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = User
     success_url = '/businessleader'
+    success_message = 'Support worker deleted successfully!'
     # template_name = 'businessleader/user_confirm_delete.html'
+
+
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(PostDeleteViewBl, self).delete(request, *args, **kwargs)
+
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+           return True
+        return False

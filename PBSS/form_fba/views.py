@@ -64,7 +64,8 @@ def edit(request, id):
             instance.save()
             messages.success(request, ' The client information is now updated!')
             return redirect('/view')
-
+        else:
+            messages.warning(request, 'Please keep limit between 0 and 10!')
     context = {
                 "form_fba": instance,
             }
