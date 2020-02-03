@@ -22,13 +22,18 @@ class Fba(models.Model):
 class Meta:
     db_table = 'fba'
 
-#
-# class Br(models.Model):
-#     client = models.ForeignKey(Post, on_delete=models.CASCADE)
-#
-#     def get_absolute_url(self):
-#         return reverse("forms:detail", kwargs={"is": self.id})
-#
-#
-# class Meta:
-#     db_table = 'fba'
+
+class Br(models.Model):
+    client = models.ForeignKey(Post, on_delete=models.CASCADE, null=False)
+    #client = models.ForeignKey(User, on_delete=models.CASCADE)
+    intensity1 = models.PositiveSmallIntegerField(blank=False, default=None, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    intensity2 = models.PositiveSmallIntegerField(blank=False, default=None, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    intensity3 = models.PositiveSmallIntegerField(blank=False, default=None, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    intensity4 = models.PositiveSmallIntegerField(blank=False, default=None, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    intensity5 = models.PositiveSmallIntegerField(blank=False, default=None, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    def get_absolute_url(self):
+        return reverse("forms:detail", kwargs={"is": self.id})
+
+
+class Meta:
+    db_table = 'br'

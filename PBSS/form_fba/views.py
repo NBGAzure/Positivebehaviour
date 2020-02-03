@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from form_fba.forms import FbaForm, EditFba
+from form_fba.forms import FbaForm, EditFba, brForm
 from form_fba.models import Fba, User
 from django.contrib import messages
 from django.views.generic import TemplateView
@@ -29,6 +29,35 @@ def std(request):
         form = FbaForm()
     return render(request, 'fbaindex.html', {'form': form})
 
+def view(request):
+    form_fba = Fba.objects.all()
+    return render(request, "view.html", {'form_fba': form_fba})
+
+def std1(request):
+    if request.method == 'POST':
+        form = brForm(request.POST)
+        if form.is_valid():
+            try:
+                form.save()
+                return redirect('/view1')
+            except:
+                pass
+    else:
+        form = brForm()
+    return render(request, 'brreport.html', {'form': form})
+
+def view1(request):
+    form_br = Fba.objects.all()
+    return render(request, "brview.html", {'form_br': form_br})
+
+def view1(request):
+    instance = Fba.objects.all()
+
+    template = 'brview.html'
+    context = {
+        'form_br': instance,
+    }
+    return render(request, template, context)
 
 class fbaChart(TemplateView):
     template_name = 'charts.html'
@@ -85,23 +114,7 @@ def view(request):
 
 ###TESTING IN PROGRESS
 
-# def std1(request):
-#     if request.method == 'POST':
-#         form = brForm(request.POST)
-#         if form.is_valid():
-#             try:
-#                 form.save()
-#                 return redirect('/view')
-#             except:
-#                 pass
-#     else:
-#         form = brForm()
-#     return render(request, 'brreport.html', {'form': form})
 
-#
-# def view(request):
-#     form_fba = Fba.objects.all()
-#     return render(request, "view.html", {'form_fba': form_fba})
 
 
 
