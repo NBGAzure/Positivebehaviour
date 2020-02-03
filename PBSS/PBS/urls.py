@@ -31,16 +31,16 @@ from django.conf.urls import handler400,handler403,handler404,handler500
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('std/', views.std, name='std'),
-    path('brreport/', views.std1, name='std1'),
+    #path('brreport/', views.std1, name='std1'),
     path('view/', views.view, name='view'),
-    path('view1/', views.view, name='view1'),
+    path('view1/', views.view1, name='view1'),
 
     path('delete/<int:id>', views.delete),
     path('edit/<int:id>', views.edit, name='edit'),
     # url(r'^$/', views.view, name='view'),
     # url(r'^form_fba/(?P<id>[-\w]+)/edit/$', views.edit, name='edit'),
     # url(r'^form_fba/edit/$', views.edit, name='edit'),
-    path('brreport/', views.brreport, name='brreport'),
+    path('std1/', views.std1, name='std1'),
 
     path('freefbaform/', include('freefbaform.urls')),
     path('positivebehaviour/', include('positivebehaviour.urls')),
