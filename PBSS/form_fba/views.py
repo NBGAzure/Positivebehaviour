@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from form_fba.forms import FbaForm, EditFba, brForm
-from form_fba.models import Fba, User, Br
+from form_fba.models import Fba, User
 from django.contrib import messages
 from django.views.generic import TemplateView
 from django.contrib.auth.models import User
@@ -47,11 +47,11 @@ def std1(request):
     return render(request, 'brreport.html', {'form': form})
 
 def view1(request):
-    form_br = Br.objects.all()
+    form_br = Fba.objects.all()
     return render(request, "brview.html", {'form_br': form_br})
 
 def view1(request):
-    instance = Br.objects.all()
+    instance = Fba.objects.all()
 
     template = 'brview.html'
     context = {
@@ -68,8 +68,8 @@ class fbaChart(TemplateView):
         return context
 
 
-# def brreport(request):
-#     return render(request, 'brreport.html', {'title': 'Br Report'})
+def brreport(request):
+    return render(request, 'brreport.html', {'title': 'Br Report'})
 
 
 def delete(request, id):

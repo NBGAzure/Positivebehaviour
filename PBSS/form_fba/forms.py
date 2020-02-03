@@ -50,7 +50,7 @@ class brForm(forms.ModelForm):
         )
 
     def save(self, commit=True):
-        client = super(brForm, self).save(commit=False)
+        client = super(Post, self).save(commit=False)
         client.intensity1 = self.cleaned_data['intensity1']
         client.intensity2 = self.cleaned_data['intensity2']
         client.intensity3 = self.cleaned_data['intensity3']
