@@ -74,13 +74,21 @@ def edit(request, id):
 
 
 def view(request):
-    instance = Fba.objects.all()
+    #instance = Fba.objects.all() >>Displays everything from the db
+    instance = Fba.objects.filter(client_id=33)
 
     template = 'view.html'
     context = {
         'form_fba': instance,
     }
     return render(request, template, context)
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def get_queryset(self):
+        return super(view, self).get_queryset().filter(author=self.request.user)
 
 
 ###TESTING IN PROGRESS
