@@ -3,6 +3,9 @@ from form_fba.forms import FbaForm, EditFba, brForm
 from form_fba.models import Fba, User, Br
 from django.contrib import messages
 from django.views.generic import TemplateView
+from django.db.models import Sum
+from django.db.models import Avg, Count
+from django.db.models import Sum
 from django.contrib.auth.models import User
 # from .forms import EditFba
 
@@ -48,6 +51,14 @@ def std1(request):
 
 def view1(request):
     form_br = Br.objects.all()
+    # sum = (Br.objects.aggregate(
+    #     total=Sum('sum', field="intensity1+intensity2+intensity3+intensity4+intensity5")
+    # )['sum']
+    # )
+    sum = sum.aggregate(sum=Sum('item_quantity'))['sum'] or 0
+    context = {
+        'sum': sum,
+    }
     return render(request, "brview.html", {'form_br': form_br})
 
 def view1(request):
