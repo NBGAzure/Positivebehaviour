@@ -32,30 +32,8 @@ from django.conf.urls import handler400,handler403,handler404,handler500
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-
-
-
-
     path('std/', views.std, name='std'),
     path('view/', fbaListView.as_view(), name='view'),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     path('view1/', views.view1, name='view1'),
