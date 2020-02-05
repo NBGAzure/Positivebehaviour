@@ -25,7 +25,7 @@
 </header>
 <!-- Header -->
 
-<section id="about" class="box-content box-3">
+<section id="about" class="box-content box-3" style="background-size: 100% auto; padding: 0px 0; background-color: white;">
     <div class="container">
         <div>
             {% if messages %}
@@ -36,7 +36,8 @@
             {% endfor %}
             {% endif %}
         </div>
-        <div class="col-md-8">
+     <div class="box-content box-1" style="background-size: 100% auto; padding: 0px 0; background-color: white;">
+        <div class="col-md-8" style="background-color: white;">
             <div class="row heading">
                 <div class="col-lg-12">
                     <h2>About us</h2>
@@ -119,6 +120,8 @@
                 </div>
             </div>
         </div>
+     </div>
+    </div>
 </section>
 
 <!-- ////////////Content Box 02 -->
@@ -222,7 +225,7 @@
         </section>
 
 
-        <section class="box-content box-1" style="background-size: 100% auto; padding: 0px 0; background-color: white;">
+        <div class="box-content box-1" style="background-size: 100% auto; padding: 0px 0; background-color: white;">
             <div class="clearfix">
                 <div class="container">
                     <div class="row heading">
@@ -416,6 +419,8 @@
                     </div> <!-- cd-testimonials-all -->
                 </div>
             </div>
+        </div>
+    </div></div>
         </section>
 
         {% endblock content %}
