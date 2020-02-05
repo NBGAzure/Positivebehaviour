@@ -33,7 +33,7 @@ class Br(models.Model):
     intensity3 = models.PositiveSmallIntegerField(blank=False, default=None, validators=[MinValueValidator(0), MaxValueValidator(10)])
     intensity4 = models.PositiveSmallIntegerField(blank=False, default=None, validators=[MinValueValidator(0), MaxValueValidator(10)])
     intensity5 = models.PositiveSmallIntegerField(blank=False, default=None, validators=[MinValueValidator(0), MaxValueValidator(10)])
-    sum = models.CharField(max_length=100, null=True)
+    # sum = models.CharField(max_length=100, null=True)
     def get_absolute_url(self):
         return reverse("forms:detail", kwargs={"is": self.id})
 

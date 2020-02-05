@@ -55,10 +55,10 @@ def view1(request):
     #     total=Sum('sum', field="intensity1+intensity2+intensity3+intensity4+intensity5")
     # )['sum']
     # )
-    sum = sum.aggregate(sum=Sum('item_quantity'))['sum'] or 0
-    context = {
-        'sum': sum,
-    }
+    # sum = sum.aggregate(sum=Sum('item_quantity'))['sum'] or 0
+    # context = {
+    #     'sum': sum,
+    # }
     return render(request, "brview.html", {'form_br': form_br})
 
 def view1(request):
@@ -75,7 +75,7 @@ class fbaChart(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["qs"] = Fba.objects.all()
+        context["qs"] = Br.objects.all()
         return context
 
 
@@ -114,8 +114,9 @@ def edit(request, id):
 
 
 def view(request):
-    #instance = Fba.objects.all() >>Displays everything from the db
-    instance = Fba.objects.filter(client_id=33)
+
+    instance = Fba.objects.all()
+    # instance = Fba.objects.filter(client_id=33)
 
     template = 'view.html'
     context = {

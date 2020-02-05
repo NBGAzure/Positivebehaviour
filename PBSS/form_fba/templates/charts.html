@@ -10,10 +10,10 @@
     var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: [{% for item in qs %}'{{item.user}}',{% endfor %}],
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
         datasets: [{
-            label: '# of Votes',
-            data: [{% for item in qs %}'{{item.intensity}}',{% endfor %}],
+            label: 'Did the person increased respectful and positive behaviour from last day? ',
+            data: [{% for item in qs %}'{{item.intensity1}}',{% endfor %}],
 
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -54,17 +54,16 @@
 });
   });
 
-
   $(document).ready(function(){
 
     var ctx = document.getElementById('myChart2').getContext('2d');
     var myChart2 = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: [{% for item in qs %}'{{item.user}}',{% endfor %}],
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
         datasets: [{
-            label: '# of Votes',
-            data: [{% for item in qs %}'{{item.intensity}}',{% endfor %}],
+            label: 'Did the person increased respectful and positive behaviour from last day? ',
+            data: [{% for item in qs %}'{{item.intensity1}}',{% endfor %}],
 
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -111,10 +110,10 @@
     var myChart3 = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: [{% for item in qs %}'{{item.user}}',{% endfor %}],
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
         datasets: [{
-            label: '# of Votes',
-            data: [{% for item in qs %}'{{item.intensity}}',{% endfor %}],
+            label: 'Did the person increased respectful and positive behaviour from last day? ',
+            data: [{% for item in qs %}'{{item.intensity1}}',{% endfor %}],
 
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -155,13 +154,740 @@
 });
   });
 
+
+// intensity 2
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart4').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'Did the person increased time focused on instruction? ',
+            data: [{% for item in qs %}'{{item.intensity2}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart5').getContext('2d');
+    var myChart2 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'Did the person increased time focused on instruction? ',
+            data: [{% for item in qs %}'{{item.intensity2}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart6').getContext('2d');
+    var myChart3 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'Did the person increased time focused on instruction? ',
+            data: [{% for item in qs %}'{{item.intensity2}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+
+
+//intensity 3
+
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart7').getContext('2d');
+    var myChart7 = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'Did the person improved social-emotional wellbeing positive and respectful relationships among people around them? ',
+            data: [{% for item in qs %}'{{item.intensity3}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart8').getContext('2d');
+    var myChart8 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'Did the person improved social-emotional wellbeing positive and respectful relationships among people around them? ',
+            data: [{% for item in qs %}'{{item.intensity3}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart9').getContext('2d');
+    var myChart9 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'Did the person improved social-emotional wellbeing positive and respectful relationships among people around them? ',
+            data: [{% for item in qs %}'{{item.intensity3}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+
+  //intensity 4
+
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart10').getContext('2d');
+    var myChart10 = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'On the scale of 1-10, how much response they are providing to the positive support they are getting? ',
+            data: [{% for item in qs %}'{{item.intensity4}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart11').getContext('2d');
+    var myChart11 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'On the scale of 1-10, how much response they are providing to the positive support they are getting? ',
+            data: [{% for item in qs %}'{{item.intensity4}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart12').getContext('2d');
+    var myChart12 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'On the scale of 1-10, how much response they are providing to the positive support they are getting? ',
+            data: [{% for item in qs %}'{{item.intensity4}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+
+
+   //intensity 5
+
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart13').getContext('2d');
+    var myChart13 = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'from 0 - not al all, 10 - easy to predict Warning signs or frustration clues? Does the client act in a predictable way prior to problem behaviours occurring?',
+            data: [{% for item in qs %}'{{item.intensity5}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart14').getContext('2d');
+    var myChart14 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'from 0 - not al all, 10 - easy to predict Warning signs or frustration clues? Does the client act in a predictable way prior to problem behaviours occurring?',
+            data: [{% for item in qs %}'{{item.intensity5}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
+
+  $(document).ready(function(){
+
+    var ctx = document.getElementById('myChart15').getContext('2d');
+    var myChart15 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [{% for item in qs %}'{{item.id}}',{% endfor %}],
+        datasets: [{
+            label: 'from 0 - not al all, 10 - easy to predict Warning signs or frustration clues? Does the client act in a predictable way prior to problem behaviours occurring?',
+            data: [{% for item in qs %}'{{item.intensity5}}',{% endfor %}],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(153, 10, 455, 0.2)',
+                'rgba(23, 502, 255, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(200, 12, 155, 1)',
+                'rgba(55, 459, 44, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  });
   </script>
   {% endblock scripts %}
 
   {%block content%}
-    <canvas id="myChart"  width="800" height="100"></canvas>
-    <canvas id="myChart2"  width="800" height="100"></canvas>
-    <canvas id="myChart3"  width="800" height="100"></canvas>
+    <main class="page-content">
+    <div class="container-fluid">
+        <h2 style="text-align: center;">Dashboard</h2>
+        <hr>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <p style="text-align: center;">Data Visualization</p>
+                <a href="{% url 'client' %}"><i class="fa fa-arrow-circle-left"
+                                                style="font-size:40px; border: none; float: left; color: blue;"></i></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row heading">
+                <div class="col-lg-12" style="margin-top: 1%; margin-bottom: 3%;">
+
+                    <br><br>
+                     <div class="container">
+
+                            <div class="container" style=" -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);; margin-bottom: 3%; width: 95%; float: left; padding-bottom: 3%; padding-top: 3%;">
+                                <canvas id="myChart"  width="500" height="100"></canvas>
+                        <canvas id="myChart2"  width="800" height="100"></canvas>
+                        <canvas id="myChart3"  width="800" height="100"></canvas>
+                            </div>
+                     </div>
+                    </div>
+                </div>
+            </div>
+         <div class="container">
+            <div class="row heading">
+                <div class="col-lg-12" style="margin-top: 1%; margin-bottom: 3%;">
+
+                    <br><br>
+                     <div class="container">
+
+                           <div class="container" style=" -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);; margin-bottom: 3%; width: 95%; float: left; padding-bottom: 3%; padding-top: 3%;">
+                        <canvas id="myChart4"  width="500" height="100" style="width: 10%; height: auto;"></canvas>
+                        <canvas id="myChart5"  width="800" height="100"></canvas>
+                        <canvas id="myChart6"  width="800" height="100"></canvas>
+                            </div>
+                     </div>
+                    </div>
+                </div>
+            </div>
+             <div class="container">
+            <div class="row heading">
+                <div class="col-lg-12" style="margin-top: 1%; margin-bottom: 3%;">
+
+                    <br><br>
+                     <div class="container">
+
+                           <div class="container" style=" -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);; margin-bottom: 3%; width: 95%; float: left; padding-bottom: 3%; padding-top: 3%;">
+                        <canvas id="myChart7"  width="500" height="100" style="width: 10%; height: auto;"></canvas>
+                        <canvas id="myChart8"  width="800" height="100"></canvas>
+                        <canvas id="myChart9"  width="800" height="100"></canvas>
+                            </div>
+                     </div>
+                    </div>
+                </div>
+            </div>
+             <div class="container">
+            <div class="row heading">
+                <div class="col-lg-12" style="margin-top: 1%; margin-bottom: 3%;">
+
+                    <br><br>
+                     <div class="container">
+
+                            <div class="container" style=" -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);; margin-bottom: 3%; width: 95%; float: left; padding-bottom: 3%; padding-top: 3%;">
+                        <canvas id="myChart10"  width="500" height="100" style="width: 10%; height: auto;"></canvas>
+                        <canvas id="myChart11"  width="800" height="100"></canvas>
+                        <canvas id="myChart12"  width="800" height="100"></canvas>
+                            </div>
+                     </div>
+                    </div>
+                </div>
+            </div>
+             <div class="container">
+            <div class="row heading">
+                <div class="col-lg-12" style="margin-top: 1%; margin-bottom: 3%;">
+
+                    <br><br>
+                     <div class="container">
+
+               <div class="container" style=" -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);; margin-bottom: 3%; width: 95%; float: left; padding-bottom: 3%; padding-top: 3%;">
+                        <canvas id="myChart13"  width="500" height="100" style="width: 10%; height: auto;"></canvas>
+                        <canvas id="myChart14"  width="800" height="100"></canvas>
+                        <canvas id="myChart15"  width="800" height="100"></canvas>
+                            </div>
+                     </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+
+
+
 
 
   {%endblock content %}
