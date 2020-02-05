@@ -1,7 +1,6 @@
 from django import forms
 from .models import Fba, Br
 from .models import User
-from users.models import Post
 
 
 class FbaForm(forms.ModelForm):
@@ -12,7 +11,8 @@ class FbaForm(forms.ModelForm):
             'anticedent',
             'behaviour',
             'consequence',
-            'intensity'
+            'intensity',
+            'date_created'
         )
 
     def save(self, commit=True):
@@ -22,6 +22,8 @@ class FbaForm(forms.ModelForm):
         client.behaviour = self.cleaned_data['behaviour']
         client.consequence = self.cleaned_data['consequence']
         client.intensity = self.cleaned_data['intensity']
+        client.intensity = self.cleaned_data['date_created']
+
         if commit:
             client.save()
         return client

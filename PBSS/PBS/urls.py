@@ -26,15 +26,40 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
 from form_fba.views import fbaChart
+from form_fba.views import fbaListView
 from django.conf.urls import handler400,handler403,handler404,handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('std/', views.std, name='std'),
-    #path('brreport/', views.std1, name='std1'),
-    path('view/', views.view, name='view'),
-    path('view1/', views.view1, name='view1'),
 
+
+
+
+
+    path('std/', views.std, name='std'),
+    path('view/', fbaListView.as_view(), name='view'),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    path('view1/', views.view1, name='view1'),
+    # path('brreport/', views.std1, name='std1'),
     path('delete/<int:id>', views.delete),
     path('edit/<int:id>', views.edit, name='edit'),
     # url(r'^$/', views.view, name='view'),
