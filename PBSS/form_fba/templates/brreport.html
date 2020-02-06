@@ -18,67 +18,72 @@
               <a href="{% url 'client' %}"><i class="fa fa-arrow-circle-left" style="font-size:40px; border: none; float: left; color: blue;"></i></a>
 
       </div>
+         <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
+
+<!--                <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a> > <a href="#"> Functional Behaviour-->
+<!--                    Assessment</a></p>-->
+                <h4>Business Report</h4>
+
+            </div>
         <form method="POST" class="post-form" action="/std1/">
             {% csrf_token %}
         <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
              <div class="container">
-                    <div class="row heading">
-                        <div class="col-lg-12" style="margin-top: 5%; margin-bottom: 3%;">
-<!--                            <p style="margin-bottom: 3%;"><a href="{% url 'client' %}">Home</a> > <a href="#"> BR Report</a></p>-->
-                           <h4 style=" text-transform: capitalize; ">Please fill in the survey related to client to calculate the improvement in past few days.</h4>
-                        </div>
-                   </div>
                     <div class="row">
-
+                          <div class="col-sm-6 box-item" style="text-align: left;">
+                            <p style="line-height: 3; margin-top: 3%;">Please fill in the survey related to client to calculate the improvement in past few days.</h4>
+                        </p>
+                            <div style="text-align: center; margin-top: 30%;">
+                                <img src="{% static 'images/checklist.png' %}" alt="checklist" class="checklist">
+                            </div>
+                        </div>
+                         <div class="col-sm-6 box-item" style="text-align: left;">
                     <div class="col-sm-12 box-item" style="text-align: left;">
                         <div class="form-group row" style="border-style: solid;">
 
-        <label class="col-sm-2 col-form-label" style="line-height: 1.7;"> Please confirm the client name: </label>
-        <div class="col-sm-4" style="border-style: solid;">{{ form.client }} </div>
+        <label class="col-sm-10 col-form-label" style="line-height: 1.7;"> Please confirm the client name: </label>
+        <div class="col-sm-10" style="border-style: solid;">{{ form.client }} </div>
 
-    </div>
-
-<!--testing start-->
-
-                           <div style="background-color: #f2f2f2; padding: 1%;">
-                        Did the person increased respectful and positive behaviour from last day?
+                            <label class="col-sm-10 col-form-label" style="line-height: 1.7; font-weight: lighter; padding-top: 5%;">Did the person increased respectful and positive behaviour from last day?</label>
                         <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                       <div class="col-sm-4">{{ form.intensity1 }}</div><br>
+                       <div class="col-sm-10">{{ form.intensity1 }}</div><br>
                         </div>
-                        </div>
+
                          <div style=" padding: 1%;">
-                        Did the person increased time focused on instruction?
+                             <label class="col-sm-10 col-form-label" style="line-height: 1.7; font-weight: lighter; padding-top: 5%;">Did the person increased time focused on instruction?</label>
                          <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                    <div class="col-sm-4">{{ form.intensity2 }}</div><br>
+                    <div class="col-sm-10">{{ form.intensity2 }}</div><br>
                          </div>
                          </div>
-                         <div style="background-color: #f2f2f2; padding: 1%;">
-                        Did the person improved social-emotional wellbeing positive and respectful relationships among people around them?
+                         <div style="padding: 1%;">
+                             <label class="col-sm-10 col-form-label" style="line-height: 1.7;padding-top: 5%; font-weight: lighter;">Did the person improved social-emotional wellbeing positive and respectful relationships among people around them?</label>
                      <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                        <div class="col-sm-4">{{ form.intensity3 }}</div><br>
+                        <div class="col-sm-10">{{ form.intensity3 }}</div><br>
                      </div>
                          </div>
                          <div style="padding: 1%;">
-                        On the scale of 1-10, how much response they are providing to the positive support they are getting?
+                             <label class="col-sm-10 col-form-label" style="line-height: 1.7; font-weight: lighter;padding-top: 5%;">On the scale of 1-10, how much response they are providing to the positive support they are getting?</label>
                          <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                        <div class="col-sm-4">{{ form.intensity4 }}</div><br>
+                        <div class="col-sm-10">{{ form.intensity4 }}</div><br>
                          </div>
                          </div>
-                         <div style="background-color: #f2f2f2; padding: 1%;">
-                        from 0 - not al all, 10 - easy to predict
+                         <div style="padding: 1%;">
+                        <label class="col-sm-10 col-form-label" style="line-height: 1.7; font-weight: lighter; padding-top: 5%;">from 0 - not al all, 10 - easy to predict
                         Warning signs or frustration clues?
-                        Does the client act in a predictable way prior to problem behaviours occurring?
+                            Does the client act in a predictable way prior to problem behaviours occurring?</label>
                          <div style="text-align: left; margin-top: 2%; margin-bottom: 2%;">
-                        <div class="col-sm-4">{{ form.intensity5 }}</div><br>
+                        <div class="col-sm-10">{{ form.intensity5 }}</div><br>
+                             <a class="btn btn-2 btn-lg" href="{% url 'view1' %}">History br</a>
+                            <button type="submit" class="btn btn-2 btn-lg" style="float: left; margin-right: 1%; margin-left: 2%;">Save</button>
                          </div>
                          </div>
+
+
                         <br>
 
-                         <button type="submit" class="btn btn-2 btn-lg">Save</button>
-                        <a class="btn btn-2 btn-lg" href="{% url 'view1' %}">History br</a>
-                        <br>
-
+                    </div>
+                        </div>
 
 <!--testing end-->
 

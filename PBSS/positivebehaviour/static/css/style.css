@@ -1099,14 +1099,15 @@ input{
 
 #id_client{
     padding: 3%;
+    width: 100%;
 }
 
 .page-content {
     background-color:
-    #F8F8FF;
+    ghostwhite;
 }
 
 body {
     background-color:
-    #F8F8FF;
+    ghostwhite;
 }
