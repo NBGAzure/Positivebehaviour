@@ -12,7 +12,6 @@ class FbaForm(forms.ModelForm):
             'behaviour',
             'consequence',
             'intensity',
-            'date_created'
         )
 
     def save(self, commit=True):
@@ -22,7 +21,6 @@ class FbaForm(forms.ModelForm):
         client.behaviour = self.cleaned_data['behaviour']
         client.consequence = self.cleaned_data['consequence']
         client.intensity = self.cleaned_data['intensity']
-        client.intensity = self.cleaned_data['date_created']
 
         if commit:
             client.save()

@@ -46,7 +46,6 @@
         <th>Behaviour</th>
         <th>Consequence</th>
         <th>Intensity</th>
-        <th>Date&Time</th>
 
     </tr>
     </thead>
@@ -57,7 +56,6 @@
         <td>{{ forms.behaviour }} </td>
         <td>{{ forms.consequence }} </td>
         <td>{{ forms.intensity }} </td>
-        <td>{{ forms.date_created|date:"F d, Y"}}</td>
         <td>
             <a href="/edit/{{ forms.id }}"> <span class="glyphicon glyphicon-pencil"></span> Edit </a></td>
             <td><a href="/delete/{{ forms.id }}"> Delete </a>

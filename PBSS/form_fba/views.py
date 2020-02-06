@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from form_fba.forms import FbaForm, EditFba, brForm
 from form_fba.models import Fba, User, Br
 from django.contrib import messages
-from django.views.generic import TemplateView,ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from django.db.models import Sum
 from django.db.models import Avg, Count
 from django.db.models import Sum
@@ -130,7 +130,8 @@ class fbaListView(ListView):
     context_object_name = 'form_fba'
     ordering = ['-date_created']
 
-
+class fbaDetailView(DetailView):
+    model = Fba
 
 
 

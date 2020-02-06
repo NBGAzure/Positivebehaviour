@@ -17,6 +17,7 @@ class Fba(models.Model):
     consequence = models.CharField(blank=False, max_length=200)
     intensity = models.PositiveSmallIntegerField(blank=False, validators=[MinValueValidator(0), MaxValueValidator(10)])    #client_fk = models.ForeignKey(Post, on_delete=models.CASCADE, null=False, default=None)
     date_created = models.DateTimeField(default=timezone.now)
+
     def get_absolute_url(self):
         return reverse("forms:detail", kwargs={"is": self.id})
 
