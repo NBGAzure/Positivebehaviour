@@ -26,7 +26,7 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
 from form_fba.views import fbaChart
-from form_fba.views import fbaListView, fbaDetailView
+from form_fba.views import fbaListView, fbaDetailView, fbaCreateView
 from django.conf.urls import handler400,handler403,handler404,handler500
 
 urlpatterns = [
@@ -35,10 +35,7 @@ urlpatterns = [
     path('std/', views.std, name='std'),
     path('view/', fbaListView.as_view(), name='view'),
     path('fba/<int:pk>/', fbaDetailView.as_view(), name='DetailView'),
-
-
-
-
+    path('fba/new/', fbaCreateView.as_view(), name='fba-Create'),
 
 
     path('view1/', views.view1, name='view1'),

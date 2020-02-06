@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from form_fba.forms import FbaForm, EditFba, brForm
 from form_fba.models import Fba, User, Br
 from django.contrib import messages
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
 from django.db.models import Sum
 from django.db.models import Avg, Count
 from django.db.models import Sum
@@ -132,8 +132,16 @@ class fbaListView(ListView):
 
 class fbaDetailView(DetailView):
     model = Fba
+    template_name = 'fba_detail.html'
 
-
+class fbaCreateView(CreateView):
+    model = Fba
+    fields = ['client',
+            'anticedent',
+            'behaviour',
+            'consequence',
+            'intensity']
+    template_name = 'fba_form.html'
 
 
 
