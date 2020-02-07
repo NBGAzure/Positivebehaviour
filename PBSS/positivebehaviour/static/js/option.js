@@ -113,20 +113,33 @@ $('.mdb-select').materialSelect();
     });
 
 
-
-          var e = document.getElementById('foo');
-            e.onclick = calculateTotal;
-
-    function calculateTotal(){
-
-            var elems = document.getElementsByClassName('Assessment');
-            var myLength = elems.length,
-            total = 0;
-            for (var i = 0; i < myLength; ++i) {
-              total += parseInt(elems[i].value * 1);
-            }
-            document.getElementById('ScoreTot').value = total;
-
-    }
-
-
+    //
+    //       var e = document.getElementById('foo');
+    //         e.onclick = calculateTotal;
+    //
+    // function calculateTotal(){
+    //
+    //         var elems = document.getElementsByClassName('Assessment');
+    //         var myLength = elems.length,
+    //         total = 0;
+    //         for (var i = 0; i < myLength; ++i) {
+    //           total += parseInt(elems[i].value * 1);
+    //         }
+    //         document.getElementById('ScoreTot').value = total;
+    //
+    // }
+//
+// var doc = new jsPDF();
+// var specialElementHandlers = {
+//     '#print-btn': function (element, renderer) {
+//         return true;
+//     }
+// };
+//
+// $('#submit').click(function () {
+//     doc.fromHTML($('#print').html(), 15, 15, {
+//         'width': 170,
+//             'elementHandlers': specialElementHandlers
+//     });
+//     doc.save('pdf-version.pdf');
+// });
