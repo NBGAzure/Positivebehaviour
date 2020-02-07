@@ -1111,3 +1111,28 @@ body {
     background-color:
     ghostwhite;
 }
+
+@media print {
+      body, html, #wrapper {
+          width: 2000px;
+          border: 0;     margin: 0 5%;     padding: 0;     float: none;     position: static;     overflow: visible;
+      }
+    #sidebar {
+        display: none;
+    }
+    .container {
+        margin-left: -20px;
+        width: 100%;
+}
+    .fa{
+        display: none;
+    }
+    .fa-arrow-circle-left{
+        display: none;
+    }
+
+    .container-fluid{
+        height: auto;
+    }
+}
+

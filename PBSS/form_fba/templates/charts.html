@@ -774,21 +774,32 @@
     }
 });
   });
+
+  function myFunction() {
+                        window.print();
+                    }
   </script>
   {% endblock scripts %}
 
   {%block content%}
+<!--    <div id="content">-->
     <main class="page-content">
     <div class="container-fluid">
         <h2 style="text-align: center;">Dashboard</h2>
+<div id="createPNGButton">
+     <div id="Button2">
+                            <button class="btn btn-3 btn-sm" onclick="myFunction()" name="print" id="print"
+                                    style="float: right; ">Print
+                            </button>
+</div>
         <hr>
         <div class="row">
             <div class="form-group col-md-12">
                 <p style="text-align: center;">Data Visualization</p>
+
                 <a href="{% url 'view1' %}"><i class="fa fa-arrow-circle-left"
                                                 style="font-size:40px; border: none; float: left; color: blue;"></i></a>
             </div>
-        </div>
         <div class="container">
             <div class="row heading">
                 <div class="col-lg-12" style="margin-top: 1%; margin-bottom: 3%;">
@@ -849,7 +860,6 @@
 
                     <br><br>
                      <div class="container">
-
                             <div class="container" style=" -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
     -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
     box-shadow:0 0 20px rgba(0,0,0,0.8);; margin-bottom: 3%; width: 95%; float: left; padding-bottom: 3%; padding-top: 3%;">
@@ -883,11 +893,17 @@
 
         </div>
     </div>
+    </div>
 </main>
+    </div>
+
+
+</div>
 
 
 
-
-
+</div>
+</div>
+</div>
 
   {%endblock content %}
