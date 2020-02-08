@@ -113,7 +113,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     success_url = '/client'
     success_message = 'client added successfully!'
     model = Post
-    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender']
 
     # initial = {"client_name": "Your Name", "DOB": "Date of birth", "email": "Your e-mail",
     #            "location": "You Location", "history": "Your History", "content": "Description"}
@@ -132,7 +132,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     success_url = '/client'
     success_message = 'client details are updated successfully!'
     model = Post
-    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender', 'content']
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender' ]
 
     def form_valid(self, form):
         form.instance.author = self.request.user

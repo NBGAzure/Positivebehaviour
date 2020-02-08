@@ -18,9 +18,7 @@ class Post(models.Model):
     GENDER_CHOICES = (
         (u'M', u'Male'),
         (u'F', u'Female'),
-        (u'Q', u'Queer'),
-        (u'T', u'Transgender'),
-        (u'N', u'Non-binary'),
+        (u'O', u'Others'),
     )
     client_name = models.CharField(max_length=100)
     DOB = models.DateField(auto_now_add=False, auto_now=False, blank=True)
