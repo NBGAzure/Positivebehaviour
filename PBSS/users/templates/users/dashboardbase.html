@@ -49,15 +49,15 @@
             <div class="sidebar-brand">
                 <a class="navbar-brand page-scroll" style="font-size: 26px;" href="{% url 'index' %}">PBSS</a>
             </div>
-            <div>
-                {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}" style="text-align: center">
-                    {{ message }}
-                </div>
-                {% endfor %}
-                {% endif %}
-            </div>
+<!--            <div>-->
+<!--                {% if messages %}-->
+<!--                {% for message in messages %}-->
+<!--                <div class="alert alert-{{ message.tags }}" style="text-align: center">-->
+<!--                    {{ message }}-->
+<!--                </div>-->
+<!--                {% endfor %}-->
+<!--                {% endif %}-->
+<!--            </div>-->
             <div class="sidebar-header">
                 <div class="user-pic">
                     <img class="img-responsive img-rounded" src="{{ user.profile.image.url }}"

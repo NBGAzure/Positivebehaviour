@@ -1136,3 +1136,27 @@ body {
     }
 }
 
+
+#error_1_id_DOB {
+    color:
+    red;
+    margin-top: 1%;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.invalid-feedback{
+    color:
+    red;
+    margin-top: 1%;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.strong{
+ color:
+    red;
+    margin-top: 1%;
+    font-size: 15px;
+    font-style: italic;
+}
