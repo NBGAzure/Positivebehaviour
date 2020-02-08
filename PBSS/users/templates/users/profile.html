@@ -36,7 +36,7 @@
                         <div class="container">
                             {% for post in posts %}
                             <div class="container" style="-webkit-box-shadow: 0 10px 6px -6px #777;-moz-box-shadow: 0 10px 6px -6px #777;
-            box-shadow: 0 10px 6px -6px #777; margin-bottom: 3%; width: 48%; float: left;">
+            box-shadow: 0 10px 16px -6px #777; margin-bottom: 3%; width: 48%; float: left; margin-right: 1%;">
                                 <h2><a class="article-title" style="color: black; font-size: 30px;"
                                        href="{% url 'profile' post.id %}">{{ post.client_name }}</a></h2>
                                 <a class="mr-2" href="{% url 'user-client' post.author.username %}"

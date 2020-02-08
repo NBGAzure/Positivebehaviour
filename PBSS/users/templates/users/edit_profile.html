@@ -28,7 +28,8 @@
                             <img class="img-responsive img-rounded" src="{{ user.profile.image.url }}"
                                  alt="accountpicture">
                         </div>
-                        <div class="col-sm-8 box-item" style="text-align: left;">
+                        <div class="col-sm-8 box-item" style="text-align: left; webkit-box-shadow: 0 10px 6px -6px #777;-moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 16px -6px #777;">
                             <form method="POST" enctype="multipart/form-data">
                                 {% csrf_token %}
                                 <fieldset class="form-group"><br>
