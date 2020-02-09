@@ -51,23 +51,24 @@
     <thead class="thead-dark">
     <br><br>
     <tr style="font-weight: bold;">
-        <th>Intensity 1</th>
-        <th>Intensity 2</th>
-        <th>Intensity 3</th>
-        <th>Intensity 4</th>
-        <th>Intensity 5</th>
+         <th>Client</th>
+        <th>Intensity for Q.1</th>
+        <th>Intensity for Q.2</th>
+        <th>Intensity for Q.3</th>
+        <th>Intensity for Q.4</th>
+        <th>Intensity for Q.5</th>
 <!--        <th>Sum</th>-->
     </tr>
     </thead>
     {% for forms in form_br %}
     <tr>
-
+        <td>{{ forms.client}}</td>
         <td>{{ forms.intensity1 }} </td>
         <td>{{ forms.intensity2 }} </td>
         <td>{{ forms.intensity3 }} </td>
         <td>{{ forms.intensity4 }} </td>
         <td>{{ forms.intensity5 }} </td>
-        <td></td>
+
                     </tr>
 
                     {% endfor %}
