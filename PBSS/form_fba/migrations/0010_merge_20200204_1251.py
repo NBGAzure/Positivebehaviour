@@ -4,7 +4,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('form_fba', '0009_auto_20200203_1404'),
         ('form_fba', '0006_auto_20200203_1253'),

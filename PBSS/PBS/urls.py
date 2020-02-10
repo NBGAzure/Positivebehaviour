@@ -20,14 +20,22 @@ from django.contrib.auth import views as auth_views
 from users import views as user_views
 from users.views import client
 from contact.views import contact
-from users.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView, brreport
-#from fbaform.views import fbaformfunc, addBehaviour, addTrigger Updated upstream
+from users.views import (PostListView,
+                         PostDetailView,
+                         PostCreateView,
+                         PostUpdateView,
+                         PostDeleteView,
+                         UserPostListView,
+                         brreport)
+# from fbaform.views import fbaformfunc, addBehaviour, addTrigger Updated upstream
 from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
 from form_fba.views import fbaChart
-from form_fba.views import fbaListView, fbaDetailView, fbaCreateView
-from django.conf.urls import handler400,handler403,handler404,handler500
+from form_fba.views import (fbaListView,
+                            fbaDetailView,
+                            fbaCreateView)
+from django.conf.urls import handler400, handler403, handler404, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,7 +44,6 @@ urlpatterns = [
     path('view/', fbaListView.as_view(), name='view'),
     path('fba/<int:pk>/', fbaDetailView.as_view(), name='DetailView'),
     path('fba/new/', fbaCreateView.as_view(), name='fba-Create'),
-
 
     path('view1/', views.view1, name='view1'),
     # path('brreport/', views.std1, name='std1'),
@@ -80,7 +87,7 @@ urlpatterns = [
     path('client/<int:pk>/delete/', PostDeleteView.as_view(), name="client-delete"),
     path('chart/', fbaChart.as_view(), name='chart')
 
-    ]
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

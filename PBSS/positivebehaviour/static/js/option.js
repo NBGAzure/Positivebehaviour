@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $("#behaviour").change(function() {
+    $("#behaviour").change(function () {
         var val = $(this).val();
         if (val == "behaviour1") {
             $("#boptions").html("<option value='behaviouroptions1'>Select one</option>");
@@ -35,99 +35,99 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
-$('.mdb-select').materialSelect();
+$(document).ready(function () {
+    $('.mdb-select').materialSelect();
 });
 
-    //Retrieval
+//Retrieval
 
 
-     $("#behaviour").on("change",function(){
-        //Getting Value
-        var selValue = $("#behaviour :selected").text();
-        //Setting Value
-        $("#textFieldTextBehaviour").val(selValue);
-    });
+$("#behaviour").on("change", function () {
+    //Getting Value
+    var selValue = $("#behaviour :selected").text();
+    //Setting Value
+    $("#textFieldTextBehaviour").val(selValue);
+});
 
-      $("#boptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#boptions :selected").text();
-        //Setting Value
-        $("#textFieldTextboptions").val(selValue);
-    });
+$("#boptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#boptions :selected").text();
+    //Setting Value
+    $("#textFieldTextboptions").val(selValue);
+});
 
-      $("#ageoptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#ageoptions :selected").text();
-        //Setting Value
-        $("#textFieldTextageoptions").val(selValue);
-    });
+$("#ageoptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#ageoptions :selected").text();
+    //Setting Value
+    $("#textFieldTextageoptions").val(selValue);
+});
 
-      $("#interactionoptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#interactionoptions :selected").text();
-        //Setting Value
-        $("#textFieldTextinteractionoptions").val(selValue);
-    });
+$("#interactionoptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#interactionoptions :selected").text();
+    //Setting Value
+    $("#textFieldTextinteractionoptions").val(selValue);
+});
 
-      $("#observationoptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#observationoptions :selected").text();
-        //Setting Value
-        $("#textFieldTextobservationoptions").val(selValue);
-    });
+$("#observationoptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#observationoptions :selected").text();
+    //Setting Value
+    $("#textFieldTextobservationoptions").val(selValue);
+});
 
-      $("#enganingoptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#enganingoptions :selected").text();
-        //Setting Value
-        $("#textFieldTextenganingoptions").val(selValue);
-    });
+$("#enganingoptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#enganingoptions :selected").text();
+    //Setting Value
+    $("#textFieldTextenganingoptions").val(selValue);
+});
 
-      $("#responseoptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#responseoptions :selected").text();
-        //Setting Value
-        $("#textFieldTextresponseoptions").val(selValue);
-    });
+$("#responseoptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#responseoptions :selected").text();
+    //Setting Value
+    $("#textFieldTextresponseoptions").val(selValue);
+});
 
-      $("#consequensesoptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#consequensesoptions :selected").text();
-        //Setting Value
-        $("#textFieldTextconsequensesoptions").val(selValue);
-    });
+$("#consequensesoptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#consequensesoptions :selected").text();
+    //Setting Value
+    $("#textFieldTextconsequensesoptions").val(selValue);
+});
 
-      $("#alternativeoptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#alternativeoptions :selected").text();
-        //Setting Value
-        $("#textFieldTextalternativeoptions").val(selValue);
-    });
+$("#alternativeoptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#alternativeoptions :selected").text();
+    //Setting Value
+    $("#textFieldTextalternativeoptions").val(selValue);
+});
 
-      $("#functionoptions").on("change",function(){
-        //Getting Value
-        var selValue = $("#functionoptions :selected").text();
-        //Setting Value
-        $("#textFieldTextfunctionoptions").val(selValue);
-    });
+$("#functionoptions").on("change", function () {
+    //Getting Value
+    var selValue = $("#functionoptions :selected").text();
+    //Setting Value
+    $("#textFieldTextfunctionoptions").val(selValue);
+});
 
 
-    //
-    //       var e = document.getElementById('foo');
-    //         e.onclick = calculateTotal;
-    //
-    // function calculateTotal(){
-    //
-    //         var elems = document.getElementsByClassName('Assessment');
-    //         var myLength = elems.length,
-    //         total = 0;
-    //         for (var i = 0; i < myLength; ++i) {
-    //           total += parseInt(elems[i].value * 1);
-    //         }
-    //         document.getElementById('ScoreTot').value = total;
-    //
-    // }
+//
+//       var e = document.getElementById('foo');
+//         e.onclick = calculateTotal;
+//
+// function calculateTotal(){
+//
+//         var elems = document.getElementsByClassName('Assessment');
+//         var myLength = elems.length,
+//         total = 0;
+//         for (var i = 0; i < myLength; ++i) {
+//           total += parseInt(elems[i].value * 1);
+//         }
+//         document.getElementById('ScoreTot').value = total;
+//
+// }
 //
 // var doc = new jsPDF();
 // var specialElementHandlers = {

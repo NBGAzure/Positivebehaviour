@@ -15,7 +15,7 @@ class FbaForm(forms.ModelForm):
         )
 
     def save(self, commit=True):
-        #client = super(Post, self).save(commit=False)
+        # client = super(Post, self).save(commit=False)
         client = super(FbaForm, self).save(commit=False)
         client.anticedent = self.cleaned_data['anticedent']
         client.behaviour = self.cleaned_data['behaviour']
@@ -37,17 +37,18 @@ class EditFba(forms.ModelForm):
             'intensity'
         )
 
+
 class brForm(forms.ModelForm):
     class Meta:
         model = Br
         fields = (
-        'client',
-        'intensity1',
-        'intensity2',
-        'intensity3',
-        'intensity4',
-        'intensity5',
-       # 'sum',
+            'client',
+            'intensity1',
+            'intensity2',
+            'intensity3',
+            'intensity4',
+            'intensity5',
+            # 'sum',
         )
 
     def save(self, commit=True):
@@ -57,7 +58,7 @@ class brForm(forms.ModelForm):
         client.intensity3 = self.cleaned_data['intensity3']
         client.intensity4 = self.cleaned_data['intensity4']
         client.intensity5 = self.cleaned_data['intensity5']
-       # client.sum = self.cleaned_data['sum']
+        # client.sum = self.cleaned_data['sum']
         if commit:
             client.save()
         return client

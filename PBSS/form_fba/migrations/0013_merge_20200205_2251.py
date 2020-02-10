@@ -4,7 +4,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('form_fba', '0012_fba_date_created'),
         ('form_fba', '0012_remove_br_sum'),

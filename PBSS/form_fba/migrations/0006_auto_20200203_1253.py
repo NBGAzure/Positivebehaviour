@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('form_fba', '0005_remove_fba_timestamp'),
     ]

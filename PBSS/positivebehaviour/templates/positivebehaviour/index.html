@@ -25,7 +25,8 @@
 </header>
 <!-- Header -->
 
-<section id="about" class="box-content box-3" style="background-size: 100% auto; padding: 0px 0; background-color: white;">
+<section id="about" class="box-content box-3"
+         style="background-size: 100% auto; padding: 0px 0; background-color: white;">
     <div class="container">
         <div>
             {% if messages %}
@@ -36,91 +37,95 @@
             {% endfor %}
             {% endif %}
         </div>
-     <div class="box-content box-1" style="background-size: 100% auto; padding: 0px 0; background-color: white;">
-        <div class="col-md-8" style="background-color: white;">
-            <div class="row heading">
-                <div class="col-lg-12">
-                    <h2>About us</h2>
-                    <hr>
-                    <div class="intro"><p></p></div>
+        <div class="box-content box-1" style="background-size: 100% auto; padding: 0px 0; background-color: white;">
+            <div class="col-md-8" style="background-color: white;">
+                <div class="row heading">
+                    <div class="col-lg-12">
+                        <h2>About us</h2>
+                        <hr>
+                        <div class="intro"><p></p></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li class="blue">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" style="width: 200%;"
-                                     src="{% static 'images/tools.png' %}" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">FBA Tool</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="timeline">
+                            <li class="blue">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" style="width: 200%;"
+                                         src="{% static 'images/tools.png' %}" alt="">
                                 </div>
-                                <div class="timeline-body"><br>
-                                    <p class="text-muted" style="line-height: 2;">Concentrate primarily on preventing
-                                        the occurrence of an identified behaviour by avoiding or adapting the
-                                        circumstances that usually trigger the behaviour. </p>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">FBA Tool</h4>
+                                    </div>
+                                    <div class="timeline-body"><br>
+                                        <p class="text-muted" style="line-height: 2;">Concentrate primarily on
+                                            preventing
+                                            the occurrence of an identified behaviour by avoiding or adapting the
+                                            circumstances that usually trigger the behaviour. </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted blue">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="{% static 'images/report.png' %}" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <br> <h4 class="subheading">Business Report</h4>
+                            </li>
+                            <li class="timeline-inverted blue">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="{% static 'images/report.png' %}"
+                                         alt="">
                                 </div>
-                                <div class="timeline-body"><br>
-                                    <p class="text-muted" style="line-height: 2;">Filling a business report for 30 or
-                                        more days that will link to FBA form that has been created earlier.</p>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <br> <h4 class="subheading">Business Report</h4>
+                                    </div>
+                                    <div class="timeline-body"><br>
+                                        <p class="text-muted" style="line-height: 2;">Filling a business report for 30
+                                            or
+                                            more days that will link to FBA form that has been created earlier.</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="blue">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="{% static 'images/understanding.png' %}"
-                                     alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Data Visualization</h4>
+                            </li>
+                            <li class="blue">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="{% static 'images/understanding.png' %}"
+                                         alt="">
                                 </div>
-                                <div class="timeline-body"><br>
-                                    <p class="text-muted" style="line-height: 2;">Integrating all the collected data
-                                        into graphs for the visualising and understanding the statistics of the
-                                        client. </p>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">Data Visualization</h4>
+                                    </div>
+                                    <div class="timeline-body"><br>
+                                        <p class="text-muted" style="line-height: 2;">Integrating all the collected data
+                                            into graphs for the visualising and understanding the statistics of the
+                                            client. </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted blue">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="{% static 'images/summary.png' %}" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">End Summary</h4>
+                            </li>
+                            <li class="timeline-inverted blue">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="{% static 'images/summary.png' %}"
+                                         alt="">
                                 </div>
-                                <div class="timeline-body"><br>
-                                    <p class="text-muted" style="line-height: 2;">Provides end summary based on
-                                        antecedents, behaviour and consequences with triggers and other behavioural
-                                        information.</p>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">End Summary</h4>
+                                    </div>
+                                    <div class="timeline-body"><br>
+                                        <p class="text-muted" style="line-height: 2;">Provides end summary based on
+                                            antecedents, behaviour and consequences with triggers and other behavioural
+                                            information.</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted ">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                            <li class="timeline-inverted ">
+                                <div class="timeline-image">
+                                    <h4>Be Part
+                                        <br>Of Our
+                                        <br>Story!</h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-     </div>
     </div>
 </section>
 
@@ -420,7 +425,8 @@
                 </div>
             </div>
         </div>
-    </div></div>
-        </section>
+    </div>
+</div>
+</section>
 
-        {% endblock content %}
+{% endblock content %}

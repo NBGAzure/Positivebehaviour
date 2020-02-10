@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('users', '__first__'),
         ('form_fba', '0003_auto_20200202_0124'),

@@ -5,7 +5,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('form_fba', '0007_auto_20200203_1243'),
     ]
@@ -14,26 +13,36 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='br',
             name='intensity1',
-            field=models.PositiveSmallIntegerField(default=None, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)]),
+            field=models.PositiveSmallIntegerField(default=None,
+                                                   validators=[django.core.validators.MinValueValidator(0),
+                                                               django.core.validators.MaxValueValidator(10)]),
         ),
         migrations.AddField(
             model_name='br',
             name='intensity2',
-            field=models.PositiveSmallIntegerField(default=None, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)]),
+            field=models.PositiveSmallIntegerField(default=None,
+                                                   validators=[django.core.validators.MinValueValidator(0),
+                                                               django.core.validators.MaxValueValidator(10)]),
         ),
         migrations.AddField(
             model_name='br',
             name='intensity3',
-            field=models.PositiveSmallIntegerField(default=None, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)]),
+            field=models.PositiveSmallIntegerField(default=None,
+                                                   validators=[django.core.validators.MinValueValidator(0),
+                                                               django.core.validators.MaxValueValidator(10)]),
         ),
         migrations.AddField(
             model_name='br',
             name='intensity4',
-            field=models.PositiveSmallIntegerField(default=None, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)]),
+            field=models.PositiveSmallIntegerField(default=None,
+                                                   validators=[django.core.validators.MinValueValidator(0),
+                                                               django.core.validators.MaxValueValidator(10)]),
         ),
         migrations.AddField(
             model_name='br',
             name='intensity5',
-            field=models.PositiveSmallIntegerField(default=None, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)]),
+            field=models.PositiveSmallIntegerField(default=None,
+                                                   validators=[django.core.validators.MinValueValidator(0),
+                                                               django.core.validators.MaxValueValidator(10)]),
         ),
     ]

@@ -32,9 +32,11 @@ def std(request):
         form = FbaForm()
     return render(request, 'fbaindex.html', {'form': form})
 
+
 def view(request):
     form_fba = Fba.objects.all()
     return render(request, "view.html", {'form_fba': form_fba})
+
 
 def std1(request):
     if request.method == 'POST':
@@ -49,6 +51,7 @@ def std1(request):
         form = brForm()
     return render(request, 'brreport.html', {'form': form})
 
+
 def view1(request):
     form_br = Br.objects.all()
     # sum = (Br.objects.aggregate(
@@ -61,6 +64,7 @@ def view1(request):
     # }
     return render(request, "brview.html", {'form_br': form_br})
 
+
 def view1(request):
     instance = Br.objects.all()
 
@@ -69,6 +73,7 @@ def view1(request):
         'form_br': instance,
     }
     return render(request, template, context)
+
 
 class fbaChart(TemplateView):
     template_name = 'charts.html'
@@ -90,14 +95,12 @@ def delete(request, id):
     return redirect("/view")
 
 
-
-
 def edit(request, id):
     instance = Fba.objects.get(id=id)
 
     if request.method == 'POST':
 
-        user_form = EditFba(request.POST, instance = instance )
+        user_form = EditFba(request.POST, instance=instance)
         if user_form.is_valid():
 
             instance = user_form.save(commit=False)
@@ -107,14 +110,13 @@ def edit(request, id):
         else:
             messages.warning(request, 'Please keep limit between 0 and 10!')
     context = {
-                "form_fba": instance,
-            }
+        "form_fba": instance,
+    }
 
     return render(request, "edit.html", context)
 
 
 def view(request):
-
     instance = Fba.objects.all()
     # instance = Fba.objects.filter(client_id=33)
 
@@ -124,32 +126,27 @@ def view(request):
     }
     return render(request, template, context)
 
+
 class fbaListView(ListView):
     model = Fba
     template_name = 'view.html'
     context_object_name = 'form_fba'
     ordering = ['-date_created']
 
+
 class fbaDetailView(DetailView):
     model = Fba
     template_name = 'fba_detail.html'
 
+
 class fbaCreateView(CreateView):
     model = Fba
     fields = ['client',
-            'anticedent',
-            'behaviour',
-            'consequence',
-            'intensity']
+              'anticedent',
+              'behaviour',
+              'consequence',
+              'intensity']
     template_name = 'fba_form.html'
-
-
-
-
-
-
-
-
 
     # def form_valid(self, form):
     #     form.instance.author = self.request.user
@@ -158,12 +155,7 @@ class fbaCreateView(CreateView):
     # def get_queryset(self):
     #     return super(view, self).get_queryset().filter(author=self.request.user)
 
-
 ###TESTING IN PROGRESS
-
-
-
-
 
 
 # def edit(request,id=None):
@@ -180,9 +172,7 @@ class fbaCreateView(CreateView):
 #     return render(request, "edit.html", context)
 
 
-
-
-#TESTING - FOUND differences >> current
+# TESTING - FOUND differences >> current
 # def edit(request, id):
 #     instance = Fba.objects.get(id=id)
 #
@@ -222,7 +212,6 @@ class fbaCreateView(CreateView):
 #             }
 #
 #     return render(request, template_name, context)
-
 
 
 ##Testing in PROGRESS..DO NOT REMOVE>>cu

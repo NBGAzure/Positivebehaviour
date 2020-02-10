@@ -5,7 +5,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('form_fba', '0002_auto_20200202_0101'),
     ]
@@ -14,6 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='fba',
             name='intensity',
-            field=models.PositiveSmallIntegerField(validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)]),
+            field=models.PositiveSmallIntegerField(
+                validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)]),
         ),
     ]

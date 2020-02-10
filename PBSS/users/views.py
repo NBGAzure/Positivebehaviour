@@ -132,7 +132,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     success_url = '/client'
     success_message = 'client details are updated successfully!'
     model = Post
-    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender' ]
+    fields = ['client_name', 'DOB', 'email', 'location', 'history', 'gender']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
